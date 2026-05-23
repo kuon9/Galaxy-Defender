@@ -1,0 +1,748 @@
+fileFormatVersion: 2
+guid: 3658398f42b993045b683a143096fa30
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2115593984397944113
+    second: squid_pop_0
+  - first:
+      213: 3905522826670451598
+    second: squid_pop_1
+  - first:
+      213: 4587533737536751245
+    second: squid_pop_2
+  - first:
+      213: 9064256151906115590
+    second: squid_pop_3
+  - first:
+      213: -4003982205499460823
+    second: squid_pop_4
+  - first:
+      213: 1378441759112105478
+    second: squid_pop_5
+  - first:
+      213: 3832364209325603283
+    second: squid_pop_6
+  - first:
+      213: -8370808019504035415
+    second: squid_pop_7
+  - first:
+      213: 814907893205722820
+    second: squid_pop_8
+  - first:
+      213: -4255849946903840155
+    second: squid_pop_9
+  - first:
+      213: -9216508163569711088
+    second: squid_pop_10
+  - first:
+      213: 8383519137381187614
+    second: squid_pop_11
+  - first:
+      213: -2901432756470502822
+    second: squid_pop_12
+  - first:
+      213: 8329544967402692976
+    second: squid_pop_13
+  - first:
+      213: -5375196307185379595
+    second: squid_pop_14
+  - first:
+      213: 3669033930597589851
+    second: squid_pop_15
+  - first:
+      213: -5947947240213953979
+    second: squid_pop_16
+  - first:
+      213: -3821905131427299605
+    second: squid_pop_17
+  - first:
+      213: -2481711699653112351
+    second: squid_pop_18
+  - first:
+      213: -7499771427699535471
+    second: squid_pop_19
+  - first:
+      213: -2970197617472927436
+    second: squid_pop_20
+  - first:
+      213: -488583484306073808
+    second: squid_pop_21
+  - first:
+      213: -6285410275597152362
+    second: squid_pop_22
+  - first:
+      213: 987246278253485669
+    second: squid_pop_23
+  - first:
+      213: -2897801682805099192
+    second: squid_pop_24
+  - first:
+      213: -882376375926099435
+    second: squid_pop_25
+  - first:
+      213: 7502915003540690557
+    second: squid_pop_26
+  - first:
+      213: -1768905035065229872
+    second: squid_pop_27
+  - first:
+      213: 1818505375630451615
+    second: squid_pop_28
+  - first:
+      213: 9150588854716567458
+    second: squid_pop_29
+  - first:
+      213: -1550143879371087745
+    second: squid_pop_30
+  - first:
+      213: -9004077053835163444
+    second: squid_pop_31
+  - first:
+      213: -8186953061293682128
+    second: squid_pop_32
+  - first:
+      213: -7421058733963099328
+    second: squid_pop_33
+  - first:
+      213: -8131072201242192676
+    second: squid_pop_34
+  - first:
+      213: -510076723555666289
+    second: squid_pop_35
+  - first:
+      213: -1328708756411367920
+    second: squid_pop_36
+  - first:
+      213: 1415139600812876978
+    second: squid_pop_37
+  - first:
+      213: -7833161273895288919
+    second: squid_pop_38
+  - first:
+      213: 5010029985142732393
+    second: squid_pop_39
+  - first:
+      213: -8395357032634484701
+    second: squid_pop_40
+  - first:
+      213: 4767109706844945403
+    second: squid_pop_41
+  - first:
+      213: -5891046264981476860
+    second: squid_pop_42
+  - first:
+      213: 1965835507479055806
+    second: squid_pop_43
+  - first:
+      213: -4457265988569068816
+    second: squid_pop_44
+  - first:
+      213: -4202956711544256586
+    second: squid_pop_45
+  - first:
+      213: 7276901024065321770
+    second: squid_pop_46
+  - first:
+      213: -6284864863126591618
+    second: squid_pop_47
+  - first:
+      213: 200263590080800855
+    second: squid_pop_48
+  - first:
+      213: 3077953648652089373
+    second: squid_pop_49
+  - first:
+      213: 6688254659215499252
+    second: squid_pop_50
+  - first:
+      213: 3514805485730414217
+    second: squid_pop_51
+  - first:
+      213: 2206134392123253730
+    second: squid_pop_52
+  - first:
+      213: 6294108044774376936
+    second: squid_pop_53
+  - first:
+      213: 6662123717107717859
+    second: squid_pop_54
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: squid_pop_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcad107ea76e3a2e0800000000000000
+      internalID: -2115593984397944113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: squid_pop_1
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 240
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8b2fd98154333630800000000000000
+      internalID: 3905522826670451598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: squid_pop_2
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 240
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d868ff4e0a13aaf30800000000000000
+      internalID: 4587533737536751245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: squid_pop_3
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 240
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 600638712f4bacd70800000000000000
+      internalID: 9064256151906115590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: squid_pop_4
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 240
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 923383ae56ffe68c0800000000000000
+      internalID: -4003982205499460823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: squid_pop_5
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 240
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60e01730a75312310800000000000000
+      internalID: 1378441759112105478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: squid_pop_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 120
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d9f5c291fa4f2530800000000000000
+      internalID: 3832364209325603283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: squid_pop_7
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 120
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a9887ae47ae4db80800000000000000
+      internalID: -8370808019504035415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: squid_pop_8
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 120
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c6603b49622f4b00800000000000000
+      internalID: 814907893205722820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: squid_pop_9
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 120
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56a7e61950f20f4c0800000000000000
+      internalID: -4255849946903840155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: squid_pop_10
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 120
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01880f808a2681080800000000000000
+      internalID: -9216508163569711088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: squid_pop_11
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 120
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e108b47dc3e385470800000000000000
+      internalID: 8383519137381187614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: squid_pop_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5aa4eac74a0cb7d0800000000000000
+      internalID: -2901432756470502822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: squid_pop_13
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0712eaa140d789370800000000000000
+      internalID: 8329544967402692976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: squid_pop_14
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f6593800777765b0800000000000000
+      internalID: -5375196307185379595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: squid_pop_15
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 0
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b53ef16abe60be230800000000000000
+      internalID: 3669033930597589851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: squid_pop_16
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5424844af75a47da0800000000000000
+      internalID: -5947947240213953979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: squid_pop_17
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bee7804488dd5fac0800000000000000
+      internalID: -3821905131427299605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: af290b5c797f67c478e2b242da3c2db2
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      squid_pop_0: -2115593984397944113
+      squid_pop_1: 3905522826670451598
+      squid_pop_10: -9216508163569711088
+      squid_pop_11: 8383519137381187614
+      squid_pop_12: -2901432756470502822
+      squid_pop_13: 8329544967402692976
+      squid_pop_14: -5375196307185379595
+      squid_pop_15: 3669033930597589851
+      squid_pop_16: -5947947240213953979
+      squid_pop_17: -3821905131427299605
+      squid_pop_2: 4587533737536751245
+      squid_pop_3: 9064256151906115590
+      squid_pop_4: -4003982205499460823
+      squid_pop_5: 1378441759112105478
+      squid_pop_6: 3832364209325603283
+      squid_pop_7: -8370808019504035415
+      squid_pop_8: 814907893205722820
+      squid_pop_9: -4255849946903840155
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
