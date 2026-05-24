@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
     public float boost = 1f;
     private float boostPower = 5f;
+    [SerializeField] ParticleSystem boostEffect;
     
     
     void Awake()
@@ -60,11 +61,13 @@ public class PlayerMovement : MonoBehaviour
     {
         anim.SetBool("Boosting", true);
         boost = boostPower;
+        boostEffect.Play();
     }
 
     void StopBoosting()
     {
         anim.SetBool("Boosting", false);
         boost = 1f;
+        boostEffect.Stop();
     }
 }

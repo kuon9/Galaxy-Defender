@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class Background : MonoBehaviour
+public class MovingBackground : MonoBehaviour
 {
-    [SerializeField] float moveSpeed = 0.01f;
+    [SerializeField] private float moveSpeed;
     float backgroundImageWidth;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -15,10 +15,10 @@ public class Background : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float moveX = moveSpeed * Time.deltaTime;
-        transform.position += new Vector3(moveSpeed, 0);
+        float moveX = (moveSpeed * PlayerMovement.instance.boost) * Time.deltaTime;
+        transform.position += new Vector3(moveX, 0);
 
-        if(Mathf.Abs(transform.position.x) > backgroundImageWidth)
+        if(Mathf.Abs(transform.position.x) - backgroundImageWidth > 0)
         {
             transform.position = new Vector3(0, transform.position.y);
         }
