@@ -9,9 +9,14 @@ public class PlayerMovement : MonoBehaviour
     private Animator anim;
     private Vector2  playerDirection;
     [SerializeField] float moveSpeed;
-
+    [SerializeField] float energy;
+    [SerializeField] float maxEnergy;
+    [SerializeField] float energyRegen;
+    private bool boosting;
     public float boost = 1f;
-    private float boostPower = 5f;
+    public float boostPower = 5f;
+
+
     [SerializeField] ParticleSystem boostEffect;
     
     
@@ -55,19 +60,40 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         rb.linearVelocity = new Vector2(playerDirection.x * moveSpeed, playerDirection.y * moveSpeed);
+        if(boosting)
+        {
+            if(energy >= 0.2f) energy -= 0.2f;
+            else
+            {
+                StopBoosting();
+            }
+        }
+        else
+        {
+            if(energy < maxEnergy)
+            {
+                energy += energyRegen;
+            }
+        }
+        UiController.instance.UpdateEnergySlider(energy,maxEnergy);
     }
-
     void Boosting()
     {
-        anim.SetBool("Boosting", true);
-        boost = boostPower;
-        boostEffect.Play();
+        // can only boost once energy full, this prevents us from spamming it as energy is regeneing
+        if(energy > 10)
+        {
+            boostEffect.Play();
+            anim.SetBool("Boosting", true);
+            boost = boostPower;
+            boosting = true;            
+        }
     }
 
     void StopBoosting()
     {
+         boostEffect.Stop();
         anim.SetBool("Boosting", false);
         boost = 1f;
-        boostEffect.Stop();
+        boosting = false;
     }
 }

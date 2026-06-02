@@ -79,7 +79,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -839453605
-  m_SortingLayer: 2
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 2099384810065395903, guid: b9876284f4bfceb46a7ca1052893ec02, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -222,7 +222,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 4
+  energy: 0
+  maxEnergy: 10
+  energyRegen: 0.1
   boost: 3
+  boostEffect: {fileID: 6877075387216148022}
 --- !u!95 &1966102440551048512
 Animator:
   serializedVersion: 7
@@ -255,7 +259,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4151986051699399260, guid: 4e5ef2b58b710c345843ad212e092233, type: 3}
       propertyPath: m_SortingLayer
-      value: 2
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4151986051699399260, guid: 4e5ef2b58b710c345843ad212e092233, type: 3}
       propertyPath: m_SortingLayerID
@@ -313,5 +317,10 @@ PrefabInstance:
 --- !u!4 &4732987992985038567 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5623053850019244980, guid: 4e5ef2b58b710c345843ad212e092233, type: 3}
+  m_PrefabInstance: {fileID: 1128127723076961619}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &6877075387216148022 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5825315473790366565, guid: 4e5ef2b58b710c345843ad212e092233, type: 3}
   m_PrefabInstance: {fileID: 1128127723076961619}
   m_PrefabAsset: {fileID: 0}
