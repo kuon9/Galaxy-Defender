@@ -7,6 +7,8 @@ public class UiController : MonoBehaviour
     public static UiController instance;
     [SerializeField] Slider energySlider;
     [SerializeField] TMP_Text energyText;
+    [SerializeField] Slider healthSlider;
+    [SerializeField] TMP_Text healthText;
      
     void Awake()
     {
@@ -25,4 +27,12 @@ public class UiController : MonoBehaviour
         energySlider.maxValue = max;
         energyText.text = energySlider.value + "/" + energySlider.maxValue;
     }
+
+    public void UpdateHealthSlider(float current, float max)
+    {
+        healthSlider.maxValue = max;
+        healthSlider.value = Mathf.RoundToInt(current);
+        healthText.text = healthSlider.value + "/" + healthSlider.maxValue;        
+    }
+
 }

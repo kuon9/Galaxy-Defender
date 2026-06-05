@@ -16,6 +16,13 @@ public class PlayerMovement : MonoBehaviour
     public float boost = 1f;
     public float boostPower = 5f;
 
+    [SerializeField] int health;
+    [SerializeField] int maxHealth;
+    [SerializeField] Material defaultMaterial;
+    [SerializeField] Material whiteMaterial;
+
+    FlashWhite flashWhite;
+    SpriteRenderer spriteRenderer;
 
     [SerializeField] ParticleSystem boostEffect;
     
@@ -35,8 +42,11 @@ public class PlayerMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        health = maxHealth;
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();    
+        anim = GetComponent<Animator>();
+        flashWhite = GetComponent<FlashWhite>();
+        spriteRenderer = GetComponent<SpriteRenderer>();    
     }
 
     // Update is called once per frame
@@ -56,6 +66,15 @@ public class PlayerMovement : MonoBehaviour
         {
             StopBoosting();
         }
+        if(Input.GetButtonDown("Fire1"))
+        {
+            Weapon.instance.Shoot();
+        }
+        if(Input.GetButtonDown("Fire3"))
+        {
+            Weapon.instance.ShootMissile();
+        }
+
     }
     void FixedUpdate()
     {
@@ -95,5 +114,18 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("Boosting", false);
         boost = 1f;
         boosting = false;
+    }
+
+    public void TakeDamage(int damage)
+    {
+        flashWhite.Flash();
+        health -= damage;
+        spriteRenderer.material = whiteMaterial;
+        UiController.instance.UpdateHealthSlider(health,maxHealth);
+        if(health <=0)
+        {
+            Destroy(gameObject);
+            boost = 0f;
+        }
     }
 }
