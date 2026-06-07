@@ -36,6 +36,7 @@ public class Enemy : MonoBehaviour
     public virtual void Start()
     {
         flashWhite = GetComponent<FlashWhite>();
+        destroyEffectPool = GameObject.Find("BoomPool").GetComponent<ObjectPooler>();
     }
 
    //virtual will always run first because its the parent class, then child class afterwards

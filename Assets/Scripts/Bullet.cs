@@ -34,7 +34,9 @@ public class Bullet : MonoBehaviour
         {
             // GetComponent of the actual gameobject name and not the tag or layer of it
             EnemyShip enemyship = col.gameObject.GetComponent<EnemyShip>();
+            Enemy enemy = col.gameObject.GetComponent<Enemy>();
             if(enemyship) enemyship.TakeDamage(weapon.stats[weapon.weaponLevel].damage);
+            if(enemy)enemy.TakeDamage(weapon.stats[weapon.weaponLevel].damage);
             gameObject.SetActive(false);
             Debug.Log("Enemy ship is taking damage");            
         }
