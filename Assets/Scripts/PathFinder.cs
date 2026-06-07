@@ -16,7 +16,9 @@ public class PathFinder : MonoBehaviour
     void Awake()
     {
         // looks for the script enemySpawner on whatever gameobject that its attached to
-        enemySpawner = FindObjectOfType<EnemySpawner>();
+        // this is obsolete
+        //enemySpawner = FindObjectOfType<EnemySpawner>();
+        enemySpawner = Object.FindFirstObjectByType<EnemySpawner>();
     }
 
     // Start is called before the first frame update

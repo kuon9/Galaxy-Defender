@@ -8,6 +8,7 @@ TagManager:
   - Bullet
   - Missile
   - Enemy
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - Bullet
   - Missile
   - Enemy
-  - 
+  - EnemyBullet
   - 
   - 
   - 
@@ -53,6 +54,9 @@ TagManager:
     locked: 0
   - name: Objects
     uniqueID: 1296468117
+    locked: 0
+  - name: Enemy
+    uniqueID: 3607737941
     locked: 0
   m_RenderingLayers:
   - Default

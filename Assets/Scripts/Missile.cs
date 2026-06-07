@@ -65,7 +65,9 @@ public class Missile : MonoBehaviour
         if(col.gameObject.CompareTag("Obstacles"))
         {
             Asteroid asteroid = col.gameObject.GetComponent<Asteroid>();
+            Meteor meteor = col.gameObject.GetComponent<Meteor>();
             if(asteroid) asteroid.TakeDamage(missileDamage);
+            if(meteor) meteor.TakeDamage(missileDamage);
             gameObject.SetActive(false); 
         }
     }
