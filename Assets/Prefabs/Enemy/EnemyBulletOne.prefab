@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4216746329514050037}
   - component: {fileID: 501293143641944300}
   - component: {fileID: 6207977379793471505}
+  - component: {fileID: 1063642646725405760}
   m_Layer: 12
   m_Name: EnemyBulletOne
   m_TagString: EnemyBullet
@@ -139,3 +140,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 5
   dmg: 1
+--- !u!95 &1063642646725405760
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3600466092121803907}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e05d723af4cbc464b804088e0a7ed18d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

@@ -20,6 +20,8 @@ public class EnemyShip : MonoBehaviour
 
     [SerializeField] private int lives;
     [SerializeField] private int maxLives;
+    private float timeBeforeShooting = 1.5f;  
+    private bool canShoot;
 
     
     // void OnEnable()
@@ -33,13 +35,13 @@ public class EnemyShip : MonoBehaviour
     {
         // moving this to OnEnable or Awake solved the shooting bug.
         // putting this under Update made enemy shoot nonstop
-        shootInterval = Random.Range(1f,2f);         
+        shootInterval = Random.Range(1.5f,2f);         
     }
 
 
     void Start()
     {
-        projectilePool = GameObject.Find("EnemyBulletPool").GetComponent<ObjectPooler>();
+        projectilePool = GameObject.Find("EnemyBulletTwoPool").GetComponent<ObjectPooler>();
         destroyEffectPool = GameObject.Find("BoomPool").GetComponent<ObjectPooler>();
         flashWhite = GetComponent<FlashWhite>();
         lives = maxLives;
@@ -48,8 +50,17 @@ public class EnemyShip : MonoBehaviour
 
     void Update()
     {
+        timeBeforeShooting -= Time.deltaTime;
+        if(timeBeforeShooting <= 0)
+        {
+            canShoot = true;    
+        }
+        else
+        {
+            canShoot = false;
+        }
         shootTimer -= Time.deltaTime;
-        if(shootTimer <= 0)
+        if(shootTimer <= 0 && canShoot == true)
         {
             shootTimer += shootInterval;
             Shoot();

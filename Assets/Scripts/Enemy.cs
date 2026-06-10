@@ -43,9 +43,9 @@ public class Enemy : MonoBehaviour
    public virtual void Update()
     {
         transform.position += new Vector3(speedX * Time.deltaTime, speedY * Time.deltaTime);
-        if(transform.position.x < -11)
+        if(transform.position.x < -4)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }    
     }
 
