@@ -8,6 +8,7 @@ public class Boss : Enemy
     private float moveSpeed;
     private float shootTimer;
     private float shootInterval;
+    private ObjectPooler projectileEnemyPool;
     private ObjectPooler projectilePool;
     private float timeBeforeShooting = 2f;
     private bool canShoot;
@@ -29,7 +30,8 @@ public class Boss : Enemy
     {
         base.Start();
         //destroyEffectPool = GameObject.Find("BoomPool").GetComponent<ObjectPooler>();
-        projectilePool = GameObject.Find("FloatingHeadEnemyPool").GetComponent<ObjectPooler>(); 
+        projectileEnemyPool = GameObject.Find("FloatingHeadEnemyPool").GetComponent<ObjectPooler>();
+        projectilePool = GameObject.Find("BossBulletPool").GetComponent<ObjectPooler>();  
     }
 
 
@@ -65,25 +67,51 @@ public class Boss : Enemy
         if(shootTimer <=  0 && canShoot == true)
         {
             shootTimer += shootInterval;
-            Shoot();
+            ChooseRandomAttack();
+            shootTimer = 2f;
+            //Shoot();
         }    
     }
+    
+    void ChooseRandomAttack()
+    {
+        int randomAttack = Random.Range(0,2);
+        if(randomAttack == 0)
+        {
+            SpawnEnemy();
+        }
+        else
+        {
+            Shoot();
+        }
+    }
+    
+    private void SpawnEnemy()
+    {
+        GameObject projectileEnemy = projectileEnemyPool.GetPooledObject();
+        projectileEnemy.transform.position = projectileSpawn.position;
+        projectileEnemy.transform.rotation = projectileSpawn.rotation;
+        projectileEnemy.SetActive(true);
+        //anim.SetBool("shooting", true);
+        //AudioManager.instance.PlaySound(AudioManager.instance.squidShoot);
+        //StartCoroutine(ResetShoot());          
+    }
+
     private void Shoot()
     {
         GameObject projectile = projectilePool.GetPooledObject();
         projectile.transform.position = projectileSpawn.position;
         projectile.transform.rotation = projectileSpawn.rotation;
         projectile.SetActive(true);
-        //anim.SetBool("shooting", true);
-        //AudioManager.instance.PlaySound(AudioManager.instance.squidShoot);
-        StartCoroutine(ResetShoot());            
-    }    
-    IEnumerator ResetShoot()
-    {
-        // waits one frame
-        yield return null;
-        //anim.SetBool("shooting", false); 
+        //StartCoroutine(ResetShoot());    
     }
+
+    // IEnumerator ResetShoot()
+    // {
+    //     // waits one frame
+    //     yield return null;
+    //     //anim.SetBool("shooting", false); 
+    // }
     public virtual void TakeDamage(int damage)
     {
         //AudioManager.instance.PlayModifiedSound(hitSound);
