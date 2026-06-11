@@ -105,6 +105,7 @@ public class EnemyShip : MonoBehaviour
             GameObject destroyEffect = destroyEffectPool.GetPooledObject();
             destroyEffect.transform.position = transform.position;
             destroyEffect.transform.rotation = transform.rotation;
+            GameManager.instance.enemyCounter++;
             destroyEffect.SetActive(true);
             gameObject.SetActive(false);
         }   

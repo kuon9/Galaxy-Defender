@@ -14,7 +14,7 @@ public class HeadEnemy : Enemy
     public override void OnEnable()
     {
         base.OnEnable();
-        moveSpeed = 6f;
+        moveSpeed = 4f;
         targetMoveSpeed = Random.Range(0.8f, 2f);
         transform.rotation = Quaternion.Euler(0,0,90);
  

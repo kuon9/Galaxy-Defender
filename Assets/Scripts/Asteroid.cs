@@ -42,7 +42,9 @@ public class Asteroid : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         // 4 different variation of sprites on spawn for asteroid.
         spriteRenderer.sprite = sprites[Random.Range(0, sprites.Length)];
+        // we're making a float that rngs between 0.6 and 1
         float randomScale = Random.Range(0.6f, 1f);  
+        // we make gameobject's size rng between 0.6 and 1 for both x and y
         transform.localScale = new Vector2(randomScale, randomScale);   
     }
 

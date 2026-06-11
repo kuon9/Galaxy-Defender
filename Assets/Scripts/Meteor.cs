@@ -43,8 +43,8 @@ public class Meteor : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         // 4 different variation of sprites on spawn for asteroid.
         spriteRenderer.sprite = sprites[Random.Range(0, sprites.Length)];
-        //float randomScale = Random.Range(0.6f, 1f);  
-        transform.localScale = new Vector3(2f, 2f,2f);   
+        float randomScale = Random.Range(1.8f, 2f);  
+        transform.localScale = new Vector2(randomScale, randomScale);   
     }
 
     public void OnCollisionEnter2D(Collision2D col)

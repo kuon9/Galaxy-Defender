@@ -75,6 +75,7 @@ public class Enemy : MonoBehaviour
             destroyEffect.SetActive(true);
             // UiController.instance.ModifyScore(scoreToGive);
             // Player.instance.GetExperience(experienceToGive);
+            GameManager.instance.enemyCounter++;
             gameObject.SetActive(false);
         }
     }

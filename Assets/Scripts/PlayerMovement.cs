@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private bool boosting;
     public float boost = 1f;
     public float boostPower = 5f;
+    private ObjectPooler playerBoomPool;
 
     [SerializeField] int health;
     [SerializeField] int maxHealth;
@@ -46,7 +47,8 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         flashWhite = GetComponent<FlashWhite>();
-        spriteRenderer = GetComponent<SpriteRenderer>();    
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        playerBoomPool = GameObject.Find("playerBoomPool").GetComponent<ObjectPooler>();    
     }
 
     // Update is called once per frame
@@ -102,7 +104,7 @@ public class PlayerMovement : MonoBehaviour
         if(energy > 10)
         {
             boostEffect.Play();
-            anim.SetBool("Boosting", true);
+            //anim.SetBool("Boosting", true);
             boost = boostPower;
             boosting = true;            
         }
@@ -111,7 +113,7 @@ public class PlayerMovement : MonoBehaviour
     void StopBoosting()
     {
          boostEffect.Stop();
-        anim.SetBool("Boosting", false);
+        //anim.SetBool("Boosting", false);
         boost = 1f;
         boosting = false;
     }
@@ -124,6 +126,10 @@ public class PlayerMovement : MonoBehaviour
         UiController.instance.UpdateHealthSlider(health,maxHealth);
         if(health <=0)
         {
+            GameObject playerBoom = playerBoomPool.GetPooledObject();
+            playerBoom.transform.position = transform.position;
+            playerBoom.transform.rotation = transform.rotation;
+            playerBoom.SetActive(true);
             Destroy(gameObject);
             boost = 0f;
         }
