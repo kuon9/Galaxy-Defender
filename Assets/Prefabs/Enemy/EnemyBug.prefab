@@ -167,6 +167,7 @@ MonoBehaviour:
   lives: 1
   maxLives: 5
   damage: 1
+  experienceToGive: 2
   sprites:
   - {fileID: -6820249328387856256, guid: b9e8874dc1e9d804292d1d4f56054fe7, type: 3}
   - {fileID: -3023535025924735832, guid: c29fd27d90cd9e24ca5a80d5fd9ab3c7, type: 3}

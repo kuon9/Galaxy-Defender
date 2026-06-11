@@ -9,7 +9,12 @@ public class UiController : MonoBehaviour
     [SerializeField] TMP_Text energyText;
     [SerializeField] Slider healthSlider;
     [SerializeField] TMP_Text healthText;
-     
+    [SerializeField] Slider experienceSlider;
+    [SerializeField] TMP_Text experienceText;
+
+    [SerializeField] public GameObject pausePanel;
+
+
     void Awake()
     {
         if(instance!= null)
@@ -33,6 +38,31 @@ public class UiController : MonoBehaviour
         healthSlider.maxValue = max;
         healthSlider.value = Mathf.RoundToInt(current);
         healthText.text = healthSlider.value + "/" + healthSlider.maxValue;        
+    }
+    public void UpdateExperienceSlider(float current, float max)
+    {
+        experienceSlider.maxValue = max;
+        experienceSlider.value = Mathf.RoundToInt(current);
+        experienceText.text = experienceSlider.value + "/" + experienceSlider.maxValue;
+    }
+    public void DeactivateUI()
+    {
+        energySlider.gameObject.SetActive(false);
+        energyText.gameObject.SetActive(false);
+        healthSlider.gameObject.SetActive(false);
+        healthText.gameObject.SetActive(false);
+        experienceSlider.gameObject.SetActive(false);
+        experienceText.gameObject.SetActive(false);
+    }
+
+    public void ActivateUI()
+    {
+        energySlider.gameObject.SetActive(true);
+        energyText.gameObject.SetActive(true);
+        healthSlider.gameObject.SetActive(true);
+        healthText.gameObject.SetActive(true);
+        experienceSlider.gameObject.SetActive(true);
+        experienceText.gameObject.SetActive(true);
     }
 
 }

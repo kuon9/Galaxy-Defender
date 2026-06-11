@@ -110,7 +110,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -687229355
-  m_SortingLayer: 2
+  m_SortingLayer: -3
   m_SortingOrder: 0
   m_Sprite: {fileID: 5489977385265109453, guid: 55a3f1b95190b8b4494d8280e9809daa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -136,8 +136,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 0
-  maxLives: 30
+  maxLives: 50
   damage: 5
+  experienceToGive: 10
   projectileSpawn: {fileID: 1729739936152154498}
 --- !u!114 &5475046095306861283
 MonoBehaviour:

@@ -1,4 +1,8 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using System.Collections;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -9,8 +13,15 @@ public class GameManager : MonoBehaviour
     private ObjectPooler BossPool;
     public int enemyCounter;
     public bool canSpawn;
-    
-    
+    public bool isTransitioning;
+
+    [SerializeField] string mainMenuScene;
+    [SerializeField] string currentLevelScene;
+     [SerializeField] string nextLevelScene;
+
+     [SerializeField] GameObject gameOverUI;
+     [SerializeField] GameObject levelCompletedUI;
+
      void Awake()
     {
         if(instance != null)
@@ -32,6 +43,15 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+    if(isTransitioning)
+        {
+            Fade.instance.FadeToClear();            
+        }
+    
+    if(Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
+        {
+            Pause();
+        }
     if(enemyCounter >= 30)
         {
             enemyCounter = 0;
@@ -41,5 +61,102 @@ public class GameManager : MonoBehaviour
             Boss.transform.rotation = Quaternion.Euler(0,0,-90);
             Boss.SetActive(true);
         }        
+    }
+    public void Pause()
+    {
+        // if the pausepanel is inactive in the hierarchy then setactive will be true
+        // when escape or p key is pressed
+        if(UiController.instance.pausePanel.activeSelf == false)
+        {
+            //AudioManager.instance.PlaySound(AudioManager.instance.pause);
+            UiController.instance.pausePanel.SetActive(true);
+            Time.timeScale = 0;
+            Cursor.visible = true; 
+
+        }
+        else
+        {
+            //AudioManager.instance.PlaySound(AudioManager.instance.unpause);
+            UiController.instance.pausePanel.SetActive(false);
+            Cursor.visible = false;
+            Time.timeScale = 1;
+            // makes player exit boost after unpausing
+            //Player.instance.NotBoosting();    
+        }
+    }
+    public void BackToMainMenu()
+    {
+        StartCoroutine(FadingToMainMenu());
+    }
+
+    IEnumerator FadingToMainMenu()
+    {
+        Time.timeScale = 1;
+        Fade.instance.FadeToBlack();
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(mainMenuScene);
+        Fade.instance.FadeToClear();
+        // UiController.instance.ResetScore();
+        // Player.instance.ResetPlayer();
+        UiController.instance.DeactivateUI();        
+    }
+    public void NextLevel()
+    {
+        // SceneManager.LoadScene(nextLevelScene);
+        // StartFadeToBlack();
+        StartCoroutine(FadingToNextLevel());
+    }
+
+  IEnumerator FadingToNextLevel()
+    {
+        Time.timeScale = 1;
+        Fade.instance.FadeToBlack();
+        yield return new WaitForSeconds(2f);
+        //UiController.instance.ActivateUI();
+        SceneManager.LoadScene(nextLevelScene);
+        Fade.instance.FadeToClear();
+        // Player.instance.StartTakingDamage();
+        levelCompletedUI.SetActive(false);
+    }    
+
+    public void Restart()
+    {
+        StartCoroutine(RestartingLevel());
+    }
+    
+    IEnumerator RestartingLevel()
+    {
+        Time.timeScale = 1;
+        Fade.instance.FadeToBlack();
+        //Player.instance.isAlive = true;  
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(currentLevelScene);
+        Fade.instance.FadeToClear();
+        // UiController.instance.ResetScore();
+        // Player.instance.ResetPlayer();
+        gameOverUI.SetActive(false);   
+    }
+    public void GameOver()
+    {
+        StartCoroutine(GameOverScreen());
+        // below is same function as above but more precise
+        //SceneManager.LoadScene("Game Over");
+
+    }
+    IEnumerator GameOverScreen()
+    {
+        yield return new WaitForSeconds(2f);
+        Time.timeScale = 0;
+        gameOverUI.SetActive(true);
+    }
+    public void Quit()
+    {
+        Fade.instance.FadeToBlack();
+        Application.Quit();
+    }
+   public void ActivateLevelCompletedUI()
+    {
+        Time.timeScale = 0;
+        levelCompletedUI.SetActive(true);
     }
 }

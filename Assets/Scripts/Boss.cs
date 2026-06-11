@@ -112,13 +112,15 @@ public class Boss : Enemy
     //     yield return null;
     //     //anim.SetBool("shooting", false); 
     // }
-    public virtual void TakeDamage(int damage)
+    // this overrides the inheritance method from enemy script
+    public override void TakeDamage(int damage)
     {
         //AudioManager.instance.PlayModifiedSound(hitSound);
         base.TakeDamage(damage);
         lives -= damage;
         if(lives <= 0 )
         {
+            GameManager.instance.ActivateLevelCompletedUI();
             //AudioManager.instance.PlayModifiedSound(destroySound);
             GameObject destroyEffect = destroyEffectPool.GetPooledObject();
             destroyEffect.transform.position = transform.position;

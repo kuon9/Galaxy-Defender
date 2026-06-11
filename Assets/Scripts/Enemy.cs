@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected int lives;
     [SerializeField] protected int maxLives;
     [SerializeField] protected int damage;
-    // [SerializeField] protected int experienceToGive;
+    [SerializeField] protected int experienceToGive;
     //[SerializeField] int scoreToGive;
     //ScoreKeeper scoreKeeper;
 
@@ -73,8 +73,7 @@ public class Enemy : MonoBehaviour
             destroyEffect.transform.position = transform.position;
             destroyEffect.transform.rotation = transform.rotation;
             destroyEffect.SetActive(true);
-            // UiController.instance.ModifyScore(scoreToGive);
-            // Player.instance.GetExperience(experienceToGive);
+            PlayerMovement.instance.GetExperience(experienceToGive);
             GameManager.instance.enemyCounter++;
             gameObject.SetActive(false);
         }

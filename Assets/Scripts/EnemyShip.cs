@@ -20,6 +20,7 @@ public class EnemyShip : MonoBehaviour
 
     [SerializeField] private int lives;
     [SerializeField] private int maxLives;
+    [SerializeField] int expToGive;
     private float timeBeforeShooting = 1.5f;  
     private bool canShoot;
 
@@ -108,6 +109,7 @@ public class EnemyShip : MonoBehaviour
             GameManager.instance.enemyCounter++;
             destroyEffect.SetActive(true);
             gameObject.SetActive(false);
+            PlayerMovement.instance.GetExperience(expToGive);
         }   
     }    
     void OnCollisionEnter2D(Collision2D col)

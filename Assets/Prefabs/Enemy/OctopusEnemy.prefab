@@ -79,7 +79,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -687229355
-  m_SortingLayer: 2
+  m_SortingLayer: -3
   m_SortingOrder: 0
   m_Sprite: {fileID: -5351674977975021647, guid: 5e693b13d55b00043b2ba0f4850e0fb0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -119,6 +119,7 @@ MonoBehaviour:
   lives: 0
   maxLives: 5
   damage: 1
+  experienceToGive: 2
   bulletSpawn: {fileID: 2224514399898345623}
   sprites:
   - {fileID: 1555983272652816570, guid: 282a81ef6a80e4c46900dda0d3962ba9, type: 3}
