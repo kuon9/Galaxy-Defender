@@ -10,6 +10,7 @@ public class Weapon : Weapons
     
     [SerializeField] private ObjectPooler bulletPool;
     [SerializeField] private ObjectPooler missilePool;
+    private AudioSource missileShoot;
 
     [SerializeField] Transform missleSpawn;
     private bool missileAvailable = true;
@@ -26,6 +27,11 @@ public class Weapon : Weapons
         {
             instance = this;
         }
+    }
+
+    void Start()
+    {
+        missileShoot = AudioManager.instance.missileShoot;
     }
 
     public void Shoot()
@@ -62,6 +68,9 @@ public class Weapon : Weapons
     }
     IEnumerator MissileCD()
     {
+        // putting audio source in here prevents me from spamming it whenever i press it
+        // sound only plays when missile is off CD
+        AudioManager.instance.PlayModifiedSound(missileShoot);
         yield return new WaitForSeconds(missileCD);
         missileAvailable = true;    
     }

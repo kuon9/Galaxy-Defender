@@ -136,9 +136,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 0
-  maxLives: 50
+  maxLives: 750
   damage: 5
   experienceToGive: 10
+  timerBeforeHpIncrease: 20
   projectileSpawn: {fileID: 1729739936152154498}
 --- !u!114 &5475046095306861283
 MonoBehaviour:

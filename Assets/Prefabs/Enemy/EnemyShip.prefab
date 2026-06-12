@@ -211,7 +211,7 @@ MonoBehaviour:
   bulletSpawn: {fileID: 8921132191036375846}
   lives: 1
   maxLives: 1
-  expToGive: 1
+  expToGive: 2
 --- !u!114 &834993119339540672
 MonoBehaviour:
   m_ObjectHideFlags: 0

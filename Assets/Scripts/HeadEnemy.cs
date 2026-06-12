@@ -25,7 +25,9 @@ public class HeadEnemy : Enemy
     {
         base.Start();
         spriteRenderer.sprite = sprites[Random.Range(0, sprites.Length)];
-        destroyEffectPool = GameObject.Find("BoomPool").GetComponent<ObjectPooler>();    
+        destroyEffectPool = GameObject.Find("BoomPool").GetComponent<ObjectPooler>();
+        hitSound = AudioManager.instance.hitImpact;
+        destroySound = AudioManager.instance.monsterDeath;       
     }
 
     // Update is called once per frame

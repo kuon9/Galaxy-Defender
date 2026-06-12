@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 0
-  maxLives: 5
+  maxLives: 4
   damage: 1
   experienceToGive: 2
   bulletSpawn: {fileID: 2224514399898345623}

@@ -128,9 +128,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 0
-  maxLives: 5
+  maxLives: 4
   damage: 1
-  experienceToGive: 2
+  experienceToGive: 3
   sprites:
   - {fileID: -7597429030567955610, guid: 60f6c2c736206264f9c032b010c8f55a, type: 3}
   - {fileID: 811387655086997900, guid: 42b6fe7e76ea03349909e64cd2027951, type: 3}

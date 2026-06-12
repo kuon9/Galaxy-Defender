@@ -34,11 +34,16 @@ public class Bullet : MonoBehaviour
         {
             // GetComponent of the actual gameobject name and not the tag or layer of it
             EnemyShip enemyship = col.gameObject.GetComponent<EnemyShip>();
+            EnemyBug enemyBug = col.gameObject.GetComponent<EnemyBug>();
             Enemy enemy = col.gameObject.GetComponent<Enemy>();
+            OctopusWave octopusWave = col.gameObject.GetComponent<OctopusWave>();
+            BugWave bugWave = col.gameObject.GetComponent<BugWave>();
             if(enemyship) enemyship.TakeDamage(weapon.stats[weapon.weaponLevel].damage);
             if(enemy)enemy.TakeDamage(weapon.stats[weapon.weaponLevel].damage);
-            gameObject.SetActive(false);
-            Debug.Log("Enemy ship is taking damage");            
+            if(octopusWave)octopusWave.TakeDamage(weapon.stats[weapon.weaponLevel].damage);
+            if(enemyBug)enemyBug.TakeDamage(weapon.stats[weapon.weaponLevel].damage);
+            if(bugWave)bugWave.TakeDamage(weapon.stats[weapon.weaponLevel].damage);
+            gameObject.SetActive(false);            
         }
     }
 }

@@ -11,9 +11,11 @@ public class Boss : Enemy
     private ObjectPooler projectileEnemyPool;
     private ObjectPooler projectilePool;
     private float timeBeforeShooting = 2f;
+    
     private bool canShoot;
     
     public Transform projectileSpawn;
+
 
 
     public override void OnEnable()
@@ -31,7 +33,9 @@ public class Boss : Enemy
         base.Start();
         //destroyEffectPool = GameObject.Find("BoomPool").GetComponent<ObjectPooler>();
         projectileEnemyPool = GameObject.Find("FloatingHeadEnemyPool").GetComponent<ObjectPooler>();
-        projectilePool = GameObject.Find("BossBulletPool").GetComponent<ObjectPooler>();  
+        projectilePool = GameObject.Find("BossBulletPool").GetComponent<ObjectPooler>();
+        hitSound = AudioManager.instance.hitImpact;
+        destroySound = AudioManager.instance.bossDeath;    
     }
 
 
@@ -120,8 +124,7 @@ public class Boss : Enemy
         lives -= damage;
         if(lives <= 0 )
         {
-            GameManager.instance.ActivateLevelCompletedUI();
-            //AudioManager.instance.PlayModifiedSound(destroySound);
+            AudioManager.instance.PlayModifiedSound(destroySound);
             GameObject destroyEffect = destroyEffectPool.GetPooledObject();
             destroyEffect.transform.position = transform.position;
             destroyEffect.transform.rotation = transform.rotation;
@@ -129,6 +132,7 @@ public class Boss : Enemy
             // UiController.instance.ModifyScore(scoreToGive);
             // Player.instance.GetExperience(experienceToGive);
             gameObject.SetActive(false);
+            GameManager.instance.ActivateLevelCompletedUI();
         }
     }
 }

@@ -21,8 +21,10 @@ public class EnemyShip : MonoBehaviour
     [SerializeField] private int lives;
     [SerializeField] private int maxLives;
     [SerializeField] int expToGive;
+    private AudioSource destroySound;
     private float timeBeforeShooting = 1.5f;  
     private bool canShoot;
+    [SerializeField] float timerBeforeHpIncrease = 10f;
 
     
     // void OnEnable()
@@ -46,11 +48,19 @@ public class EnemyShip : MonoBehaviour
         destroyEffectPool = GameObject.Find("BoomPool").GetComponent<ObjectPooler>();
         flashWhite = GetComponent<FlashWhite>();
         lives = maxLives;
+        destroySound = AudioManager.instance.shipExplosion;
     }     
 
 
     void Update()
     {
+        timerBeforeHpIncrease -= Time.deltaTime;
+        if(timerBeforeHpIncrease <= 0)
+        {
+            maxLives += 1;
+            maxLives = lives;
+            timerBeforeHpIncrease = 10f;        
+        }
         timeBeforeShooting -= Time.deltaTime;
         if(timeBeforeShooting <= 0)
         {
@@ -102,6 +112,7 @@ public class EnemyShip : MonoBehaviour
         }
         else
         {
+            AudioManager.instance.PlayModifiedSound(destroySound);
             flashWhite.Reset();
             GameObject destroyEffect = destroyEffectPool.GetPooledObject();
             destroyEffect.transform.position = transform.position;

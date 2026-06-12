@@ -18,6 +18,8 @@ public class Meteor : MonoBehaviour
 
     private ObjectPooler destroyEffectPool;
 
+    private AudioSource destroySound;
+
 
     float pushX;
     float pushY;
@@ -44,7 +46,8 @@ public class Meteor : MonoBehaviour
         // 4 different variation of sprites on spawn for asteroid.
         spriteRenderer.sprite = sprites[Random.Range(0, sprites.Length)];
         float randomScale = Random.Range(1.8f, 2f);  
-        transform.localScale = new Vector2(randomScale, randomScale);   
+        transform.localScale = new Vector2(randomScale, randomScale);
+        destroySound = AudioManager.instance.hitRock;   
     }
 
     public void OnCollisionEnter2D(Collision2D col)
@@ -69,6 +72,7 @@ public class Meteor : MonoBehaviour
         }
         else
         {
+            AudioManager.instance.PlayModifiedSound(destroySound);
             GameObject destroyEffect = destroyEffectPool.GetPooledObject();
             destroyEffect.transform.position = transform.position;
             destroyEffect.transform.rotation = transform.rotation;

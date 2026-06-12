@@ -28,8 +28,8 @@ public class EnemyBug : Enemy
         // enemy can spawn in any of the 4 sprites randomly 
         spriteRenderer.sprite = sprites[Random.Range(0, sprites.Length)];
         destroyEffectPool = GameObject.Find("BoomPool").GetComponent<ObjectPooler>();
-        // hitSound = AudioManager.instance.beetleHit;
-        // destroySound = AudioManager.instance.beetleDestroy;
+        hitSound = AudioManager.instance.hitImpact;
+        destroySound = AudioManager.instance.monsterDeath;
         speedX = Random.Range(-0.8f, -1.5f);
     }
     public override void Update()

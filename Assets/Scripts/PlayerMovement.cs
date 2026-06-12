@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float energy;
     [SerializeField] float maxEnergy;
     [SerializeField] float energyRegen;
-    private bool boosting;
+    public bool boosting;
     public float boost = 1f;
     public float boostPower = 5f;
     private ObjectPooler playerBoomPool;
@@ -36,7 +36,11 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] ParticleSystem boostEffect;
     public bool canMove;
-    
+    private AudioSource laserShoot;
+
+    private AudioSource deathSFX;
+
+    private AudioSource boostSound;
     
     void Awake()
     {
@@ -60,7 +64,9 @@ public class PlayerMovement : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         playerBoomPool = GameObject.Find("playerBoomPool").GetComponent<ObjectPooler>();
         experience = 0;
-        UiController.instance.UpdateExperienceSlider(experience, playerLevels[currentLevel]);    
+        UiController.instance.UpdateExperienceSlider(experience, playerLevels[currentLevel]);
+        deathSFX = AudioManager.instance.playerDeathExplosion;
+        laserShoot = AudioManager.instance.laserShoot;    
     }
 
     // Update is called once per frame
@@ -85,6 +91,7 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetButtonDown("Fire1"))
         {
             Weapon.instance.Shoot();
+            AudioManager.instance.PlayModifiedSound(laserShoot);
         }
         if(Input.GetButtonDown("Fire3"))
         {
@@ -112,7 +119,7 @@ public class PlayerMovement : MonoBehaviour
         }
         UiController.instance.UpdateEnergySlider(energy,maxEnergy);
     }
-    void Boosting()
+    public void Boosting()
     {
         // can only boost once energy full, this prevents us from spamming it as energy is regeneing
         if(energy > 10)
@@ -124,7 +131,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void StopBoosting()
+    public void StopBoosting()
     {
          boostEffect.Stop();
         //anim.SetBool("Boosting", false);
@@ -140,6 +147,7 @@ public class PlayerMovement : MonoBehaviour
         UiController.instance.UpdateHealthSlider(health,maxHealth);
         if(health <=0)
         {
+            AudioManager.instance.PlayModifiedSound(deathSFX);
             GameObject playerBoom = playerBoomPool.GetPooledObject();
             playerBoom.transform.position = transform.position;
             playerBoom.transform.rotation = transform.rotation;
@@ -172,7 +180,7 @@ public class PlayerMovement : MonoBehaviour
         health = maxHealth;
         UiController.instance.UpdateHealthSlider(health,maxHealth);
         // only level up weapon at these level breakpoints 
-        if(currentLevel is 4 or 8 or 12)
+        if(currentLevel is 3 or 6 or 8 or 10)
         {
             Weapon.instance.LevelUp();             
         }

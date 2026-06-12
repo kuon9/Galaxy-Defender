@@ -70,7 +70,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6207977379793471505, guid: 68f38367a43db7c4e95591290c0ecebb, type: 3}
       propertyPath: dmg
-      value: 3
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6207977379793471505, guid: 68f38367a43db7c4e95591290c0ecebb, type: 3}
+      propertyPath: bulletSpeed
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

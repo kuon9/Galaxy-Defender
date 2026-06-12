@@ -39,8 +39,8 @@ public override void OnEnable()
         //anim = GetComponent<Animator>();
         destroyEffectPool = GameObject.Find("BoomPool").GetComponent<ObjectPooler>();    
         projectilePool = GameObject.Find("EnemyBulletPool").GetComponent<ObjectPooler>();        
-        // hitSound = AudioManager.instance.squidHit2;
-        // destroySound = AudioManager.instance.squidDestroy2;        
+        hitSound = AudioManager.instance.hitImpact;
+        destroySound = AudioManager.instance.monsterDeath;        
     }
 
     public override void Update()

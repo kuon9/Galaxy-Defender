@@ -17,10 +17,13 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] string mainMenuScene;
     [SerializeField] string currentLevelScene;
-     [SerializeField] string nextLevelScene;
+    [SerializeField] string nextLevelScene;
 
-     [SerializeField] GameObject gameOverUI;
-     [SerializeField] GameObject levelCompletedUI;
+    [SerializeField] GameObject gameOverUI;
+    [SerializeField] GameObject levelCompletedUI;
+    
+    private AudioSource bossSpawn;
+    
 
      void Awake()
     {
@@ -39,6 +42,7 @@ public class GameManager : MonoBehaviour
     {
         BossPool = GameObject.Find("BossPool").GetComponent<ObjectPooler>();
         enemyCounter = 0;
+        bossSpawn = AudioManager.instance.bossSpawnMusic;
     }
 
     void Update()
@@ -52,10 +56,11 @@ public class GameManager : MonoBehaviour
         {
             Pause();
         }
-    if(enemyCounter >= 30)
+    if(enemyCounter >= 200)
         {
             enemyCounter = 0;
             GameObject Boss = BossPool.GetPooledObject();
+            AudioManager.instance.PlayModifiedSound(bossSpawn);
             // this is the transform where the boss will be spawned at
             Boss.transform.position = new Vector2(17f,0);
             Boss.transform.rotation = Quaternion.Euler(0,0,-90);

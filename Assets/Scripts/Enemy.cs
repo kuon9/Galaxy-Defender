@@ -7,8 +7,8 @@ public class Enemy : MonoBehaviour
      // this allows only sub class and inherited class to access this
     protected SpriteRenderer spriteRenderer;
     protected ObjectPooler destroyEffectPool;
-    // protected AudioSource hitSound;
-    // protected AudioSource destroySound;
+    protected AudioSource hitSound;
+    protected AudioSource destroySound;
 
     protected float speedX = 0;
     protected float speedY = 0;
@@ -17,6 +17,9 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected int maxLives;
     [SerializeField] protected int damage;
     [SerializeField] protected int experienceToGive;
+    [SerializeField] float timerBeforeHpIncrease = 10f;
+
+
     //[SerializeField] int scoreToGive;
     //ScoreKeeper scoreKeeper;
 
@@ -47,8 +50,16 @@ public class Enemy : MonoBehaviour
         {
             gameObject.SetActive(false);
         }    
+        
+        // every 10 secs, we increase max lives of enemy by 1 hp
+        timerBeforeHpIncrease -= Time.deltaTime;
+        if(timerBeforeHpIncrease <= 0)
+        {
+            maxLives += 1;
+            maxLives = lives;
+            timerBeforeHpIncrease = 10f;           
+        }
     }
-
     public virtual void OnCollisionEnter2D(Collision2D col)
     {
         if(col.gameObject.CompareTag("Player"))
@@ -59,7 +70,7 @@ public class Enemy : MonoBehaviour
     }
     public virtual void TakeDamage(int damage)
     {
-        //AudioManager.instance.PlayModifiedSound(hitSound);
+        AudioManager.instance.PlayModifiedSound(hitSound);
         lives -= damage;
         if(lives > 0 )
         {
@@ -67,7 +78,7 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            //AudioManager.instance.PlayModifiedSound(destroySound);
+            AudioManager.instance.PlayModifiedSound(destroySound);
             flashWhite.Reset();
             GameObject destroyEffect = destroyEffectPool.GetPooledObject();
             destroyEffect.transform.position = transform.position;
