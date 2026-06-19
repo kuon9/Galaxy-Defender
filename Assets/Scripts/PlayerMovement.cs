@@ -19,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
     public bool boosting;
     public float boost = 1f;
     public float boostPower = 5f;
+    public float fireRate = 3f;
+    private float nextFireTime = 0.0f;
     private ObjectPooler playerBoomPool;
 
     [SerializeField] int health;
@@ -29,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] int currentLevel;
     [SerializeField] int maxLevel;
     [SerializeField] List<int> playerLevels;
+
 
 
     FlashWhite flashWhite;
@@ -88,9 +91,10 @@ public class PlayerMovement : MonoBehaviour
         {
             StopBoosting();
         }
-        if(Input.GetButtonDown("Fire1"))
+        if(Input.GetButtonDown("Fire1") || Input.GetButton("Fire1") && Time.time >= nextFireTime)
         {
             Weapon.instance.Shoot();
+            nextFireTime = Time.time + fireRate;
             AudioManager.instance.PlayModifiedSound(laserShoot);
         }
         if(Input.GetButtonDown("Fire3"))
