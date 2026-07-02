@@ -8,6 +8,8 @@ public class RotateAround : MonoBehaviour
     public Transform player;
     [SerializeField] float rotatingTimer = 10f;
 
+    PowerUpTracker powerUpTracker;
+
 
     //PowerUps powerUps;
     
@@ -16,40 +18,51 @@ public class RotateAround : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //gameObject.SetActive(false);    
+        //gameObject.SetActive(false);
+        //powerUpTracker = GetComponent<PowerUpTracker>();
+        // GetComponentInParent is used if the component is not on this gameobject
+        // instead it searches for the script as it goes up the hiearchy aka the parent of thi gameobject
+        powerUpTracker = GetComponentInParent<PowerUpTracker>();    
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if(!PowerUps.isRotating) {return;}
-        //this.gameObject.SetActive(true);
-        if(rotatingTimer >= 0)
+        RotatingPowerUp();
+    }
+
+
+    public void RotatingPowerUp()
+    {
+        if(!powerUpTracker.isRotating) {return;}
         {
-            Rotate();
-            rotatingTimer -= Time.deltaTime;
-        }
-        else
-        {
-            StopRotate();    
+            if(rotatingTimer >= 0)
+            {
+                Rotate();
+                rotatingTimer -= Time.deltaTime;
+            }
+            else
+            {
+                StopRotate();
+            }
         }    
     }
-    public void Rotate()
+
+    void Rotate()
     {
         for(int i = 0; i < orbs.Length; i++)
         {
             orbs[i].SetActive(true);
             transform.RotateAround(player.position, -Vector3.forward, rotationSpeed * Time.deltaTime);    
-        }
+        }        
     }
-    public void StopRotate()
+    void StopRotate()
     {
-        for(int i = 0; i < orbs.Length; i++)
+       for(int i = 0; i < orbs.Length; i++)
         {
             orbs[i].SetActive(false);
-            PowerUps.isRotating = false;
+            powerUpTracker.isRotating = false;
             rotatingTimer = 10f;
-
-        }
+        }            
     }
+
 }

@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
     private Vector2  playerDirection;
+    [Header("Player's Attributes")]
+    // SerializeField doesn't allow other scripts to access this variable due to protection level
     [SerializeField] float moveSpeed;
     [SerializeField] float energy;
     [SerializeField] float maxEnergy;
@@ -28,10 +30,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Material defaultMaterial;
     [SerializeField] Material whiteMaterial;
     [SerializeField] int experience;
-    [SerializeField] int currentLevel;
+    public int currentLevel;
     [SerializeField] int maxLevel;
     [SerializeField] List<int> playerLevels;
-
 
 
     FlashWhite flashWhite;
@@ -44,6 +45,8 @@ public class PlayerMovement : MonoBehaviour
     private AudioSource deathSFX;
 
     private AudioSource boostSound;
+
+    PowerUpTracker powerUpTracker;
     
     void Awake()
     {
@@ -69,7 +72,8 @@ public class PlayerMovement : MonoBehaviour
         experience = 0;
         UiController.instance.UpdateExperienceSlider(experience, playerLevels[currentLevel]);
         deathSFX = AudioManager.instance.playerDeathExplosion;
-        laserShoot = AudioManager.instance.laserShoot;    
+        laserShoot = AudioManager.instance.laserShoot;
+        powerUpTracker = GetComponent<PowerUpTracker>();    
     }
 
     // Update is called once per frame
@@ -77,6 +81,7 @@ public class PlayerMovement : MonoBehaviour
     {
         // if player can't move then don't execute the code below
         if(!canMove) {return;}
+        //RotatingPowerUp();
         float directionX = Input.GetAxisRaw("Horizontal");
         float directionY = Input.GetAxisRaw("Vertical");
         anim.SetFloat("moveX", directionX);
@@ -135,6 +140,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+
     public void StopBoosting()
     {
          boostEffect.Stop();
@@ -142,6 +148,42 @@ public class PlayerMovement : MonoBehaviour
         boost = 1f;
         boosting = false;
     }
+
+    // public void RotatingPowerUp()
+    // {
+    //     if(!powerUpTracker.isRotating) {return;}
+    //     {
+    //         if(rotatingTimer >= 0)
+    //         {
+    //             Rotate();
+    //             rotatingTimer -= Time.deltaTime;
+    //         }
+    //         else
+    //         {
+    //             StopRotate();
+    //         }
+    //     }    
+    // }
+
+    // void Rotate()
+    // {
+    //     for(int i = 0; i < orbs.Length; i++)
+    //     {
+    //         orbs[i].SetActive(true);
+    //         transform.RotateAround(player.position, -Vector3.forward, rotationSpeed * Time.deltaTime);    
+    //     }        
+    // }
+
+    // void StopRotate()
+    // {
+    //    for(int i = 0; i < orbs.Length; i++)
+    //     {
+    //         orbs[i].SetActive(false);
+    //         powerUpTracker.isRotating = false;
+    //         rotatingTimer = 10f;
+    //     }            
+    // }
+
 
     public void TakeDamage(int damage)
     {

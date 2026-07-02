@@ -4937,6 +4937,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08a05234583f3a840a0b3a4ff82e9427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unlockRotating: 1
+  unlockshootingPowerUp: 0
 --- !u!70 &5266250194636330643
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
