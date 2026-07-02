@@ -29,8 +29,7 @@ public class RotateAround : MonoBehaviour
     {
         RotatingPowerUp();
     }
-
-
+    
     public void RotatingPowerUp()
     {
         if(!powerUpTracker.isRotating) {return;}

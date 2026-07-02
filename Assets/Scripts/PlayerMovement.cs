@@ -106,7 +106,6 @@ public class PlayerMovement : MonoBehaviour
         {
             Weapon.instance.ShootMissile();
         }
-
     }
     void FixedUpdate()
     {
@@ -236,4 +235,7 @@ public class PlayerMovement : MonoBehaviour
         //     Weapon.instance.LevelUp();             
         // }
     }
+
+    
+
 }
