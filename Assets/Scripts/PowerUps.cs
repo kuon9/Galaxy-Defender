@@ -5,10 +5,14 @@ public class PowerUps : MonoBehaviour
 
     //public static bool isRotating, shootingPowerUp;
     [SerializeField] bool unlockRotating, unlockshootingPowerUp;
+    
+    ShootingPowerUp shootingPowerUp;
+    
 
     public void Start()
     {
-        //isRotating = false;    
+        //isRotating = false; 
+        shootingPowerUp = Object.FindAnyObjectByType<ShootingPowerUp>();  
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -28,6 +32,7 @@ public class PowerUps : MonoBehaviour
             if(unlockshootingPowerUp)
             {
                 player.isShooting = true;
+                shootingPowerUp.ShootingForm();
             }
             // makes gameobject setactive false after people touches it
             gameObject.SetActive(false);  

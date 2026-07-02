@@ -20,25 +20,21 @@ public class ShootingPowerUp : MonoBehaviour
         powerUpTracker = GetComponentInParent<PowerUpTracker>();   
         weapons = GetComponentInParent<Weapons>();      
     }
-    // Update is called once per frame
-    void Update()
+
+    public void ShootingForm()
     {
-        if(powerUpTracker.isShooting)
-        {
-            regularMode.SetActive(false);
-            shootingMode.SetActive(true);
-            StartCoroutine(Shoot());               
-        }   
-    }
-    IEnumerator Shoot()
-    {
+        regularMode.SetActive(false);
+        shootingMode.SetActive(true);     
         // stores the variable before powering up
         originalLevel = Weapon.instance.weaponLevel;
-
         //weapon level then becomes boosted level;
         Weapon.instance.weaponLevel = boostedLevel;
         Debug.Log("SHOOTING POWER UP PEW PEW");
+        StartCoroutine(Shoot());   
+    }
 
+    IEnumerator Shoot()
+    {
         // we'll be in this shooting state for 20 seconds
         yield return new WaitForSeconds(shootingTimer);
         Debug.Log("Returning to original level before Shooting PowerUp");
