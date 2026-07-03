@@ -54,8 +54,8 @@ public class Meteor : MonoBehaviour
     {
         if(col.gameObject.CompareTag("Player"))
         {
-            PlayerMovement playerMovement = col.gameObject.GetComponent<PlayerMovement>();
-            if(playerMovement)playerMovement.TakeDamage(dmg);
+            PlayerMovement player = col.gameObject.GetComponent<PlayerMovement>();
+            if(player)player.TakeDamage(dmg);
             // this to test if asteroid flashes when taking damage froma player
         }
     }

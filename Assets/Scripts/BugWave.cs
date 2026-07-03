@@ -64,7 +64,7 @@ public class BugWave : MonoBehaviour
             destroyEffect.transform.rotation = transform.rotation;
             destroyEffect.SetActive(true);
             gameObject.SetActive(false);
-            PlayerMovement playerMovement = col.gameObject.GetComponent<PlayerMovement>();
+            PlayerHealth playerHealth = col.gameObject.GetComponent<PlayerHealth>();
             Debug.Log("Taking Damage");
             PlayerMovement.instance.TakeDamage(dmg);
             gameObject.SetActive(false);    

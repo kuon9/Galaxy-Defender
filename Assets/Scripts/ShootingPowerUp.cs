@@ -6,8 +6,10 @@ public class ShootingPowerUp : MonoBehaviour
     PowerUpTracker powerUpTracker;
 
     [SerializeField] float shootingTimer = 20f;
-    [SerializeField] GameObject regularMode;
-    [SerializeField] GameObject shootingMode;
+    // [SerializeField] GameObject regularMode;
+    // [SerializeField] GameObject shootingMode;
+    public SpriteRenderer regularModeSpriteRenderer;
+    public SpriteRenderer shootingFormSpriteRenderer;
     [SerializeField] int boostedLevel;
     [SerializeField] int originalLevel;
     private int storeLevel;
@@ -21,10 +23,20 @@ public class ShootingPowerUp : MonoBehaviour
         weapons = GetComponentInParent<Weapons>();      
     }
 
+    // we made the shooting form a function instead of IEnumerator.
+    // we also removed weapon.instance.level from update because it was being updated each frame.
+    // this made that our original level that was storing previous left before powering up
+    // the same as weapon.instance.level, preventing us from returning to level before powering up.
+    // void Update()
+    // {
+        
+    // }
     public void ShootingForm()
     {
-        regularMode.SetActive(false);
-        shootingMode.SetActive(true);     
+        //regularMode.SetActive(false);
+        regularModeSpriteRenderer.enabled = false;
+        shootingFormSpriteRenderer.enabled = true;
+        //shootingMode.SetActive(true);     
         // stores the variable before powering up
         originalLevel = Weapon.instance.weaponLevel;
         //weapon level then becomes boosted level;
@@ -41,8 +53,10 @@ public class ShootingPowerUp : MonoBehaviour
 
         // revert back to the level before touching the shooting powerups
         Weapon.instance.weaponLevel = originalLevel;
-        regularMode.SetActive(true);
-        shootingMode.SetActive(false);
+        //regularMode.SetActive(true);
+        regularModeSpriteRenderer.enabled = true;
+        //shootingMode.SetActive(false);
+        shootingFormSpriteRenderer.enabled = false;
         powerUpTracker.isShooting = false;   
     }
 // make IEnumerator that checks for player's level every few frames.

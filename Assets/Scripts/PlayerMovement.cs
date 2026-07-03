@@ -18,11 +18,18 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float energy;
     [SerializeField] float maxEnergy;
     [SerializeField] float energyRegen;
+    //[SerializeField] GameObject regularMode, shootingMode;
+    //[SerializeField] private GameObject RegularForm, ShootingForm; 
+
+    [SerializeField] private FlashWhite [] playerForms;
+
     public bool boosting;
     public float boost = 1f;
     public float boostPower = 5f;
     public float fireRate = 3f;
     private float nextFireTime = 0.0f;
+
+    public bool isRegularMode;
     private ObjectPooler playerBoomPool;
 
     [SerializeField] int health;
@@ -35,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] List<int> playerLevels;
 
 
-    FlashWhite flashWhite;
+    //FlashWhite flashWhite;
     SpriteRenderer spriteRenderer;
 
     [SerializeField] ParticleSystem boostEffect;
@@ -63,17 +70,20 @@ public class PlayerMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        isRegularMode = true;
         health = maxHealth;
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        flashWhite = GetComponent<FlashWhite>();
+        //flashWhite = GetComponent<FlashWhite>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         playerBoomPool = GameObject.Find("playerBoomPool").GetComponent<ObjectPooler>();
         experience = 0;
         UiController.instance.UpdateExperienceSlider(experience, playerLevels[currentLevel]);
         deathSFX = AudioManager.instance.playerDeathExplosion;
         laserShoot = AudioManager.instance.laserShoot;
-        powerUpTracker = GetComponent<PowerUpTracker>();    
+        powerUpTracker = GetComponent<PowerUpTracker>();
+        // gets all instances of FlashWhite scripts on this object and its child
+        playerForms = GetComponentsInChildren<FlashWhite>();
     }
 
     // Update is called once per frame
@@ -84,8 +94,8 @@ public class PlayerMovement : MonoBehaviour
         //RotatingPowerUp();
         float directionX = Input.GetAxisRaw("Horizontal");
         float directionY = Input.GetAxisRaw("Vertical");
-        anim.SetFloat("moveX", directionX);
-        anim.SetFloat("moveY", directionY);
+        // anim.SetFloat("moveX", directionX);
+        // anim.SetFloat("moveY", directionY);
         playerDirection = new Vector2(directionX, directionY).normalized;
 
         if(Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Fire2"))
@@ -186,10 +196,12 @@ public class PlayerMovement : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        flashWhite.Flash();
-        health -= damage;
-        spriteRenderer.material = whiteMaterial;
-        UiController.instance.UpdateHealthSlider(health,maxHealth);
+        foreach (FlashWhite form in playerForms)
+        {
+            form.Flash();
+            health -= damage;
+            spriteRenderer.material = whiteMaterial;
+            UiController.instance.UpdateHealthSlider(health,maxHealth);            
         if(health <=0)
         {
             AudioManager.instance.PlayModifiedSound(deathSFX);
@@ -200,7 +212,8 @@ public class PlayerMovement : MonoBehaviour
             Destroy(gameObject);
             boost = 0f;
             GameManager.instance.GameOver();
-        }
+        }                
+        } 
     }
     public void GetExperience(int exp)
     {
@@ -235,7 +248,4 @@ public class PlayerMovement : MonoBehaviour
         //     Weapon.instance.LevelUp();             
         // }
     }
-
-    
-
 }
