@@ -23,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private FlashWhite [] playerForms;
 
+    [SerializeField] GameObject droneOne,droneTwo;
+
     public bool boosting;
     public float boost = 1f;
     public float boostPower = 5f;
@@ -92,6 +94,7 @@ public class PlayerMovement : MonoBehaviour
         // if player can't move then don't execute the code below
         if(!canMove) {return;}
         //RotatingPowerUp();
+        ActivateDroids();
         float directionX = Input.GetAxisRaw("Horizontal");
         float directionY = Input.GetAxisRaw("Vertical");
         // anim.SetFloat("moveX", directionX);
@@ -202,17 +205,17 @@ public class PlayerMovement : MonoBehaviour
             health -= damage;
             spriteRenderer.material = whiteMaterial;
             UiController.instance.UpdateHealthSlider(health,maxHealth);            
-        if(health <=0)
-        {
-            AudioManager.instance.PlayModifiedSound(deathSFX);
-            GameObject playerBoom = playerBoomPool.GetPooledObject();
-            playerBoom.transform.position = transform.position;
-            playerBoom.transform.rotation = transform.rotation;
-            playerBoom.SetActive(true);
-            Destroy(gameObject);
-            boost = 0f;
-            GameManager.instance.GameOver();
-        }                
+            if(health <=0)
+            {
+                AudioManager.instance.PlayModifiedSound(deathSFX);
+                GameObject playerBoom = playerBoomPool.GetPooledObject();
+                playerBoom.transform.position = transform.position;
+                playerBoom.transform.rotation = transform.rotation;
+                playerBoom.SetActive(true);
+                Destroy(gameObject);
+                boost = 0f;
+                GameManager.instance.GameOver();
+            }                
         } 
     }
     public void GetExperience(int exp)
@@ -247,5 +250,19 @@ public class PlayerMovement : MonoBehaviour
         // {
         //     Weapon.instance.LevelUp();             
         // }
+    }
+
+    public void ActivateDroids()
+    {
+        if(currentLevel == 3)
+        {
+            droneOne.SetActive(true);
+            droneTwo.SetActive(true);
+        }
+        else
+        {
+            droneOne.SetActive(false);
+            droneTwo.SetActive(false);            
+        }
     }
 }
