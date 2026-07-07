@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected int lives;
     [SerializeField] protected int maxLives;
     [SerializeField] protected int damage;
+    [SerializeField] protected int livesMultipler = 2;
     [SerializeField] protected int experienceToGive;
     [SerializeField] float timerBeforeHpIncrease = 10f;
 
@@ -59,6 +60,9 @@ public class Enemy : MonoBehaviour
             maxLives = lives;
             timerBeforeHpIncrease = 10f;           
         }
+    
+       //HpScaling();
+    
     }
     public virtual void OnCollisionEnter2D(Collision2D col)
     {
@@ -86,7 +90,14 @@ public class Enemy : MonoBehaviour
             destroyEffect.SetActive(true);
             PlayerMovement.instance.GetExperience(experienceToGive);
             GameManager.instance.enemyCounter++;
+            ScreenClear.instance.nukeEnergy ++;
             gameObject.SetActive(false);
         }
     }
+
+    // public virtual void HpScaling()
+    // {
+    //     maxLives = playerMovement.instance.currentLevel * livesMultipler;
+    //     lives = maxLives;        
+    // }
 }

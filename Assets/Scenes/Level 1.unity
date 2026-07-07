@@ -1718,6 +1718,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3817109926931131717, guid: e5c185fe9634f1244bdd83ecd4a6a0fb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 193435784}
+    - targetCorrespondingSourceObject: {fileID: 3817109926931131717, guid: e5c185fe9634f1244bdd83ecd4a6a0fb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 193435791}
   m_SourcePrefab: {fileID: 100100000, guid: e5c185fe9634f1244bdd83ecd4a6a0fb, type: 3}
 --- !u!1 &193435768 stripped
 GameObject:
@@ -1755,6 +1758,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 909a57a2a1a51bb418e320580d66b823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &193435791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193435768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51a49d9517bd994419c109e92c50c4af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nukeEnergy: 0
+  nukeMaxEnergy: 0
+  nukeDamage: 100
+  nukeRange: 20
 --- !u!1 &206048464
 GameObject:
   m_ObjectHideFlags: 0
@@ -2035,6 +2054,8 @@ MonoBehaviour:
   healthText: {fileID: 870556298}
   experienceSlider: {fileID: 384298434}
   experienceText: {fileID: 1253456704}
+  nukeSlider: {fileID: 0}
+  nukeText: {fileID: 0}
   pausePanel: {fileID: 1698593891}
 --- !u!1 &278178110
 GameObject:
