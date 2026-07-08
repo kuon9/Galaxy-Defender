@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 0
-  maxLives: 2
+  maxLives: 5
   expToGive: 2
 --- !u!114 &-8819139911857052503
 MonoBehaviour:

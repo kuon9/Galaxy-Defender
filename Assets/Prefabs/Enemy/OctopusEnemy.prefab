@@ -117,9 +117,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 0
-  maxLives: 4
+  maxLives: 5
   damage: 1
+  livesMultipler: 2
   experienceToGive: 2
+  timerBeforeHpIncrease: 10
   bulletSpawn: {fileID: 2224514399898345623}
   sprites:
   - {fileID: 1555983272652816570, guid: 282a81ef6a80e4c46900dda0d3962ba9, type: 3}

@@ -43,11 +43,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] int maxLevel;
     [SerializeField] List<int> playerLevels;
 
-
     //FlashWhite flashWhite;
     SpriteRenderer spriteRenderer;
 
     [SerializeField] ParticleSystem boostEffect;
+
+    [SerializeField] ParticleSystem redboostEffect;
     public bool canMove;
     private AudioSource laserShoot;
 
@@ -101,9 +102,13 @@ public class PlayerMovement : MonoBehaviour
         // anim.SetFloat("moveY", directionY);
         playerDirection = new Vector2(directionX, directionY).normalized;
 
-        if(Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Fire2"))
+        if(Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Fire2") && !powerUpTracker.isShooting)
         {
             Boosting();
+        }
+        if(Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Fire2") && powerUpTracker.isShooting)
+        {
+            RedBoosting();
         }
         else if(Input.GetKeyUp(KeyCode.Space) || Input.GetButtonUp("Fire2"))
         {
@@ -152,50 +157,26 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void RedBoosting()
+    {
+        // can only boost once energy full, this prevents us from spamming it as energy is regeneing
+        if(energy > 10)
+        {
+            redboostEffect.Play();
+            //anim.SetBool("Boosting", true);
+            boost = boostPower;
+            boosting = true;            
+        }
+    }
 
     public void StopBoosting()
     {
-         boostEffect.Stop();
+        boostEffect.Stop();
+        redboostEffect.Stop();
         //anim.SetBool("Boosting", false);
         boost = 1f;
         boosting = false;
     }
-
-    // public void RotatingPowerUp()
-    // {
-    //     if(!powerUpTracker.isRotating) {return;}
-    //     {
-    //         if(rotatingTimer >= 0)
-    //         {
-    //             Rotate();
-    //             rotatingTimer -= Time.deltaTime;
-    //         }
-    //         else
-    //         {
-    //             StopRotate();
-    //         }
-    //     }    
-    // }
-
-    // void Rotate()
-    // {
-    //     for(int i = 0; i < orbs.Length; i++)
-    //     {
-    //         orbs[i].SetActive(true);
-    //         transform.RotateAround(player.position, -Vector3.forward, rotationSpeed * Time.deltaTime);    
-    //     }        
-    // }
-
-    // void StopRotate()
-    // {
-    //    for(int i = 0; i < orbs.Length; i++)
-    //     {
-    //         orbs[i].SetActive(false);
-    //         powerUpTracker.isRotating = false;
-    //         rotatingTimer = 10f;
-    //     }            
-    // }
-
 
     public void TakeDamage(int damage)
     {

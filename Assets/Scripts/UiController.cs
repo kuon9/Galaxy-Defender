@@ -12,7 +12,7 @@ public class UiController : MonoBehaviour
     [SerializeField] Slider experienceSlider;
     [SerializeField] TMP_Text experienceText;
     [SerializeField] Slider nukeSlider;
-    [SerializeField] TMP_Text nukeText;
+    public TMP_Text nukeText;
 
     [SerializeField] public GameObject pausePanel;
 
@@ -52,7 +52,7 @@ public class UiController : MonoBehaviour
     {
         nukeSlider.maxValue = max;
         nukeSlider.value = Mathf.RoundToInt(current);
-        nukeText.text = nukeSlider.value + "/" + nukeSlider.maxValue;        
+        //nukeText.text = nukeSlider.value + "/" + nukeSlider.maxValue;        
     }
     public void DeactivateUI()
     {

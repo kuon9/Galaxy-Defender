@@ -137,8 +137,9 @@ MonoBehaviour:
   - {fileID: 8237526143791864736, guid: 4d8d039f73a98c440ba6e40a3d7616e4, type: 3}
   - {fileID: -1203208193351828577, guid: efd31b508a740ba48bc0c6b4810b9975, type: 3}
   lives: 0
-  maxLives: 4
+  maxLives: 5
   expToGive: 2
+  timerBeforeHpIncrease: 10
 --- !u!4 &5477888924785909580 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2224514399898345623, guid: 4d6f0d8eb79bf574da1bf25888e76e96, type: 3}

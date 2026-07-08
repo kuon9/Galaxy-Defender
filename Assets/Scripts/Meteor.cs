@@ -60,7 +60,7 @@ public class Meteor : MonoBehaviour
         }
     }
     
-    
+
     public void TakeDamage(int damage)
     {
         Debug.Log("Meteor taking damage");
