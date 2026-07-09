@@ -14,9 +14,10 @@ public class EnemyBug : Enemy
         // enemy sprite looks at player when spawning rather than original top down 
         transform.rotation = Quaternion.Euler(0,0,-90);
         timer = transform.position.y;
-        frequency = Random.Range(0.5f, 1f);
+        frequency = Random.Range(0.8f, 1.5f);
         amplitude = Random.Range(1f, 1.5f);
         centerY = transform.position.y;
+        HpScaling();
     }
 
     // only child classes can use public override void
@@ -36,7 +37,6 @@ public class EnemyBug : Enemy
     {
         // runs Update method from base/parent/super-class first
         base.Update();
-
         // this makes enemy go up and down like a sine wave
         timer -= Time.deltaTime;
         float sine = Mathf.Sin(timer * frequency) * amplitude;
@@ -50,5 +50,12 @@ public class EnemyBug : Enemy
         // this code below makes a more aggressive sine wave movement
         //float sine = Mathf.Sin(transform.position.x);
         // transform.position = new Vector3(transform.position.x,sine);
+    }
+
+    void HpScaling()
+    {
+        // makes enemy hp scale based on current player's hp
+        maxLives = PlayerMovement.instance.currentLevel * livesMultipler;
+        lives = maxLives;        
     }
 }

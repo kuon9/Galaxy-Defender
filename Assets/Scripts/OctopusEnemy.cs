@@ -29,7 +29,8 @@ public override void OnEnable()
         moveSpeed = Random.Range(1.5f, 2.5f);
         // if random value is less than 0.5 , 50% it eithers moves up or down one float
         speedY = Random.value < 0.5 ? -1f : 1f;
-        shootInterval = Random.Range(2f, 3.5f);        
+        shootInterval = Random.Range(2f, 3.5f); 
+        HpScaling();       
     }
 
     public override void Start()
@@ -93,5 +94,11 @@ public override void OnEnable()
         // waits one frame
         yield return null;
         //anim.SetBool("shooting", false); 
+    }
+    void HpScaling()
+    {
+        // makes enemy hp scale based on current player's hp
+        maxLives = PlayerMovement.instance.currentLevel * livesMultipler;
+        lives = maxLives;        
     }
 }

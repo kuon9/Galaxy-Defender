@@ -29,6 +29,7 @@ public class OctopusWave : MonoBehaviour
     void OnEnable()
     {
         transform.rotation = Quaternion.Euler(0,0,90);
+        HpScaling();
     }
 
     void Awake()
@@ -73,7 +74,6 @@ public class OctopusWave : MonoBehaviour
             shootTimer += shootInterval;
             Shoot();
         }        
-        HpScaling();
     }
     private void Shoot()
     {
@@ -107,7 +107,7 @@ public class OctopusWave : MonoBehaviour
         }
         else
         {
-            AudioManager.instance.PlayModifiedSound(destroySound);
+            //AudioManager.instance.PlayModifiedSound(destroySound);
             flashWhite.Reset();
             GameObject destroyEffect = destroyEffectPool.GetPooledObject();
             destroyEffect.transform.position = transform.position;

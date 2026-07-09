@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public int enemyCounter;
     public bool canSpawn;
     public bool isTransitioning;
+    public bool isSwitchingLevel;
 
     [SerializeField] string mainMenuScene;
     [SerializeField] string currentLevelScene;
@@ -21,7 +22,11 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] GameObject gameOverUI;
     [SerializeField] GameObject levelCompletedUI;
-    
+
+    [SerializeField] GameObject[] firstObjectSpawners;
+    [SerializeField] GameObject[] secondObjectSpawners;
+    [SerializeField] GameObject  firstWaveSpawner;
+    [SerializeField] GameObject  secondWaveSpawner;    
     private AudioSource bossSpawn;
     
 
@@ -66,6 +71,10 @@ public class GameManager : MonoBehaviour
             Boss.transform.rotation = Quaternion.Euler(0,0,-90);
             Boss.SetActive(true);
         }        
+        if(isSwitchingLevel)
+        {
+            NewLevel();            
+        }
     }
     public void Pause()
     {
@@ -163,5 +172,19 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0;
         levelCompletedUI.SetActive(true);
+    }
+
+    public void NewLevel()
+    {
+        foreach (GameObject obj in firstObjectSpawners)
+        {
+            obj.SetActive(false);
+        }
+        foreach(GameObject obj in secondObjectSpawners)
+        {
+            obj.SetActive(true);
+        }
+        firstWaveSpawner.SetActive(false);
+        secondWaveSpawner.SetActive(true);
     }
 }

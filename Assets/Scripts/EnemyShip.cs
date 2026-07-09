@@ -77,6 +77,7 @@ public class EnemyShip : MonoBehaviour
             shootTimer += shootInterval;
             Shoot();
         }
+        HpScaling();
     }
 
     private void Shoot()

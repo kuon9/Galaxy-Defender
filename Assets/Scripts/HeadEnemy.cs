@@ -17,6 +17,10 @@ public class HeadEnemy : Enemy
         moveSpeed = 4f;
         targetMoveSpeed = Random.Range(0.8f, 2f);
         transform.rotation = Quaternion.Euler(0,0,90);
+        // Enemy gets new max hp based on player's current level * live multipler
+        // this is everytime that enemy is reactivated through object pooling
+        // putting this in update means enemy is always get new max hp // full hp
+        HpScaling();
  
     }
 
@@ -50,4 +54,10 @@ public class HeadEnemy : Enemy
             moveSpeed = Mathf.Lerp(moveSpeed, targetMoveSpeed, Time.deltaTime * 4f);
         }    
     }  
+    void HpScaling()
+    {
+        // makes enemy hp scale based on current player's hp
+        maxLives = PlayerMovement.instance.currentLevel * livesMultipler;
+        lives = maxLives;        
+    }
 }

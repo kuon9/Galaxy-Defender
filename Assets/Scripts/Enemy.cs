@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected int lives;
     [SerializeField] protected int maxLives;
     [SerializeField] protected int damage;
-    [SerializeField] protected int livesMultipler = 2;
+    [SerializeField] protected int livesMultipler = 3;
     [SerializeField] protected int experienceToGive;
     [SerializeField] float timerBeforeHpIncrease = 10f;
 
@@ -50,10 +50,7 @@ public class Enemy : MonoBehaviour
         if(transform.position.x < -4)
         {
             gameObject.SetActive(false);
-        }    
-        
-       HpScaling();
-    
+        }        
     }
     public virtual void OnCollisionEnter2D(Collision2D col)
     {
@@ -65,7 +62,7 @@ public class Enemy : MonoBehaviour
     }
     public virtual void TakeDamage(int damage)
     {
-        AudioManager.instance.PlayModifiedSound(hitSound);
+        // AudioManager.instance.PlayModifiedSound(hitSound);
         lives -= damage;
         if(lives > 0 )
         {
@@ -73,7 +70,7 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            AudioManager.instance.PlayModifiedSound(destroySound);
+            // AudioManager.instance.PlayModifiedSound(destroySound);
             flashWhite.Reset();
             GameObject destroyEffect = destroyEffectPool.GetPooledObject();
             destroyEffect.transform.position = transform.position;
@@ -84,12 +81,5 @@ public class Enemy : MonoBehaviour
             ScreenClear.instance.nukeEnergy ++;
             gameObject.SetActive(false);
         }
-    }
-
-    public virtual void HpScaling()
-    {
-        // makes enemy hp scale based on current player's hp
-        maxLives = PlayerMovement.instance.currentLevel * livesMultipler;
-        lives = maxLives;        
     }
 }

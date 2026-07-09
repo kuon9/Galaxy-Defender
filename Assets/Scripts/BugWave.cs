@@ -16,6 +16,7 @@ public class BugWave : MonoBehaviour
         void OnEnable()
     {
         transform.rotation = Quaternion.Euler(0,0,-90);
+        HpScaling();
     }
 
 
@@ -31,7 +32,7 @@ public class BugWave : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HpScaling();   
+        
     }
     public void TakeDamage(int damage)
     {
@@ -42,7 +43,7 @@ public class BugWave : MonoBehaviour
         }
         else
         {
-            AudioManager.instance.PlayModifiedSound(destroySound);
+            //AudioManager.instance.PlayModifiedSound(destroySound);
             flashWhite.Reset();
             GameObject destroyEffect = destroyEffectPool.GetPooledObject();
             destroyEffect.transform.position = transform.position;
