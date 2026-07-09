@@ -7,6 +7,7 @@ public class BugWave : MonoBehaviour
     [SerializeField] private int lives;
     [SerializeField] private int maxLives;
     [SerializeField] int expToGive;
+    [SerializeField] int livesMultipler = 1;
     private FlashWhite flashWhite;
 
     private int dmg = 1;
@@ -30,7 +31,7 @@ public class BugWave : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        HpScaling();   
     }
     public void TakeDamage(int damage)
     {
@@ -69,5 +70,11 @@ public class BugWave : MonoBehaviour
             PlayerMovement.instance.TakeDamage(dmg);
             gameObject.SetActive(false);    
         }
+    }
+
+    void HpScaling()
+    {
+        maxLives = PlayerMovement.instance.currentLevel * livesMultipler;
+        lives = maxLives;    
     }
 }

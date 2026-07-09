@@ -8,6 +8,9 @@ public class Boss : Enemy
     private float moveSpeed;
     private float shootTimer;
     private float shootInterval;
+
+    private int lives = 0;
+    private int maxLives = 1000;
     private ObjectPooler projectileEnemyPool;
     private ObjectPooler projectilePool;
     private float timeBeforeShooting = 2f;
@@ -135,4 +138,12 @@ public class Boss : Enemy
             GameManager.instance.ActivateLevelCompletedUI();
         }
     }
+
+    // we need to override this method or else the boss will have same hp as a regular enemy
+    // because this boss is inheriting from the enemy script
+    public override void HpScaling()
+    {
+        lives = maxLives;
+    }
+
 }

@@ -52,16 +52,7 @@ public class Enemy : MonoBehaviour
             gameObject.SetActive(false);
         }    
         
-        // every 10 secs, we increase max lives of enemy by 1 hp
-        timerBeforeHpIncrease -= Time.deltaTime;
-        if(timerBeforeHpIncrease <= 0)
-        {
-            maxLives += 1;
-            maxLives = lives;
-            timerBeforeHpIncrease = 10f;           
-        }
-    
-       //HpScaling();
+       HpScaling();
     
     }
     public virtual void OnCollisionEnter2D(Collision2D col)
@@ -95,9 +86,10 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    // public virtual void HpScaling()
-    // {
-    //     maxLives = playerMovement.instance.currentLevel * livesMultipler;
-    //     lives = maxLives;        
-    // }
+    public virtual void HpScaling()
+    {
+        // makes enemy hp scale based on current player's hp
+        maxLives = PlayerMovement.instance.currentLevel * livesMultipler;
+        lives = maxLives;        
+    }
 }

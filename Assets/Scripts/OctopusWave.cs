@@ -23,6 +23,7 @@ public class OctopusWave : MonoBehaviour
     private int dmg = 1;
     private SpriteRenderer spriteRenderer;
     [SerializeField] float timerBeforeHpIncrease = 10f;
+    [SerializeField] int livesMultipler = 1;
     
     
     void OnEnable()
@@ -72,6 +73,7 @@ public class OctopusWave : MonoBehaviour
             shootTimer += shootInterval;
             Shoot();
         }        
+        HpScaling();
     }
     private void Shoot()
     {
@@ -115,7 +117,14 @@ public class OctopusWave : MonoBehaviour
             gameObject.SetActive(false);
             PlayerMovement.instance.GetExperience(expToGive);
         }   
-    }   
+    }  
+
+    void HpScaling()
+    {
+        maxLives = PlayerMovement.instance.currentLevel * livesMultipler;
+        lives = maxLives;           
+    }
+
     // void OnCollisionEnter2D(Collision2D col)
     // {
     //     if(col.gameObject.CompareTag("Player"))

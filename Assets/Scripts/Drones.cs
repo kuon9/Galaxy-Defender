@@ -12,8 +12,8 @@ public class Drones : MonoBehaviour
     private Quaternion targetRotation;
     
     [Header("Targeting")]
-    public LayerMask enemyLayer;
-    private Transform currentTarget;
+    //public LayerMask enemyLayer;
+    //private Transform currentTarget;
     private bool isShooting = false;
 
     void Update()

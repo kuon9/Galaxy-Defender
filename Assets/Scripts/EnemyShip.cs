@@ -25,6 +25,7 @@ public class EnemyShip : MonoBehaviour
     private float timeBeforeShooting = 1.5f;  
     private bool canShoot;
     [SerializeField] float timerBeforeHpIncrease = 10f;
+    [SerializeField] int livesMultipler = 1;
 
     
     // void OnEnable()
@@ -132,5 +133,11 @@ public class EnemyShip : MonoBehaviour
             PlayerMovement.instance.TakeDamage(dmg);
             gameObject.SetActive(false);    
         }
+    }
+
+    void HpScaling()
+    {
+        maxLives = PlayerMovement.instance.currentLevel * livesMultipler;
+        lives = maxLives;              
     }
 }

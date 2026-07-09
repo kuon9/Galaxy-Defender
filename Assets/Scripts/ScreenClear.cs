@@ -19,7 +19,7 @@ public class ScreenClear : MonoBehaviour
     void Start()
     {
         screenNukeParticles = GetComponentInChildren<ParticleSystem>();
-        nukeEnergy = 0;
+        //nukeEnergy = 0;
         anim = nukeSlider.GetComponent<Animator>();
         // looks for all gameobject with enemy tags
         // however, since its only at start, means it won't scan new enemies
@@ -90,7 +90,7 @@ public class ScreenClear : MonoBehaviour
         if(nukeEnergy >= 50)
         {
             anim.SetBool("NukeReady", true);
-            UiController.instance.nukeText.text = "Nuke is Ready!";
+            UiController.instance.nukeText.text = "Nuke!";
         }
         else
         {
