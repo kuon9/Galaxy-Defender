@@ -8,7 +8,6 @@ public class PlayerMovement : MonoBehaviour
 {
     public static PlayerMovement instance;
 
-
     private Rigidbody2D rb;
     private Animator anim;
     private Vector2  playerDirection;

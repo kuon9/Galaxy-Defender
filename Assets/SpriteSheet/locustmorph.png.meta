@@ -170,9 +170,9 @@ TextureImporter:
       name: locustmorph_0
       rect:
         serializedVersion: 2
-        x: 9
+        x: 0
         y: 120
-        width: 102
+        width: 120
         height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -192,10 +192,10 @@ TextureImporter:
       name: locustmorph_1
       rect:
         serializedVersion: 2
-        x: 14
-        y: 0
-        width: 92
-        height: 121
+        x: 120
+        y: 120
+        width: 120
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,10 +214,10 @@ TextureImporter:
       name: locustmorph_2
       rect:
         serializedVersion: 2
-        x: 129
-        y: 0
-        width: 102
-        height: 240
+        x: 240
+        y: 120
+        width: 120
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,10 +236,10 @@ TextureImporter:
       name: locustmorph_3
       rect:
         serializedVersion: 2
-        x: 241
-        y: 119
-        width: 119
-        height: 121
+        x: 360
+        y: 120
+        width: 120
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,9 +258,9 @@ TextureImporter:
       name: locustmorph_4
       rect:
         serializedVersion: 2
-        x: 248
+        x: 0
         y: 0
-        width: 105
+        width: 120
         height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -280,10 +280,10 @@ TextureImporter:
       name: locustmorph_5
       rect:
         serializedVersion: 2
-        x: 367
+        x: 120
         y: 0
-        width: 105
-        height: 240
+        width: 120
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -298,11 +298,55 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: locustmorph_6
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16fe550ed9d502a41bf4b889e6a4c9d8
+      internalID: 120072547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locustmorph_7
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 0
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0931367d75b02db4fa09049e7bc87d80
+      internalID: -676239789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 02c73690d39fa614a9f23da52ae66e95
     internalID: 0
     vertices: []
     indices: 
@@ -318,6 +362,8 @@ TextureImporter:
       locustmorph_3: 216214826535000004
       locustmorph_4: -7989817001677814027
       locustmorph_5: -7408264423918629294
+      locustmorph_6: 120072547
+      locustmorph_7: -676239789
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -174,6 +174,10 @@ public class GameManager : MonoBehaviour
         levelCompletedUI.SetActive(true);
     }
 
+    // this allows new sets of enemies to spawn 
+    // we disable one objectspawner with old enemies loaded
+    // and we enable a second objectspawner with new enemies loaded
+    // we apply this same principle to the enemywaveSpawner
     public void NewLevel()
     {
         foreach (GameObject obj in firstObjectSpawners)

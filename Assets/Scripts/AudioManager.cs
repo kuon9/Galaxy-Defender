@@ -16,6 +16,20 @@ public static AudioManager instance;
     public AudioSource playerDeathExplosion;
     public AudioSource boostSound;
     public AudioSource shipExplosion;
+    public AudioSource beetleHit;
+    public AudioSource beetleDestroy;
+    public AudioSource squidHit;
+    public AudioSource squidHit2;
+    public AudioSource squidDestroy;
+    public AudioSource squidDestroy2;
+    public AudioSource squidShoot;
+    public AudioSource locustHit;
+    public AudioSource locustCharge;
+    public AudioSource locustDestroy;
+    public AudioSource bossCharge;
+    public AudioSource hitBoss;
+    public AudioSource boom2;
+    public AudioSource bossSpawn;
 
    void Awake()
     {

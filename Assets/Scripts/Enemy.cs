@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected int damage;
     [SerializeField] protected int livesMultipler = 3;
     [SerializeField] protected int experienceToGive;
-    [SerializeField] float timerBeforeHpIncrease = 10f;
+  
 
 
     //[SerializeField] int scoreToGive;
