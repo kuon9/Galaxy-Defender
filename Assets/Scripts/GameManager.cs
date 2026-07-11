@@ -26,7 +26,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject[] firstObjectSpawners;
     [SerializeField] GameObject[] secondObjectSpawners;
     [SerializeField] GameObject  firstWaveSpawner;
-    [SerializeField] GameObject  secondWaveSpawner;    
+    [SerializeField] GameObject  secondWaveSpawner;
+
+    [SerializeField] GameObject firstLevelBackground;
+    [SerializeField] GameObject secondLevelBackground;    
     private AudioSource bossSpawn;
     
 
@@ -190,5 +193,7 @@ public class GameManager : MonoBehaviour
         }
         firstWaveSpawner.SetActive(false);
         secondWaveSpawner.SetActive(true);
+        firstLevelBackground.SetActive(false);
+        secondLevelBackground.SetActive(true);
     }
 }

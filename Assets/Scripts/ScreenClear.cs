@@ -68,7 +68,7 @@ public class ScreenClear : MonoBehaviour
         foreach(Collider2D collider in colliders)
         {
             Enemy enemy = collider.GetComponent<Enemy>();
-            EnemyShip enemyship = collider.GetComponent<EnemyShip>();
+            EnemyShipWave enemyShipWave = collider.GetComponent<EnemyShipWave>();
             EnemyBug enemyBug = collider.GetComponent<EnemyBug>();
             OctopusWave octopusWave = collider.GetComponent<OctopusWave>();
             BugWave bugWave = collider.GetComponent<BugWave>();
@@ -76,7 +76,7 @@ public class ScreenClear : MonoBehaviour
             Meteor meteor = collider.GetComponent<Meteor>();     
 
             if(enemy)enemy.TakeDamage(nukeDamage);
-            if(enemyship)enemyship.TakeDamage(nukeDamage);
+            if(enemyShipWave)enemyShipWave.TakeDamage(nukeDamage);
             if(enemyBug)enemyBug.TakeDamage(nukeDamage);
             if(octopusWave)octopusWave.TakeDamage(nukeDamage);
             if(bugWave)bugWave.TakeDamage(nukeDamage);

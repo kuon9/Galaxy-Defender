@@ -21,6 +21,8 @@ public class SquidEnemy : Enemy
         speedY = Random.Range(-0.3f,0.3f);
         shootInterval = Random.Range(1f, 4f);
         shootTimer = 1f;
+        HpScaling();
+        
     }
 
 
@@ -89,4 +91,10 @@ public class SquidEnemy : Enemy
     //         //GameManager.instance.squidCounter++;
     //     }
     // }
+    void HpScaling()
+    {
+        // makes enemy hp scale based on current player's hp
+        maxLives = PlayerMovement.instance.currentLevel * livesMultipler;
+        lives = maxLives;        
+    }
 }

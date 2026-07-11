@@ -13,6 +13,7 @@ public class LocustEnemy : Enemy
         base.OnEnable();
         enemyVariant = Random.Range(0, frames.Count);
         EnterIdle();
+        HpScaling();
     }
 
 
@@ -77,5 +78,11 @@ public class LocustEnemy : Enemy
     private class Frames
     {
         public Sprite[] sprites;    
+    }
+    void HpScaling()
+    {
+        // makes enemy hp scale based on current player's hp
+        maxLives = PlayerMovement.instance.currentLevel * livesMultipler;
+        lives = maxLives;        
     }
 }

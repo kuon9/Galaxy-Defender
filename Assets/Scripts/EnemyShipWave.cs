@@ -2,40 +2,38 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class EnemyShip : MonoBehaviour
+public class EnemyShipWave : MonoBehaviour
 {
     
-    private float shootTimer;
-    private float shootInterval;
+    protected float shootTimer;
+    protected float shootInterval;
 
-    private int dmg = 1;
+    protected int dmg = 1;
     
-    private ObjectPooler projectilePool;
-    private ObjectPooler destroyEffectPool;
-    private Animator anim;
+    protected ObjectPooler projectilePool;
+    protected ObjectPooler destroyEffectPool;
+    protected Animator anim;
     
     public Transform bulletSpawn;
 
     private FlashWhite flashWhite;
 
-    [SerializeField] private int lives;
-    [SerializeField] private int maxLives;
-    [SerializeField] int expToGive;
-    private AudioSource destroySound;
-    private float timeBeforeShooting = 1.5f;  
-    private bool canShoot;
-    [SerializeField] float timerBeforeHpIncrease = 10f;
-    [SerializeField] int livesMultipler = 1;
+    [SerializeField] protected int lives;
+    [SerializeField] protected int maxLives;
+    [SerializeField] protected int expToGive;
+    protected AudioSource destroySound;
+    protected float timeBeforeShooting = 1.5f;  
+    protected bool canShoot;
+    //[SerializeField] float timerBeforeHpIncrease = 10f;
+    [SerializeField] protected int livesMultipler = 1;
 
     
-    // void OnEnable()
-    // {
-    //     // moving this to OnEnable solved the shooting bug.
-    //     // putting this under Update made enemy shoot nonstop
-    //     shootInterval = Random.Range(1f,2f); 
-    // }
+    public virtual void OnEnable()
+    {
+        HpScaling();
+    }
     
-    void Awake()
+    public virtual void Awake()
     {
         // moving this to OnEnable or Awake solved the shooting bug.
         // putting this under Update made enemy shoot nonstop
@@ -43,7 +41,7 @@ public class EnemyShip : MonoBehaviour
     }
 
 
-    void Start()
+    public virtual void Start()
     {
         projectilePool = GameObject.Find("EnemyBulletTwoPool").GetComponent<ObjectPooler>();
         destroyEffectPool = GameObject.Find("BoomPool").GetComponent<ObjectPooler>();
@@ -53,15 +51,15 @@ public class EnemyShip : MonoBehaviour
     }     
 
 
-    void Update()
+    public virtual void Update()
     {
-        timerBeforeHpIncrease -= Time.deltaTime;
-        if(timerBeforeHpIncrease <= 0)
-        {
-            maxLives += 1;
-            maxLives = lives;
-            timerBeforeHpIncrease = 10f;        
-        }
+        // timerBeforeHpIncrease -= Time.deltaTime;
+        // if(timerBeforeHpIncrease <= 0)
+        // {
+        //     maxLives += 1;
+        //     maxLives = lives;
+        //     timerBeforeHpIncrease = 10f;        
+        // }
         timeBeforeShooting -= Time.deltaTime;
         if(timeBeforeShooting <= 0)
         {
@@ -77,10 +75,9 @@ public class EnemyShip : MonoBehaviour
             shootTimer += shootInterval;
             Shoot();
         }
-        HpScaling();
     }
 
-    private void Shoot()
+    public virtual void Shoot()
     {
         // // we'll use this for multiple gun transform 
         // // for(int i = 0; i < bulletSpawn.Length; i++)
@@ -98,14 +95,14 @@ public class EnemyShip : MonoBehaviour
         StartCoroutine(ResetShoot());
     }
 
-    IEnumerator ResetShoot()
+    public virtual IEnumerator ResetShoot()
     {
         // this means to wait one frame before executing again
         yield return null;
     }
 
     
-    public void TakeDamage(int damage)
+    public virtual void TakeDamage(int damage)
     {
         lives -= damage;
         if(lives > 0)
@@ -125,18 +122,22 @@ public class EnemyShip : MonoBehaviour
             PlayerMovement.instance.GetExperience(expToGive);
         }   
     }    
-    void OnCollisionEnter2D(Collision2D col)
+    public virtual void OnCollisionEnter2D(Collision2D col)
     {
         if(col.gameObject.CompareTag("Player"))
         {
             //Player player = col.gameObject.GetComponent<Player>();
             Debug.Log("Taking Damage");
             PlayerMovement.instance.TakeDamage(dmg);
+            GameObject destroyEffect = destroyEffectPool.GetPooledObject();
+            destroyEffect.transform.position = transform.position;
+            destroyEffect.transform.rotation = transform.rotation;
+            destroyEffect.SetActive(true);
             gameObject.SetActive(false);    
         }
     }
 
-    void HpScaling()
+    public virtual void HpScaling()
     {
         maxLives = PlayerMovement.instance.currentLevel * livesMultipler;
         lives = maxLives;              

@@ -92,9 +92,9 @@ public class Missile : MonoBehaviour
         else if(col.gameObject.CompareTag("Enemy"))
         {
             // GetComponent of the actual gameobject name and not the tag or layer of it
-            EnemyShip enemyship = col.gameObject.GetComponent<EnemyShip>();
+            EnemyShipWave enemyShipWave = col.gameObject.GetComponent<EnemyShipWave>();
             Enemy enemy = col.gameObject.GetComponent<Enemy>();
-            if(enemyship) enemyship.TakeDamage(missileDamage);
+            if(enemyShipWave) enemyShipWave.TakeDamage(missileDamage);
             if(enemy)enemy.TakeDamage(missileDamage);
             gameObject.SetActive(false);
             Debug.Log("Enemy ship is taking damage");            

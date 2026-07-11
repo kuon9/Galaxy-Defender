@@ -55,4 +55,20 @@ public class SquidCritter : Enemy
     //         GameManager.instance.critterCounter++;
     //     }
     // }
+
+    public override void OnCollisionEnter2D(Collision2D col)
+    {
+        
+        if(col.gameObject.CompareTag("Player"))
+        {
+            PlayerMovement player = col.gameObject.GetComponent<PlayerMovement>();
+            if(player)player.TakeDamage(damage);
+            GameObject destroyEffect = destroyEffectPool.GetPooledObject();
+            destroyEffect.transform.position = transform.position;
+            destroyEffect.transform.rotation = transform.rotation;
+            destroyEffect.SetActive(true);
+            gameObject.SetActive(false);    
+        }
+    }
+
 }
