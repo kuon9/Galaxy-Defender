@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     public float mapSpeed;
 
     private ObjectPooler BossPool;
+    private ObjectPooler BossTwoPool;
+    private ObjectPooler BossThreePool;
     public int enemyCounter;
     public bool canSpawn;
     public bool isTransitioning;
@@ -27,11 +29,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject[] secondObjectSpawners;
     [SerializeField] GameObject  firstWaveSpawner;
     [SerializeField] GameObject  secondWaveSpawner;
-
     [SerializeField] GameObject firstLevelBackground;
     [SerializeField] GameObject secondLevelBackground;    
     private AudioSource bossSpawn;
     
+    public bool isLevelOne;
 
      void Awake()
     {
@@ -49,8 +51,10 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         BossPool = GameObject.Find("BossPool").GetComponent<ObjectPooler>();
+        BossTwoPool = GameObject.Find("BossTwoPool").GetComponent<ObjectPooler>();
         enemyCounter = 0;
         bossSpawn = AudioManager.instance.bossSpawnMusic;
+        isLevelOne = true;
     }
 
     void Update()
@@ -64,7 +68,7 @@ public class GameManager : MonoBehaviour
         {
             Pause();
         }
-    if(enemyCounter >= 200)
+    if(enemyCounter >= 200 & isLevelOne)
         {
             enemyCounter = 0;
             GameObject Boss = BossPool.GetPooledObject();
@@ -73,7 +77,18 @@ public class GameManager : MonoBehaviour
             Boss.transform.position = new Vector2(17f,0);
             Boss.transform.rotation = Quaternion.Euler(0,0,-90);
             Boss.SetActive(true);
-        }        
+        }    
+
+    if(enemyCounter >= 200 & !isLevelOne)
+        {
+            enemyCounter = 0;
+            GameObject BossTwo = BossTwoPool.GetPooledObject();
+            AudioManager.instance.PlayModifiedSound(bossSpawn);
+            // this is the transform where the boss will be spawned at
+            BossTwo.transform.position = new Vector2(17f,0);
+            BossTwo.transform.rotation = Quaternion.Euler(0,0,-90);
+            BossTwo.SetActive(true);            
+        }    
         if(isSwitchingLevel)
         {
             NewLevel();            
@@ -183,6 +198,7 @@ public class GameManager : MonoBehaviour
     // we apply this same principle to the enemywaveSpawner
     public void NewLevel()
     {
+        isLevelOne = false;
         foreach (GameObject obj in firstObjectSpawners)
         {
             obj.SetActive(false);

@@ -131,8 +131,10 @@ public class Boss : Enemy
             destroyEffect.SetActive(true);
             // UiController.instance.ModifyScore(scoreToGive);
             // Player.instance.GetExperience(experienceToGive);
+            // this makes us switch to level 2
+            GameManager.instance.isSwitchingLevel = true;
             gameObject.SetActive(false);
-            GameManager.instance.ActivateLevelCompletedUI();
+            //GameManager.instance.ActivateLevelCompletedUI();
         }
     }
 }
