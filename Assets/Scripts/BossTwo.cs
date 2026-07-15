@@ -12,7 +12,12 @@ private ObjectPooler projectilePool;
 private Animator anim;
 private float timeBeforeShooting = 2f;
 private bool canShoot;
-public Transform [] bulletSpawn;
+// using arrays means we can't edit it 
+public Transform [] phaseOneBulletSpawn;
+public Transform [] phaseTwoBulletSpawn;
+
+// [SerializeField] private List<Transform> phaseOneGuns;
+// [SerializeField] private List<Transform> phaseTwoGuns;
     
 public override void OnEnable()
     {
@@ -67,25 +72,72 @@ public override void OnEnable()
         }
         //shooting
         shootTimer -= Time.deltaTime;
-        if(shootTimer <=  0 && canShoot == true)
+        if(maxLives >= 200 && shootTimer <=  0 && canShoot == true)
         {
             shootTimer += shootInterval;
-            Shoot();
+            PhaseOne();
         }    
-    }
-    private void Shoot()
-    {
-        for (int i = 0; i < bulletSpawn.Length; i++)
+        if(maxLives <= 200 && shootTimer <= 0 &&  canShoot == true)
         {
-        GameObject projectile = projectilePool.GetPooledObject();
-        projectile.transform.position = bulletSpawn[i].position;
-        projectile.transform.rotation = bulletSpawn[i].rotation;
-        projectile.SetActive(true);
-        //anim.SetBool("shooting", true);
-        //AudioManager.instance.PlaySound(AudioManager.instance.squidShoot);
-        StartCoroutine(ResetShoot());               
+            shootTimer += shootInterval;
+            PhaseTwo();
+        }
+    }
+    private void PhaseOne()
+    {
+        for (int i = 0; i < phaseOneBulletSpawn.Length; i++)
+        {
+            BossTwoBullet.bulletSpeed = 8;
+            GameObject projectile = projectilePool.GetPooledObject();
+            projectile.transform.position = phaseOneBulletSpawn[i].position;
+            projectile.transform.rotation = phaseOneBulletSpawn[i].rotation;
+            projectile.SetActive(true);
+            //anim.SetBool("shooting", true);
+            //AudioManager.instance.PlaySound(AudioManager.instance.squidShoot);
+            StartCoroutine(ResetShoot());               
         }           
-    }    
+    }
+    private void PhaseTwo()
+    {
+        for (int i = 0; i < phaseTwoBulletSpawn.Length; i++)
+        {
+            BossTwoBullet.bulletSpeed = 10;
+            GameObject projectile = projectilePool.GetPooledObject();
+            projectile.transform.position = phaseTwoBulletSpawn[i].position;
+            projectile.transform.rotation = phaseTwoBulletSpawn[i].rotation;
+            projectile.SetActive(true);
+            //anim.SetBool("shooting", true);
+            //AudioManager.instance.PlaySound(AudioManager.instance.squidShoot);
+            StartCoroutine(ResetShoot());               
+        }           
+    }
+    // private void PhaseOne()
+    // {
+                            // we use .Count when using Lists, only use.Length with Arrays    
+    // for (int i = 0; i < phaseOneGuns.Count; i++)
+    //     {
+    //     GameObject projectile = projectilePool.GetPooledObject();
+    //     projectile.transform.position = phaseOneGuns[i].position;
+    //     projectile.transform.rotation = phaseOneGuns[i].rotation;
+    //     projectile.SetActive(true);
+    //     //anim.SetBool("shooting", true);
+    //     //AudioManager.instance.PlaySound(AudioManager.instance.squidShoot);
+    //     StartCoroutine(ResetShoot());               
+    //     }           
+    // }
+    // private void PhaseTwo()
+    // {
+    //     for (int i = 0; i < phaseTwoGuns.Count; i++)
+    //     {
+    //     GameObject projectile = projectilePool.GetPooledObject();
+    //     projectile.transform.position = phaseTwoGuns[i].position;
+    //     projectile.transform.rotation = phaseTwoGuns[i].rotation;
+    //     projectile.SetActive(true);
+    //     //anim.SetBool("shooting", true);
+    //     //AudioManager.instance.PlaySound(AudioManager.instance.squidShoot);
+    //     StartCoroutine(ResetShoot());               
+    //     }           
+    // }
     IEnumerator ResetShoot()
     {
         // waits one frame

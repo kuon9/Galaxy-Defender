@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class BossTwoBullet : MonoBehaviour
 {
-    [SerializeField] int bulletSpeed;
-    [SerializeField] int dmg = 1;
+    public static int bulletSpeed;
+    [SerializeField] int dmg;
 
     private Rigidbody2D rigidbody;
 
