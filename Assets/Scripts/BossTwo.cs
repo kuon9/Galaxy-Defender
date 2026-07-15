@@ -24,7 +24,7 @@ public override void OnEnable()
         base.OnEnable();
         //transform.rotation = Quaternion.Euler(0,0,90);
         // this makes enemys charge in and spawn on right side of the map
-        initialPositionX = 15f + Random.Range(-1f,1f);
+        initialPositionX = 17f + Random.Range(-1f,1f);
         moveSpeed = Random.Range(1f, 2f);
         // if random value is less than 0.5 , 50% it eithers moves up or down Two float
         speedY = Random.value < 0.5 ? -2f : 2f;
@@ -57,6 +57,20 @@ public override void OnEnable()
         {
             canShoot = false;
         }
+        //shooting
+        shootTimer -= Time.deltaTime;
+        if(maxLives >= 200 && shootTimer <=  0 && canShoot == true)
+        {
+            shootTimer += shootInterval;
+            PhaseOne();
+        }    
+        if(maxLives <= 200 && shootTimer <= 0 &&  canShoot == true)
+        {
+            shootTimer += shootInterval;
+            PhaseTwo();
+        }
+
+
         //movement x
         float currentX = transform.position.x;
         if(Mathf.Abs(currentX - initialPositionX) > 0.1f)
@@ -70,18 +84,7 @@ public override void OnEnable()
         {
             speedY *= -1;
         }
-        //shooting
-        shootTimer -= Time.deltaTime;
-        if(maxLives >= 200 && shootTimer <=  0 && canShoot == true)
-        {
-            shootTimer += shootInterval;
-            PhaseOne();
-        }    
-        if(maxLives <= 200 && shootTimer <= 0 &&  canShoot == true)
-        {
-            shootTimer += shootInterval;
-            PhaseTwo();
-        }
+
     }
     private void PhaseOne()
     {
@@ -101,6 +104,9 @@ public override void OnEnable()
     {
         for (int i = 0; i < phaseTwoBulletSpawn.Length; i++)
         {
+            // position boss closer to player
+            // means less time for player to react and dodge to boss's projectiles
+            initialPositionX = 14f + Random.Range(-1f,1f);
             BossTwoBullet.bulletSpeed = 10;
             GameObject projectile = projectilePool.GetPooledObject();
             projectile.transform.position = phaseTwoBulletSpawn[i].position;

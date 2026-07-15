@@ -21,7 +21,7 @@ public class Boss : Enemy
     public override void OnEnable()
     {
         base.OnEnable();
-        initialPositionX = 20f + Random.Range(-1f,1f);
+        initialPositionX = 18f + Random.Range(-1f,1f);
         transform.rotation = Quaternion.Euler(0,0,-90);
         moveSpeed = Random.Range(1.5f, 2.5f);
         speedY = Random.value < 0.5 ? -1f : 1f;
