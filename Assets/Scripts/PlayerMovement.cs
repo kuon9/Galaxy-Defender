@@ -183,6 +183,8 @@ public class PlayerMovement : MonoBehaviour
         {
             form.Flash();
             health -= damage;
+            // player has iframes after taking damage
+            StartCoroutine(iFrames());
             spriteRenderer.material = whiteMaterial;
             UiController.instance.UpdateHealthSlider(health,maxHealth);            
             if(health <=0)
@@ -198,6 +200,19 @@ public class PlayerMovement : MonoBehaviour
             }                
         } 
     }
+
+    IEnumerator iFrames()
+    {
+        // disables current gameobject and all of its children's collider
+        foreach (Collider2D col in GetComponentsInChildren<Collider2D>()) 
+        {
+            Debug.Log("DEACTIVATING COLLIDERS");
+            col.enabled = false;
+            yield return new WaitForSeconds(1f);
+            col.enabled = true;
+        }        
+    }
+
     public void GetExperience(int exp)
     {
         experience += exp;

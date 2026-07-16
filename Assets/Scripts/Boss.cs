@@ -16,7 +16,9 @@ public class Boss : Enemy
     
     public Transform projectileSpawn;
 
-
+    [SerializeField] GameObject laser;
+    public bool isLaser;
+    [SerializeField] float laserDuration = 3f;
 
     public override void OnEnable()
     {
@@ -26,6 +28,7 @@ public class Boss : Enemy
         moveSpeed = Random.Range(1.5f, 2.5f);
         speedY = Random.value < 0.5 ? -1f : 1f;
         shootInterval = Random.Range(2f,3.5f);
+        isLaser = false;
     }
 
     public override void Start()
@@ -68,16 +71,23 @@ public class Boss : Enemy
         }
         //shooting
         shootTimer -= Time.deltaTime;
-        if(shootTimer <=  0 && canShoot == true)
+        if(maxLives >= 300 && shootTimer <=  0 && canShoot == true)
         {
             shootTimer += shootInterval;
-            ChooseRandomAttack();
+            PhaseOneAttacks();
             shootTimer = 2f;
-            //Shoot();
         }    
+        // isLaser bool prevents boss from shooting projectile while also shooting laser
+        // maybe we'll remove later and add other attacks
+        if(maxLives <= 300 && shootTimer <= 0 && canShoot == true && !isLaser)
+        {
+            shootTimer += shootInterval;
+            PhaseTwoAttacks();
+            shootTimer = 2f;
+        }
     }
     
-    void ChooseRandomAttack()
+    void PhaseOneAttacks()
     {
         int randomAttack = Random.Range(0,2);
         if(randomAttack == 0)
@@ -86,10 +96,22 @@ public class Boss : Enemy
         }
         else
         {
-            Shoot();
+            PhaseOneProjectile();
         }
     }
-    
+
+    void PhaseTwoAttacks()
+    {
+        int randomAttack = Random.Range(0,2);
+        if(randomAttack == 0)
+        {
+            StartCoroutine(Laser());
+        }
+        else
+        {
+            PhaseTwoProjectile();
+        }
+    }
     private void SpawnEnemy()
     {
         GameObject projectileEnemy = projectileEnemyPool.GetPooledObject();
@@ -101,13 +123,34 @@ public class Boss : Enemy
         //StartCoroutine(ResetShoot());          
     }
 
-    private void Shoot()
+    private void PhaseOneProjectile()
     {
+        BossBullet.bulletSpeed = 7;
+        BossBullet.dmg = 3;
         GameObject projectile = projectilePool.GetPooledObject();
         projectile.transform.position = projectileSpawn.position;
         projectile.transform.rotation = projectileSpawn.rotation;
         projectile.SetActive(true);
         //StartCoroutine(ResetShoot());    
+    }
+
+    private void PhaseTwoProjectile()
+    {
+        GameObject projectile = projectilePool.GetPooledObject();
+        BossBullet.bulletSpeed = 9;
+        BossBullet.dmg = 5;
+        projectile.transform.position = projectileSpawn.position;
+        projectile.transform.rotation = projectileSpawn.rotation;
+        projectile.SetActive(true);
+        //StartCoroutine(ResetShoot());    
+    }
+    IEnumerator Laser()
+    {
+        laser.SetActive(true);
+        isLaser = true;
+        yield return new WaitForSeconds(laserDuration);
+        laser.SetActive(false);
+        isLaser = false;    
     }
 
     // IEnumerator ResetShoot()
