@@ -3,7 +3,7 @@ using UnityEngine;
 public class BossTwoBullet : MonoBehaviour
 {
     public static int bulletSpeed;
-    [SerializeField] int dmg;
+    public static int dmg;
 
     private Rigidbody2D rigidbody;
 

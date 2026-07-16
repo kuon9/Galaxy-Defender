@@ -136,9 +136,9 @@ public class Boss : Enemy
 
     private void PhaseTwoProjectile()
     {
-        GameObject projectile = projectilePool.GetPooledObject();
         BossBullet.bulletSpeed = 9;
         BossBullet.dmg = 5;
+        GameObject projectile = projectilePool.GetPooledObject();
         projectile.transform.position = projectileSpawn.position;
         projectile.transform.rotation = projectileSpawn.rotation;
         projectile.SetActive(true);

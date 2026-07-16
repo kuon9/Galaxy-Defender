@@ -183,8 +183,6 @@ public class PlayerMovement : MonoBehaviour
         {
             form.Flash();
             health -= damage;
-            // player has iframes after taking damage
-            StartCoroutine(iFrames());
             spriteRenderer.material = whiteMaterial;
             UiController.instance.UpdateHealthSlider(health,maxHealth);            
             if(health <=0)
@@ -201,9 +199,17 @@ public class PlayerMovement : MonoBehaviour
         } 
     }
 
-    IEnumerator iFrames()
+    // we can use this method whenever we want players to have iframes 
+    // after taking damage from certain special attacks or mechanics.
+    public void iFrames()
     {
-        // disables current gameobject and all of its children's collider
+        StartCoroutine(InvulnerabilityFrames());
+    }
+    public IEnumerator InvulnerabilityFrames()
+    {
+        // disables current gameobject and all of its children's colliders
+        // because i have regular/red shooting form, i need to disable both colliders incase i switch forms midfight
+        // normally foreach (Collider2D col in GetComponents<Collider2D>()) instead for current gameObject
         foreach (Collider2D col in GetComponentsInChildren<Collider2D>()) 
         {
             Debug.Log("DEACTIVATING COLLIDERS");
@@ -212,7 +218,6 @@ public class PlayerMovement : MonoBehaviour
             col.enabled = true;
         }        
     }
-
     public void GetExperience(int exp)
     {
         experience += exp;
