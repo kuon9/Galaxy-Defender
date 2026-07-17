@@ -31,6 +31,11 @@ public class Missile : MonoBehaviour
         
     }
 
+    void OnEnable()
+    {
+        StartCoroutine(LookForTarget());
+    }
+
     void Update()
     {
        transform.position += new Vector3(defaultSpeed * Time.deltaTime, 0f);

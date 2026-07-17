@@ -10,15 +10,18 @@ public class Boss : Enemy
     private float shootInterval;
     private ObjectPooler projectileEnemyPool;
     private ObjectPooler projectilePool;
+    private ObjectPooler homingProjectilePool;
     private float timeBeforeShooting = 2f;
     
     private bool canShoot;
     
     public Transform projectileSpawn;
 
+    public Transform [] phaseTwoProjectileSpawn;
+
     [SerializeField] GameObject laser;
     public bool isLaser;
-    [SerializeField] float laserDuration = 3f;
+    [SerializeField] float laserDuration;
 
     public override void OnEnable()
     {
@@ -26,8 +29,8 @@ public class Boss : Enemy
         initialPositionX = 18f + Random.Range(-1f,1f);
         transform.rotation = Quaternion.Euler(0,0,-90);
         moveSpeed = Random.Range(1.5f, 2.5f);
-        speedY = Random.value < 0.5 ? -1f : 1f;
-        shootInterval = Random.Range(2f,3.5f);
+        speedY = Random.value < 0.5 ? -2f : 2f;
+        shootInterval = Random.Range(1f,2f);
         isLaser = false;
     }
 
@@ -37,6 +40,7 @@ public class Boss : Enemy
         //destroyEffectPool = GameObject.Find("BoomPool").GetComponent<ObjectPooler>();
         projectileEnemyPool = GameObject.Find("FloatingHeadEnemyPool").GetComponent<ObjectPooler>();
         projectilePool = GameObject.Find("BossBulletPool").GetComponent<ObjectPooler>();
+        homingProjectilePool = GameObject.Find("BossHomingBulletPool").GetComponent<ObjectPooler>();
         hitSound = AudioManager.instance.hitImpact;
         destroySound = AudioManager.instance.bossDeath;   
     }
@@ -65,7 +69,7 @@ public class Boss : Enemy
         }
 
         //movement y 
-        if(transform.position.y > 4 || transform.position.y < -4)
+        if(transform.position.y > 3 || transform.position.y < -3)
         {
             speedY *= -1;
         }
@@ -75,7 +79,7 @@ public class Boss : Enemy
         {
             shootTimer += shootInterval;
             PhaseOneAttacks();
-            shootTimer = 2f;
+            shootTimer = 1f;
         }    
         // isLaser bool prevents boss from shooting projectile while also shooting laser
         // maybe we'll remove later and add other attacks
@@ -89,27 +93,28 @@ public class Boss : Enemy
     
     void PhaseOneAttacks()
     {
-        int randomAttack = Random.Range(0,2);
-        if(randomAttack == 0)
+        int randomAttack = Random.Range(0,3);
+        if(randomAttack == 0 || randomAttack == 1)
         {
-            SpawnEnemy();
+            PhaseOneProjectile();
         }
         else
         {
-            PhaseOneProjectile();
+            SpawnEnemy();
         }
     }
 
     void PhaseTwoAttacks()
     {
-        int randomAttack = Random.Range(0,2);
-        if(randomAttack == 0)
+        // increase odds of regular attacks vs laser
+        int randomAttack = Random.Range(0,3);
+        if(randomAttack == 0 || randomAttack == 1)
         {
-            StartCoroutine(Laser());
+            PhaseTwoProjectile();            
         }
         else
         {
-            PhaseTwoProjectile();
+            StartCoroutine(Laser());
         }
     }
     private void SpawnEnemy()
@@ -125,6 +130,7 @@ public class Boss : Enemy
 
     private void PhaseOneProjectile()
     {
+        
         BossBullet.bulletSpeed = 7;
         BossBullet.dmg = 3;
         GameObject projectile = projectilePool.GetPooledObject();
@@ -136,13 +142,15 @@ public class Boss : Enemy
 
     private void PhaseTwoProjectile()
     {
-        BossBullet.bulletSpeed = 9;
-        BossBullet.dmg = 5;
-        GameObject projectile = projectilePool.GetPooledObject();
-        projectile.transform.position = projectileSpawn.position;
-        projectile.transform.rotation = projectileSpawn.rotation;
-        projectile.SetActive(true);
-        //StartCoroutine(ResetShoot());    
+        for(int i = 0; i < phaseTwoProjectileSpawn.Length; i++)
+        {
+
+            GameObject homingProjectile = homingProjectilePool.GetPooledObject();
+            homingProjectile.transform.position = phaseTwoProjectileSpawn[i].position;
+            homingProjectile.transform.rotation = phaseTwoProjectileSpawn[i].rotation;
+            homingProjectile.SetActive(true);
+            //StartCoroutine(ResetShoot());               
+        } 
     }
     IEnumerator Laser()
     {
