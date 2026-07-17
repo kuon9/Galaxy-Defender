@@ -16,6 +16,17 @@ public class Drones : MonoBehaviour
     //private Transform currentTarget;
     private bool isShooting = false;
 
+
+    // this fixes the issue of drones of not firing after being setactive true
+    // when returning to normal form after shooting form ends
+    // because disabling an gameobject stops all coroutine
+    // so when drones are setactive false, we make also set the boolean isShooting false
+    // when drone gets reactivated, the update method will run because isShooting is false
+    void OnDisable()
+    {
+        isShooting = false;
+    }
+
     void Update()
     {
         //currentTarget != null && 
