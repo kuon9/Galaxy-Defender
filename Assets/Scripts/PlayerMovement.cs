@@ -176,7 +176,6 @@ public class PlayerMovement : MonoBehaviour
         boost = 1f;
         boosting = false;
     }
-
     public void TakeDamage(int damage)
     {
         foreach (FlashWhite form in playerForms)
@@ -198,7 +197,6 @@ public class PlayerMovement : MonoBehaviour
             }                
         } 
     }
-
     // we can use this method whenever we want players to have iframes 
     // after taking damage from certain special attacks or mechanics.
     public void iFrames()
@@ -251,7 +249,6 @@ public class PlayerMovement : MonoBehaviour
         //     Weapon.instance.LevelUp();             
         // }
     }
-
     public void ActivateDroids()
     {
         // drones are only active if player's level is higher or equal to 3 and isShooting form is off

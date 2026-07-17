@@ -25,12 +25,15 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject gameOverUI;
     [SerializeField] GameObject levelCompletedUI;
 
-    [SerializeField] GameObject[] firstObjectSpawners;
-    [SerializeField] GameObject[] secondObjectSpawners;
-    [SerializeField] GameObject  firstWaveSpawner;
-    [SerializeField] GameObject  secondWaveSpawner;
+    // [SerializeField] GameObject[] firstObjectSpawners;
+    // [SerializeField] GameObject[] secondObjectSpawners;
+    // [SerializeField] GameObject  firstWaveSpawner;
+    // [SerializeField] GameObject  secondWaveSpawner;
     [SerializeField] GameObject firstLevelBackground;
-    [SerializeField] GameObject secondLevelBackground;    
+    [SerializeField] GameObject secondLevelBackground; 
+
+    public GameObject firstLevelChunk;
+    public GameObject secondLevelChunk;   
     private AudioSource bossSpawn;
     
     public bool isLevelOne;
@@ -68,8 +71,10 @@ public class GameManager : MonoBehaviour
         {
             Pause();
         }
-    if(enemyCounter >= 200 & isLevelOne)
+    if(enemyCounter >= 50 & isLevelOne)
         {
+            //this disables all spawners so that we only have boss on the screen
+            firstLevelChunk.SetActive(false);
             enemyCounter = 0;
             GameObject Boss = BossPool.GetPooledObject();
             AudioManager.instance.PlayModifiedSound(bossSpawn);
@@ -79,8 +84,9 @@ public class GameManager : MonoBehaviour
             Boss.SetActive(true);
         }    
 
-    if(enemyCounter >= 200 & !isLevelOne)
+    if(enemyCounter >= 50 & !isLevelOne)
         {
+            secondLevelChunk.SetActive(false);
             enemyCounter = 0;
             GameObject BossTwo = BossTwoPool.GetPooledObject();
             AudioManager.instance.PlayModifiedSound(bossSpawn);
@@ -196,20 +202,32 @@ public class GameManager : MonoBehaviour
     // we disable one objectspawner with old enemies loaded
     // and we enable a second objectspawner with new enemies loaded
     // we apply this same principle to the enemywaveSpawner
+    // public void NewLevel()
+    // {
+    //     isLevelOne = false;
+    //     foreach (GameObject obj in firstObjectSpawners)
+    //     {
+    //         obj.SetActive(false);
+    //     }
+    //     foreach(GameObject obj in secondObjectSpawners)
+    //     {
+    //         obj.SetActive(true);
+    //     }
+    //     firstWaveSpawner.SetActive(false);
+    //     secondWaveSpawner.SetActive(true);
+    //     firstLevelBackground.SetActive(false);
+    //     secondLevelBackground.SetActive(true);
+    // }
+
+    // this method is way more easier and efficient.
+    // Make a Master Parent GameObject and it setactive false or true every children below
     public void NewLevel()
     {
+        //firstLevelChunk.SetActive(false);
         isLevelOne = false;
-        foreach (GameObject obj in firstObjectSpawners)
-        {
-            obj.SetActive(false);
-        }
-        foreach(GameObject obj in secondObjectSpawners)
-        {
-            obj.SetActive(true);
-        }
-        firstWaveSpawner.SetActive(false);
-        secondWaveSpawner.SetActive(true);
         firstLevelBackground.SetActive(false);
         secondLevelBackground.SetActive(true);
+        secondLevelChunk.SetActive(true);    
     }
+
 }

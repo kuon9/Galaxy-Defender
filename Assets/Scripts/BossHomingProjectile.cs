@@ -15,8 +15,6 @@ public class BossHomingProjectile : MonoBehaviour
 
     public float homingProjectileTimer;
     
-
-
     void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
