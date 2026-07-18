@@ -21,7 +21,6 @@ public class Mine : MonoBehaviour
     {
         
     }
-
     public void Explode()
     {
         GameObject mineExplosion = mineExplosionPool.GetPooledObject();

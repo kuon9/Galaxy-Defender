@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5137466754987508652}
   - component: {fileID: 6986516786802249845}
   m_Layer: 7
-  m_Name: 4 Sec Mine
+  m_Name: 3 Sec Mine
   m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

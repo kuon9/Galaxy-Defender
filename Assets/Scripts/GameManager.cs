@@ -244,7 +244,10 @@ public class GameManager : MonoBehaviour
         isLevelOne = false;
         firstLevelBackground.SetActive(false);
         secondLevelBackground.SetActive(true);
-        secondLevelChunk.SetActive(true);          
+        secondLevelChunk.SetActive(true);
+        // this coroutine is running over and over.
+        // we gotta make isSwitchingBoolean to false so coroutine stops running because of condition
+        isSwitchingLevel = false;          
     }
 
 }
