@@ -22,7 +22,7 @@ public Transform [] phaseTwoBulletSpawn;
 public override void OnEnable()
     {
         base.OnEnable();
-        //transform.rotation = Quaternion.Euler(0,0,90);
+        transform.rotation = Quaternion.Euler(0,0,0);
         // this makes enemys charge in and spawn on right side of the map
         initialPositionX = 17f + Random.Range(-1f,1f);
         moveSpeed = Random.Range(1f, 2f);
@@ -69,7 +69,6 @@ public override void OnEnable()
             shootTimer += shootInterval;
             PhaseTwo();
         }
-
 
         //movement x
         float currentX = transform.position.x;

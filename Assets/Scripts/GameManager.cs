@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     public bool canSpawn;
     public bool isTransitioning;
     public bool isSwitchingLevel;
+    [SerializeField] float fadeSlowMo = 0.5f;
+    [SerializeField] float levelloadDelay = 2f;
 
     [SerializeField] string mainMenuScene;
     [SerializeField] string currentLevelScene;
@@ -97,7 +99,8 @@ public class GameManager : MonoBehaviour
         }    
         if(isSwitchingLevel)
         {
-            NewLevel();            
+            //NewLevel();
+            StartCoroutine(NewLevel());            
         }
     }
     public void Pause()
@@ -221,13 +224,27 @@ public class GameManager : MonoBehaviour
 
     // this method is way more easier and efficient.
     // Make a Master Parent GameObject and it setactive false or true every children below
-    public void NewLevel()
+    // public void NewLevel()
+    // {
+    //     //firstLevelChunk.SetActive(false);
+    //     isLevelOne = false;
+    //     firstLevelBackground.SetActive(false);
+    //     secondLevelBackground.SetActive(true);
+    //     secondLevelChunk.SetActive(true);    
+    // }
+
+    // fade between next level.
+    IEnumerator NewLevel()
     {
-        //firstLevelChunk.SetActive(false);
+        Fade.instance.FadeToBlack();
+        Time.timeScale = fadeSlowMo;
+        yield return new WaitForSeconds(1.5f);
+        Fade.instance.FadeToClear();
+        Time.timeScale = 1;
         isLevelOne = false;
         firstLevelBackground.SetActive(false);
         secondLevelBackground.SetActive(true);
-        secondLevelChunk.SetActive(true);    
+        secondLevelChunk.SetActive(true);          
     }
 
 }
