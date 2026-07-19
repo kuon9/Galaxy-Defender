@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8282173567338283953
+--- !u!1 &5213428078231844598
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,24 +8,25 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 48444815215091090}
-  - component: {fileID: 8151052207144208082}
-  - component: {fileID: 4093956660793580321}
-  - component: {fileID: 8050708140684840789}
+  - component: {fileID: 1647015520106832538}
+  - component: {fileID: 2401350114489672750}
+  - component: {fileID: 569809780964715951}
+  - component: {fileID: 336079509585794282}
+  - component: {fileID: 394705852444689817}
   m_Layer: 12
-  m_Name: BossBulletFr
+  m_Name: BossBulletCircle
   m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &48444815215091090
+--- !u!4 &1647015520106832538
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8282173567338283953}
+  m_GameObject: {fileID: 5213428078231844598}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 14.12, y: 0.29, z: 0}
@@ -34,13 +35,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &8151052207144208082
+--- !u!212 &2401350114489672750
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8282173567338283953}
+  m_GameObject: {fileID: 5213428078231844598}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -89,13 +90,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &4093956660793580321
+--- !u!70 &569809780964715951
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8282173567338283953}
+  m_GameObject: {fileID: 5213428078231844598}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -126,15 +127,51 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.99999994, y: 0.99999994}
   m_Direction: 0
---- !u!114 &8050708140684840789
+--- !u!114 &336079509585794282
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8282173567338283953}
+  m_GameObject: {fileID: 5213428078231844598}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f5b9ee7a0fe3a940b39c4a05fce6b93, type: 3}
+  m_Script: {fileID: 11500000, guid: 92d2c8cb9a30d0747bc493d00431002e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  circleRadius: 1.5
+  circleSpeed: 3
+  bulletSpeed: 5
+  timeToChase: 2
+  dmg: 5
+  homingProjectileTimer: 3
+  childProjectilePrefab: {fileID: 8282173567338283953, guid: 6f73bd925790ba747927283ea233b27c, type: 3}
+  splitCount: 3
+  spreadAngle: 45
+--- !u!50 &394705852444689817
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5213428078231844598}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

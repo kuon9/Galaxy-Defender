@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected int lives;
     [SerializeField] protected int maxLives;
     [SerializeField] protected int damage;
-    [SerializeField] protected int livesMultipler = 3;
+    [SerializeField] protected int livesMultipler = 2;
     [SerializeField] protected int experienceToGive;
   
 

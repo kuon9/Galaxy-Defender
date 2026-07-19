@@ -9,6 +9,7 @@ private float moveSpeed;
 private float shootTimer;
 private float shootInterval;
 private ObjectPooler projectilePool;
+private ObjectPooler homingCircleProjectilePool;
 private Animator anim;
 private float timeBeforeShooting = 2f;
 private bool canShoot;
@@ -38,7 +39,8 @@ public override void OnEnable()
         base.Start();
         anim = GetComponent<Animator>();
         destroyEffectPool = GameObject.Find("BoomPool").GetComponent<ObjectPooler>();    
-        projectilePool = GameObject.Find("BossBulletFrPool").GetComponent<ObjectPooler>();        
+        projectilePool = GameObject.Find("BossBulletFrPool").GetComponent<ObjectPooler>();
+        homingCircleProjectilePool= GameObject.Find("BossBulletCirclePool").GetComponent<ObjectPooler>();        
         hitSound = AudioManager.instance.hitImpact;
         destroySound = AudioManager.instance.monsterDeath;        
     }
@@ -91,9 +93,13 @@ public override void OnEnable()
         {
             BossTwoBullet.bulletSpeed = 8;
             GameObject projectile = projectilePool.GetPooledObject();
-            projectile.transform.position = phaseOneBulletSpawn[i].position;
-            projectile.transform.rotation = phaseOneBulletSpawn[i].rotation;
-            projectile.SetActive(true);
+            GameObject homingProjectile = homingCircleProjectilePool.GetPooledObject();
+            // projectile.transform.position = phaseOneBulletSpawn[i].position;
+            // projectile.transform.rotation = phaseOneBulletSpawn[i].rotation;
+            // projectile.SetActive(true);
+            homingProjectile.transform.position = phaseOneBulletSpawn[i].position;
+            homingProjectile.transform.rotation = phaseOneBulletSpawn[i].rotation;
+            homingProjectile.SetActive(true);            
             //anim.SetBool("shooting", true);
             //AudioManager.instance.PlaySound(AudioManager.instance.squidShoot);
             StartCoroutine(ResetShoot());               
