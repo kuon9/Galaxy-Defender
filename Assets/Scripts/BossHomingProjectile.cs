@@ -11,6 +11,7 @@ public class BossHomingProjectile : MonoBehaviour
     public Transform playerTransform;
     private Rigidbody2D rigidbody;
 
+    private ObjectPooler explosionVFX;
     public int dmg;
 
     public float homingProjectileTimer;
@@ -20,6 +21,10 @@ public class BossHomingProjectile : MonoBehaviour
         rigidbody = GetComponent<Rigidbody2D>();
     }
 
+    void Start()
+    {
+        explosionVFX = GameObject.Find("GreenHomingVFXPool").GetComponent<ObjectPooler>();
+    }
 
     void OnEnable()
     {
@@ -38,18 +43,18 @@ public class BossHomingProjectile : MonoBehaviour
         // if playertransform is unassigned, or if variable is empty the it's null
         if(playerTransform == null) return;
         
-        // 1. Calculate the direction vector to the player
+        // Calculate the direction vector to the player
         Vector2 direction = (Vector2)playerTransform.position - rigidbody.position;
         direction.Normalize();
 
-        // 2. Calculate the rotation required to face the player
+        //  Calculate the rotation required to face the player
         // Vector2.right assumes the projectile sprite faces right by default
         float rotateAmount = Vector3.Cross(direction, transform.right).z;
 
-        // 3. Apply angular velocity to steer toward the player
+        //  Apply angular velocity to steer toward the player
         rigidbody.angularVelocity = -rotateAmount * rotateSpeed;
 
-        // 4. Move forward in the direction the projectile is facing
+        //  Move forward in the direction the projectile is facing
         rigidbody.linearVelocity = transform.right * speed;        
     }
     void OnCollisionEnter2D(Collision2D col)
@@ -57,7 +62,10 @@ public class BossHomingProjectile : MonoBehaviour
         // Handle impact logic here (e.g., damage player, spawn explosion VFX)
         if(col.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Taking Damage");
+            GameObject explosion = explosionVFX.GetPooledObject();
+            explosion.transform.position = transform.position;
+            explosion.transform.rotation = transform.rotation;
+            explosion.SetActive(true);
             PlayerMovement.instance.TakeDamage(dmg);
             gameObject.SetActive(false);    
         }
@@ -66,7 +74,11 @@ public class BossHomingProjectile : MonoBehaviour
     IEnumerator Timer()
     {
         yield return new WaitForSeconds(homingProjectileTimer);
-        gameObject.SetActive(false);    
+        GameObject explosion = explosionVFX.GetPooledObject();
+        explosion.transform.position = transform.position;
+        explosion.transform.rotation = transform.rotation;
+        explosion.SetActive(true);
+        gameObject.SetActive(false);  
     }
 
 }

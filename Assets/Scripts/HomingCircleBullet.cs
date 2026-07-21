@@ -41,7 +41,6 @@ public class HomingCircleBullet : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         if (currentState == State.Circling)

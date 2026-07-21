@@ -191,8 +191,10 @@ Transform:
   - {fileID: 6101848456101830598}
   - {fileID: 2912325478018210675}
   - {fileID: 6098587339015066363}
+  - {fileID: 9172560409744653326}
   - {fileID: 7017987783948375977}
   - {fileID: 8179312096814398402}
+  - {fileID: 5906097117469126261}
   - {fileID: 8665500604002409794}
   - {fileID: 2368265249704265958}
   m_Father: {fileID: 0}
@@ -355,20 +357,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 0
-  maxLives: 300
+  maxLives: 400
   damage: 5
   livesMultipler: 3
   experienceToGive: 20
   phaseOneBulletSpawn:
-  - {fileID: 6101848456101830598}
-  - {fileID: 2912325478018210675}
-  - {fileID: 7017987783948375977}
+  - {fileID: 6098587339015066363}
+  - {fileID: 8179312096814398402}
+  phaseOneHomingBulletSpawn: []
   phaseTwoBulletSpawn:
   - {fileID: 6101848456101830598}
   - {fileID: 2912325478018210675}
   - {fileID: 6098587339015066363}
   - {fileID: 7017987783948375977}
   - {fileID: 8179312096814398402}
+  phaseTwoHomingBulletSpawn: []
 --- !u!114 &1330397786010570177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5215,6 +5218,68 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!1 &3314120874935814658
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5906097117469126261}
+  m_Layer: 0
+  m_Name: Side Bottom Homing Spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5906097117469126261
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3314120874935814658}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0.17364816, w: 0.9848078}
+  m_LocalPosition: {x: -0.362, y: -0.313, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8115535898919273609}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 20}
+--- !u!1 &6209231802463041338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9172560409744653326}
+  m_Layer: 0
+  m_Name: Side Top Homing Spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9172560409744653326
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6209231802463041338}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: -0.17364825, w: 0.9848078}
+  m_LocalPosition: {x: -0.369, y: 0.33, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8115535898919273609}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -20}
 --- !u!1 &7447938202349225828
 GameObject:
   m_ObjectHideFlags: 0

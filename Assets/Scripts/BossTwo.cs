@@ -15,7 +15,9 @@ private float timeBeforeShooting = 2f;
 private bool canShoot;
 // using arrays means we can't edit it 
 public Transform [] phaseOneBulletSpawn;
+public Transform [] phaseOneHomingBulletSpawn;
 public Transform [] phaseTwoBulletSpawn;
+public Transform [] phaseTwoHomingBulletSpawn;
 
 // [SerializeField] private List<Transform> phaseOneGuns;
 // [SerializeField] private List<Transform> phaseTwoGuns;
@@ -90,15 +92,17 @@ public override void OnEnable()
     private void PhaseOne()
     {
         for (int i = 0; i < phaseOneBulletSpawn.Length; i++)
+        for (int v = 0; v < phaseOneHomingBulletSpawn.Length; v++)
+
         {
             BossTwoBullet.bulletSpeed = 8;
             GameObject projectile = projectilePool.GetPooledObject();
             GameObject homingProjectile = homingCircleProjectilePool.GetPooledObject();
-            // projectile.transform.position = phaseOneBulletSpawn[i].position;
-            // projectile.transform.rotation = phaseOneBulletSpawn[i].rotation;
-            // projectile.SetActive(true);
-            homingProjectile.transform.position = phaseOneBulletSpawn[i].position;
-            homingProjectile.transform.rotation = phaseOneBulletSpawn[i].rotation;
+            projectile.transform.position = phaseOneBulletSpawn[i].position;
+            projectile.transform.rotation = phaseOneBulletSpawn[i].rotation;
+            projectile.SetActive(true);
+            homingProjectile.transform.position = phaseOneHomingBulletSpawn[v].position;
+            homingProjectile.transform.rotation = phaseOneHomingBulletSpawn[v].rotation;
             homingProjectile.SetActive(true);            
             //anim.SetBool("shooting", true);
             //AudioManager.instance.PlaySound(AudioManager.instance.squidShoot);
