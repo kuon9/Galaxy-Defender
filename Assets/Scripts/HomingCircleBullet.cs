@@ -9,16 +9,14 @@ public class HomingCircleBullet : MonoBehaviour
     public float circleRadius = 2f;
     public float circleSpeed = 5f;
     private Vector2 bulletSpawn;
+    private Vector2 direction;
     private float angle;
 
     public float bulletSpeed = 10f;
     public float timeToChase = 1f;
     public int dmg;
-
-    private Transform player;
     private Rigidbody2D rb;    
     public float homingProjectileTimer;
-    public GameObject childProjectilePrefab;
 
     //private ObjectPooler  projectilePool; // The bullet to spawn on split
     public int splitCount = 3; // Number of new projectiles to spawn
@@ -29,20 +27,18 @@ public class HomingCircleBullet : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         bulletSpawn = transform.position;
         currentState = State.Circling;
-        GameObject playerShip = GameObject.FindWithTag("Player");
-        if(playerShip != null)
+        GameObject player = GameObject.FindWithTag("Player");
+        if(player != null)
         {
-            player = playerShip.transform;
+            direction = (player.transform.position - transform.position).normalized;
         }        
-    
         currentState = State.Circling;
-        Invoke(nameof(StartChasing), timeToChase);
-        StartCoroutine(Timer());        
+        Invoke(nameof(StartChasing), timeToChase);    
     }
     
     void Start()
     {
-        //projectilePool = GameObject.Find("BossBulletFrPool").GetComponent<ObjectPooler>();        
+
     }
 
     // Update is called once per frame
@@ -56,12 +52,12 @@ public class HomingCircleBullet : MonoBehaviour
         }
         else if (currentState == State.Chasing)
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, bulletSpeed * Time.deltaTime);
+            rb.linearVelocity = direction * bulletSpeed;
 
-            // Rotate towards the player
-            Vector2 direction = (Vector2)(player.position - transform.position);
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            // // Rotate towards the player
+            // Vector2 direction = (Vector2)(player.position - transform.position);
+            // float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            // transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
         }    
     }
@@ -79,30 +75,5 @@ public class HomingCircleBullet : MonoBehaviour
     void StartChasing()
     {
         currentState = State.Chasing;
-    }
-
-    IEnumerator Timer()
-    {
-        yield return new WaitForSeconds(homingProjectileTimer);
-        SplitProjectile();  
-        gameObject.SetActive(false);  
-    }
-    void SplitProjectile()
-    {
-        float angleStep = 45f; 
-        float startAngle = -15f;
-        for (int i = 0; i < splitCount; i++)
-        {
-            Vector3 directionToPlayer = (player.position - transform.position).normalized;
-            {
-                //Rotate the direction slightly for the spread
-                float currentAngle = startAngle + (angleStep * i);
-                Quaternion spreadRotation = Quaternion.AngleAxis(currentAngle, Vector3.forward); // Use Vector3.up for 3D
-                Vector3 finalDirection = spreadRotation * directionToPlayer;
-
-                // Spawn the new projectile
-                GameObject newProjectile = Instantiate(childProjectilePrefab, transform.position, Quaternion.identity);    
-            }            
-        }
     }
 }

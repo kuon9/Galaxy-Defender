@@ -19,7 +19,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1647015520106832538
 Transform:
   m_ObjectHideFlags: 0
@@ -139,13 +139,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92d2c8cb9a30d0747bc493d00431002e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  circleRadius: 1.5
-  circleSpeed: 3
-  bulletSpeed: 5
+  circleRadius: 1
+  circleSpeed: 4
+  bulletSpeed: 6
   timeToChase: 2
   dmg: 5
-  homingProjectileTimer: 3
-  childProjectilePrefab: {fileID: 8282173567338283953, guid: 6f73bd925790ba747927283ea233b27c, type: 3}
+  homingProjectileTimer: 2
   splitCount: 3
   spreadAngle: 45
 --- !u!50 &394705852444689817
