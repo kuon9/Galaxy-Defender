@@ -63,6 +63,7 @@ public class ObjectSpawner : MonoBehaviour
     }
 
 
+    // Vector2 variable allowing enemies to spawn between range of transform
     Vector2 RandomSpawnPoint()
     {
         Vector2 spawnPoint;

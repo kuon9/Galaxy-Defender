@@ -16,11 +16,11 @@ public class HomingCircleBullet : MonoBehaviour
     public float timeToChase = 1f;
     public int dmg;
     private Rigidbody2D rb;    
-    public float homingProjectileTimer;
+    // public float homingProjectileTimer;
 
     //private ObjectPooler  projectilePool; // The bullet to spawn on split
-    public int splitCount = 3; // Number of new projectiles to spawn
-    public float spreadAngle = 45f; // Total angle spread in degrees
+    // public int splitCount = 3; // Number of new projectiles to spawn
+    // public float spreadAngle = 45f; // Total angle spread in degrees
 
     void OnEnable()
     {
@@ -39,6 +39,15 @@ public class HomingCircleBullet : MonoBehaviour
     void Start()
     {
 
+    }
+
+    void Update()
+    {
+        // Make them setactive(false) and recycle them back into objectpool
+        if(transform.position.x < -5)
+        {
+            gameObject.SetActive(false);
+        }    
     }
 
     void FixedUpdate()

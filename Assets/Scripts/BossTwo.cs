@@ -106,24 +106,29 @@ public override void OnEnable()
             homingProjectile.SetActive(true);            
             //anim.SetBool("shooting", true);
             //AudioManager.instance.PlaySound(AudioManager.instance.squidShoot);
-            StartCoroutine(ResetShoot());               
+            //StartCoroutine(ResetShoot());               
         }           
     }
     private void PhaseTwo()
     {
         for (int i = 0; i < phaseTwoBulletSpawn.Length; i++)
+        for (int v = 0; v < phaseOneHomingBulletSpawn.Length; v++)
         {
             // position boss closer to player
             // means less time for player to react and dodge to boss's projectiles
             initialPositionX = 14f + Random.Range(-1f,1f);
             BossTwoBullet.bulletSpeed = 10;
             GameObject projectile = projectilePool.GetPooledObject();
+            GameObject homingProjectile = homingCircleProjectilePool.GetPooledObject();
             projectile.transform.position = phaseTwoBulletSpawn[i].position;
             projectile.transform.rotation = phaseTwoBulletSpawn[i].rotation;
             projectile.SetActive(true);
+            homingProjectile.transform.position = phaseOneHomingBulletSpawn[v].position;
+            homingProjectile.transform.rotation = phaseOneHomingBulletSpawn[v].rotation;
+            homingProjectile.SetActive(true);                        
             //anim.SetBool("shooting", true);
             //AudioManager.instance.PlaySound(AudioManager.instance.squidShoot);
-            StartCoroutine(ResetShoot());               
+            //StartCoroutine(ResetShoot());               
         }           
     }
     // private void PhaseOne()
@@ -153,12 +158,12 @@ public override void OnEnable()
     //     StartCoroutine(ResetShoot());               
     //     }           
     // }
-    IEnumerator ResetShoot()
-    {
-        // waits one frame
-        yield return null;
-        //anim.SetBool("shooting", false); 
-    }
+    // IEnumerator ResetShoot()
+    // {
+    //     // waits one frame
+    //     yield return null;
+    //     //anim.SetBool("shooting", false); 
+    // }
     // void HpScaling()
     // {
     //     // makes enemy hp scale based on current player's hp
