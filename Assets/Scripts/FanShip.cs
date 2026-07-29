@@ -1,17 +1,22 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
-public class EnemyShipTwo : Enemy
+public class FanShip : Enemy
 {
 private float initialPositionX;
 private float moveSpeed;
 private float shootTimer;
 private float shootInterval;
 private ObjectPooler projectilePool;
+
+public int bulletCount = 4;
+
+[Tooltip("The total arc angle of the fan spread (in degrees).")]
+public float totalSpreadAngle = 50f;
 private Animator anim;
 private float timeBeforeShooting = 2f;
 private bool canShoot;
-public Transform [] bulletSpawn;
+public Transform bulletSpawn;
     
 public override void OnEnable()
     {
@@ -32,7 +37,7 @@ public override void OnEnable()
         base.Start();
         anim = GetComponent<Animator>();
         destroyEffectPool = GameObject.Find("BoomPool").GetComponent<ObjectPooler>();    
-        projectilePool = GameObject.Find("EnemyBulletThreePool").GetComponent<ObjectPooler>();        
+        projectilePool = GameObject.Find("FanBulletPool").GetComponent<ObjectPooler>();        
         hitSound = AudioManager.instance.hitImpact;
         destroySound = AudioManager.instance.monsterDeath;        
     }
@@ -60,7 +65,7 @@ public override void OnEnable()
         }
 
         //movement y 
-        if(transform.position.y > 4 || transform.position.y < -4)
+        if(transform.position.y > 3 || transform.position.y < -3)
         {
             speedY *= -1;
         }
@@ -74,23 +79,36 @@ public override void OnEnable()
     }
     private void Shoot()
     {
-        for (int i = 0; i < bulletSpawn.Length; i++)
+        // 1. Calculate the step angle between each individual bullet
+        float angleStep = 0f;
+        if (bulletCount > 1)
         {
-        GameObject projectile = projectilePool.GetPooledObject();
-        projectile.transform.position = bulletSpawn[i].position;
-        projectile.transform.rotation = bulletSpawn[i].rotation;
-        projectile.SetActive(true);
+            angleStep = totalSpreadAngle / (bulletCount - 1);
+        }
+
+        // 2. Find the leftmost starting angle relative to the center direction
+        // transform.rotation.eulerAngles.z handles any direction your shooter is facing
+        float centerAngle = transform.rotation.eulerAngles.z;
+        float startAngle = centerAngle - (totalSpreadAngle / 2f);
+        for (int i = 0; i < bulletCount; i++)
+        {
+            float currentBulletAngle = startAngle + (angleStep * i);
+            Quaternion bulletRotation = Quaternion.Euler(0f, 0f, currentBulletAngle);        
+            GameObject projectile = projectilePool.GetPooledObject();
+            projectile.transform.position = bulletSpawn.position;
+            projectile.transform.rotation = bulletRotation;
+            projectile.SetActive(true);
         //anim.SetBool("shooting", true);
         //AudioManager.instance.PlaySound(AudioManager.instance.squidShoot);
-        StartCoroutine(ResetShoot());               
+        //StartCoroutine(ResetShoot());               
         }           
     }    
-    IEnumerator ResetShoot()
-    {
-        // waits one frame
-        yield return null;
-        //anim.SetBool("shooting", false); 
-    }
+    // IEnumerator ResetShoot()
+    // {
+    //     // waits one frame
+    //     yield return null;
+    //     //anim.SetBool("shooting", false); 
+    // }
     void HpScaling()
     {
         // makes enemy hp scale based on current player's hp
