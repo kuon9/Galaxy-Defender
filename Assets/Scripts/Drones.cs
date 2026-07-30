@@ -5,7 +5,8 @@ public class Drones : MonoBehaviour
 {
     [Header("Shooting")]
     public GameObject bulletPrefab;
-    public Transform firePoint;
+    private ObjectPooler projectilePool;
+    public Transform projectileSpawn;
     public float fireRate = 1f;
     public float detectionRange = 5f;
 
@@ -27,6 +28,11 @@ public class Drones : MonoBehaviour
         isShooting = false;
     }
 
+    void Start()
+    {
+        projectilePool = GameObject.Find("BulletPool").GetComponent<ObjectPooler>();
+    }
+
     void Update()
     {
         //currentTarget != null && 
@@ -35,7 +41,8 @@ public class Drones : MonoBehaviour
         if (!isShooting)
         {
             isShooting = true;
-            StartCoroutine(ShootRoutine());
+            Shoot();
+            //StartCoroutine(ShootRoutine());
         }
     }
 
@@ -53,10 +60,20 @@ public class Drones : MonoBehaviour
     //         transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, 90 * Time.deltaTime);
     //     }
     // }
-    IEnumerator ShootRoutine()
+    
+    public void Shoot()
+    {
+        GameObject projectile = projectilePool.GetPooledObject();
+        projectile.transform.position = projectileSpawn.position;
+        projectile.transform.rotation = projectileSpawn.rotation;
+        projectile.SetActive(true);
+        StartCoroutine(ShootCD());
+    }
+    
+    IEnumerator ShootCD()    
     {
         Debug.Log("DRONE FIRING");
-        Instantiate(bulletPrefab, firePoint.position, transform.rotation);
+        //Instantiate(bulletPrefab, firePoint.position, transform.rotation);
         yield return new WaitForSeconds(fireRate);
         isShooting = false;
     }

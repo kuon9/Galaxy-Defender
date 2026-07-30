@@ -98,9 +98,9 @@ public override void OnEnable()
             projectile.transform.position = bulletSpawn.position;
             projectile.transform.rotation = bulletRotation;
             projectile.SetActive(true);
-        //anim.SetBool("shooting", true);
-        //AudioManager.instance.PlaySound(AudioManager.instance.squidShoot);
-        //StartCoroutine(ResetShoot());               
+            //anim.SetBool("shooting", true);
+            //AudioManager.instance.PlaySound(AudioManager.instance.squidShoot);
+            //StartCoroutine(ResetShoot());               
         }           
     }    
     // IEnumerator ResetShoot()

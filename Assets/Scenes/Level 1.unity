@@ -2662,6 +2662,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 8128205275267693067, guid: 35a50fce3e4fd2e4ba8018ac1d13a538, type: 3}
   poolSize: 5
+--- !u!1 &322990172
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 322990173}
+  - component: {fileID: 322990174}
+  m_Layer: 0
+  m_Name: FanBulletPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &322990173
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322990172}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 13.421839, y: -0.9301218, z: -598.37024}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 765709286}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &322990174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322990172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 987ad150b4767c54aae1bb57e7575e04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 6833601599542441067, guid: 12fb95a4eacdb204987ae9dcc5721d78, type: 3}
+  poolSize: 5
 --- !u!1 &344213326
 GameObject:
   m_ObjectHideFlags: 0
@@ -3428,7 +3474,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &508673125
 Transform:
   m_ObjectHideFlags: 0
@@ -3799,7 +3845,7 @@ GameObject:
   - component: {fileID: 523002329}
   - component: {fileID: 523002330}
   m_Layer: 0
-  m_Name: EnemyShipTwoPool
+  m_Name: FanShipPool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4262,6 +4308,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &628446569 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1442895371046481054, guid: b43ca19d4e045be4ba9c42486ec55a89, type: 3}
+  m_PrefabInstance: {fileID: 1830237072}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &641836242
 GameObject:
   m_ObjectHideFlags: 0
@@ -4825,6 +4876,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 4751130397799575543, guid: c7dd16be3f235d74da0bc18c78ddf11f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4897,6 +4952,7 @@ Transform:
   - {fileID: 1910188191}
   - {fileID: 2027336986}
   - {fileID: 830868269}
+  - {fileID: 322990173}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &768898804
@@ -10982,7 +11038,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2682551466513078923, guid: 9ace43562cff9c9409219aaea1ccf58b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193556465791287352, guid: 9ace43562cff9c9409219aaea1ccf58b, type: 3}
+      propertyPath: phaseOneHomingBulletSpawn.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8115535898919273609, guid: 9ace43562cff9c9409219aaea1ccf58b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11037,9 +11097,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1713125217609688378, guid: b43ca19d4e045be4ba9c42486ec55a89, type: 3}
+      propertyPath: bulletCount
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1713125217609688378, guid: b43ca19d4e045be4ba9c42486ec55a89, type: 3}
+      propertyPath: bulletSpawn
+      value: 
+      objectReference: {fileID: 628446569}
+    - target: {fileID: 1713125217609688378, guid: b43ca19d4e045be4ba9c42486ec55a89, type: 3}
+      propertyPath: totalSpreadAngle
+      value: 44
+      objectReference: {fileID: 0}
     - target: {fileID: 4040206049830756685, guid: b43ca19d4e045be4ba9c42486ec55a89, type: 3}
       propertyPath: m_Name
-      value: EnemyShip2
+      value: FanShip
       objectReference: {fileID: 0}
     - target: {fileID: 4040206049830756685, guid: b43ca19d4e045be4ba9c42486ec55a89, type: 3}
       propertyPath: m_IsActive
@@ -11047,7 +11119,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4781984208378945380, guid: b43ca19d4e045be4ba9c42486ec55a89, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20.683828
+      value: 16.69
       objectReference: {fileID: 0}
     - target: {fileID: 4781984208378945380, guid: b43ca19d4e045be4ba9c42486ec55a89, type: 3}
       propertyPath: m_LocalPosition.y
@@ -13001,6 +13073,10 @@ PrefabInstance:
     - target: {fileID: 1078292029082180427, guid: 37b70fe7f1cada943a1c26dd4a9bd288, type: 3}
       propertyPath: m_Name
       value: HelixShip
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078292029082180427, guid: 37b70fe7f1cada943a1c26dd4a9bd288, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
