@@ -27,7 +27,7 @@ public override void OnEnable()
         base.OnEnable();
         transform.rotation = Quaternion.Euler(0,0,0);
         // this makes enemys charge in and spawn on right side of the map
-        initialPositionX = 16f + Random.Range(-1f,1f);
+        initialPositionX = 17f + Random.Range(-1f,1f);
         moveSpeed = Random.Range(1f, 2f);
         // if random value is less than 0.5 , 50% it eithers moves up or down Two float
         speedY = Random.value < 0.5 ? -2f : 2f;

@@ -1,0 +1,4771 @@
+fileFormatVersion: 2
+guid: 3cdf9075a9b0b5945a266234c00f79c4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7162386311589441314
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_0
+  - first:
+      213: 6148718473782132191
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_1
+  - first:
+      213: 8878539451046019020
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_2
+  - first:
+      213: -5867785296570472386
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_3
+  - first:
+      213: -1915371427911171061
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_4
+  - first:
+      213: 6944432537444785296
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_5
+  - first:
+      213: 494956816998594280
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_6
+  - first:
+      213: -4637274012782447716
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_7
+  - first:
+      213: -1653377727251152940
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_8
+  - first:
+      213: -514190796674834484
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_9
+  - first:
+      213: 8748426968198868768
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_10
+  - first:
+      213: 6390880412961713152
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_11
+  - first:
+      213: -6759015066882163047
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_12
+  - first:
+      213: 99388395563715100
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_13
+  - first:
+      213: -1437006036609247189
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_14
+  - first:
+      213: -6491298567657320585
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_15
+  - first:
+      213: -4847337738419145354
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_16
+  - first:
+      213: 1389583462010973613
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_17
+  - first:
+      213: 5945707224887684932
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_18
+  - first:
+      213: -5116907017301898729
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_19
+  - first:
+      213: -5374262774094702376
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_20
+  - first:
+      213: 7186528300261076731
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_21
+  - first:
+      213: -1156449296061114945
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_22
+  - first:
+      213: 3044036200003961065
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_23
+  - first:
+      213: -8722582439412291754
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_24
+  - first:
+      213: 3739306717327666934
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_25
+  - first:
+      213: 8114147275583870347
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_26
+  - first:
+      213: 2675323314117372648
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_27
+  - first:
+      213: 4516650019951962499
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_28
+  - first:
+      213: 6698995784500110781
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_29
+  - first:
+      213: 3822525792507357064
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_30
+  - first:
+      213: -6673513344800303706
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_31
+  - first:
+      213: -1170423593111884151
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_32
+  - first:
+      213: -7711342599587953099
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_33
+  - first:
+      213: 2617908343886319043
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_34
+  - first:
+      213: -7792756882840604355
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_35
+  - first:
+      213: -7927360593163083240
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_36
+  - first:
+      213: 2832056259966735815
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_37
+  - first:
+      213: 3359202772242587780
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_38
+  - first:
+      213: -991334322176178572
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_39
+  - first:
+      213: -2377570177815879051
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_40
+  - first:
+      213: 5770035029165061474
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_41
+  - first:
+      213: 8118895196950148308
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_42
+  - first:
+      213: 2688528226725610688
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_43
+  - first:
+      213: -7193407040117641847
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_44
+  - first:
+      213: 8147180329786571686
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_45
+  - first:
+      213: -2388650174957258749
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_46
+  - first:
+      213: -5898104158828223296
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_47
+  - first:
+      213: -526011103141433429
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_48
+  - first:
+      213: 4073310596099776989
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_49
+  - first:
+      213: -246695001305914552
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_50
+  - first:
+      213: 3748292443040061090
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_51
+  - first:
+      213: -1288728733733643662
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_52
+  - first:
+      213: -182274296356567695
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_53
+  - first:
+      213: 8200907174580359821
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_54
+  - first:
+      213: 995995710203790128
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_55
+  - first:
+      213: 138056284991081020
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_56
+  - first:
+      213: -4895024003687567751
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_57
+  - first:
+      213: 4681572069921050472
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_58
+  - first:
+      213: -5015751967682444351
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_59
+  - first:
+      213: 3346808947009109330
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_60
+  - first:
+      213: 1573624413817215119
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_61
+  - first:
+      213: -1966426499464644124
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_62
+  - first:
+      213: -5337839667793555031
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_63
+  - first:
+      213: -3653975979310930804
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_64
+  - first:
+      213: 6544288952607830022
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_65
+  - first:
+      213: 3322194206494635663
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_66
+  - first:
+      213: 8187104512667534857
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_67
+  - first:
+      213: -2275020293052710380
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_68
+  - first:
+      213: 8679787591700315075
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_69
+  - first:
+      213: -2510722720805241869
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_70
+  - first:
+      213: -7134891476701267905
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_71
+  - first:
+      213: 1613752913976406284
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_72
+  - first:
+      213: 8563777956802959557
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_73
+  - first:
+      213: 6699475432917749630
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_74
+  - first:
+      213: -1957912198898563046
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_75
+  - first:
+      213: 3862840331939649575
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_76
+  - first:
+      213: 7872415160587559392
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_77
+  - first:
+      213: 8899481647304889708
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_78
+  - first:
+      213: 346145853726175283
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_79
+  - first:
+      213: 6028745217262077436
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_80
+  - first:
+      213: 4000145075877065485
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_81
+  - first:
+      213: 1440628764646727785
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_82
+  - first:
+      213: -5471790086645139275
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_83
+  - first:
+      213: 3104940138938097912
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_84
+  - first:
+      213: 7574894546332149419
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_85
+  - first:
+      213: -7597835643941933724
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_86
+  - first:
+      213: 4746125326251411530
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_87
+  - first:
+      213: -7599467781468193444
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_88
+  - first:
+      213: 7272559942287259584
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_89
+  - first:
+      213: 9035005616944836932
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_90
+  - first:
+      213: -2009050258777609726
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_91
+  - first:
+      213: 4450248410517999326
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_92
+  - first:
+      213: 6715240711797605204
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_93
+  - first:
+      213: -2157603007107012884
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_94
+  - first:
+      213: -8651730506529750751
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_95
+  - first:
+      213: -9074079300012160084
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_96
+  - first:
+      213: 6106688240400644480
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_97
+  - first:
+      213: -8411740827617567431
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_98
+  - first:
+      213: 919171973276574984
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_99
+  - first:
+      213: 2801994159015478455
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_100
+  - first:
+      213: 1888048899550423712
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_101
+  - first:
+      213: 3362038725535534727
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_102
+  - first:
+      213: -1819242500977741196
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_103
+  - first:
+      213: 5155530504781420278
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_104
+  - first:
+      213: -653233246486416420
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_105
+  - first:
+      213: -4081121193881756469
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_106
+  - first:
+      213: -6285349613744599083
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_107
+  - first:
+      213: 3186536182235343870
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_108
+  - first:
+      213: -7612658629496291805
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_109
+  - first:
+      213: 4757674606880971695
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_110
+  - first:
+      213: 3853391922087212539
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_111
+  - first:
+      213: 33295460187357921
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_112
+  - first:
+      213: -3346893713277492560
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_113
+  - first:
+      213: -1498997397088974344
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_114
+  - first:
+      213: -6525581001397816029
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_115
+  - first:
+      213: -2067262554853283953
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_116
+  - first:
+      213: 4567537001574273748
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_117
+  - first:
+      213: 3234395022126949919
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_118
+  - first:
+      213: -758431377376236765
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_119
+  - first:
+      213: -8295581864310911974
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_120
+  - first:
+      213: 8599571086637884815
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_121
+  - first:
+      213: 4785279731113386166
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_122
+  - first:
+      213: 5037879626927077989
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_123
+  - first:
+      213: 312182238475132341
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_124
+  - first:
+      213: -7865154033849552534
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_125
+  - first:
+      213: 2617776791211435349
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_126
+  - first:
+      213: -3446420373044041543
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_127
+  - first:
+      213: 1212255043517442031
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_128
+  - first:
+      213: -8956369467577052950
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_129
+  - first:
+      213: -2790144954716617544
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_130
+  - first:
+      213: 2897540287413133960
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_131
+  - first:
+      213: 7558809545195671541
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_132
+  - first:
+      213: 1217937086627896102
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_133
+  - first:
+      213: 1047578712497890806
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_134
+  - first:
+      213: 10789922308561146
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_135
+  - first:
+      213: 5823829134931362488
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_136
+  - first:
+      213: -63684138739060851
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_137
+  - first:
+      213: 700930292894568612
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_138
+  - first:
+      213: -2735565528012932897
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_139
+  - first:
+      213: 8111052483461151855
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_140
+  - first:
+      213: -1026736704277598327
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_141
+  - first:
+      213: 1173836454999925920
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_142
+  - first:
+      213: 8884397575157227340
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_143
+  - first:
+      213: 7670787219163432676
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_144
+  - first:
+      213: -2075441617777879921
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_145
+  - first:
+      213: -3307866554702495944
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_146
+  - first:
+      213: 7420519245563109011
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_147
+  - first:
+      213: -2087907872872069448
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_148
+  - first:
+      213: -5582707168981182259
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_149
+  - first:
+      213: 2912366124114366253
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_150
+  - first:
+      213: -8652377292609513328
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_151
+  - first:
+      213: -4605960392757712693
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_152
+  - first:
+      213: -460823642405482689
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_153
+  - first:
+      213: 7181566101727937132
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_154
+  - first:
+      213: 8644979727595435641
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_155
+  - first:
+      213: 7712394112566696540
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_156
+  - first:
+      213: 8849934529573454569
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_157
+  - first:
+      213: -1103220436452379814
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_158
+  - first:
+      213: -896462226066109394
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_159
+  - first:
+      213: -2066547466963908630
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_160
+  - first:
+      213: -7308907328423582604
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_161
+  - first:
+      213: -3285467628659870890
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_162
+  - first:
+      213: 5883802304642373885
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_163
+  - first:
+      213: -6290147629515889434
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_164
+  - first:
+      213: 4896574333968331490
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_165
+  - first:
+      213: 8887281074643838100
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_166
+  - first:
+      213: 2214539148867117721
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_167
+  - first:
+      213: -7879398838607227953
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_168
+  - first:
+      213: -1963781338259182089
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_169
+  - first:
+      213: 1296244937508889905
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_170
+  - first:
+      213: 1924336766699193301
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_171
+  - first:
+      213: 5217878781626850744
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_172
+  - first:
+      213: -8859573046383177156
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_173
+  - first:
+      213: -3402490952054020690
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_174
+  - first:
+      213: -4700635641836979368
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_175
+  - first:
+      213: -346746296930193490
+    second: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_176
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 2578
+        width: 31
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22fa8660768e56360800000000000000
+      internalID: 7162386311589441314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_1
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 2385
+        width: 187
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdd7aa5efd2a45550800000000000000
+      internalID: 6148718473782132191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_2
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 2385
+        width: 186
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccfb3e71798e63b70800000000000000
+      internalID: 8878539451046019020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_3
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 2385
+        width: 186
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3828a39c50719ea0800000000000000
+      internalID: -5867785296570472386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_4
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 2385
+        width: 186
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b040c6a95db3b65e0800000000000000
+      internalID: -1915371427911171061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_5
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 2302
+        width: 47
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09c9f0189949f5060800000000000000
+      internalID: 6944432537444785296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_6
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 2076
+        width: 219
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e6fb584a907ed600800000000000000
+      internalID: 494956816998594280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_7
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 2077
+        width: 214
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c93b3fdcad715afb0800000000000000
+      internalID: -4637274012782447716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_8
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 2076
+        width: 209
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dff6af87b50e09e0800000000000000
+      internalID: -1653377727251152940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_9
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 2076
+        width: 206
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccfdb69d13a3dd8f0800000000000000
+      internalID: -514190796674834484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_10
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 2076
+        width: 208
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02fe0f6f9f7a86970800000000000000
+      internalID: 8748426968198868768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1778
+        width: 211
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00ca59010e7f0b850800000000000000
+      internalID: 6390880412961713152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_12
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 1778
+        width: 217
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99eb9f28b972332a0800000000000000
+      internalID: -6759015066882163047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_13
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 1778
+        width: 222
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1a0f5c1839116100800000000000000
+      internalID: 99388395563715100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_14
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 1778
+        width: 226
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2850df8f9abe0ce0800000000000000
+      internalID: -1437006036609247189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_15
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 1776
+        width: 229
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77f88c758564ae5a0800000000000000
+      internalID: -6491298567657320585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_16
+      rect:
+        serializedVersion: 2
+        x: 1765
+        y: 1777
+        width: 227
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6757e2b520ccabcb0800000000000000
+      internalID: -4847337738419145354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_17
+      rect:
+        serializedVersion: 2
+        x: 2125
+        y: 1776
+        width: 223
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dadebeedbcac84310800000000000000
+      internalID: 1389583462010973613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_18
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 1739
+        width: 33
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44f67e52835638250800000000000000
+      internalID: 5945707224887684932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_19
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 1739
+        width: 42
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71a4405ad281df8b0800000000000000
+      internalID: -5116907017301898729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_20
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1706
+        width: 50
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d8da742b78ca65b0800000000000000
+      internalID: -5374262774094702376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_21
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 1706
+        width: 50
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfe6a59c96dabb360800000000000000
+      internalID: 7186528300261076731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_22
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1706
+        width: 50
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb5d68b0e7773ffe0800000000000000
+      internalID: -1156449296061114945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_23
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 1706
+        width: 50
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e08aa0cbc69e3a20800000000000000
+      internalID: 3044036200003961065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_24
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1638
+        width: 50
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65725ce4c7923f680800000000000000
+      internalID: -8722582439412291754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_25
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 1638
+        width: 52
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fe2c80d5afa4e330800000000000000
+      internalID: 3739306717327666934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_26
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 1638
+        width: 43
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b855160e4fd3b9070800000000000000
+      internalID: 8114147275583870347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_27
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 1636
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ea69453168a02520800000000000000
+      internalID: 2675323314117372648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_28
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 1636
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3896ffd434d5eae30800000000000000
+      internalID: 4516650019951962499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_29
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 1680
+        width: 74
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db5e7f65c2d97fc50800000000000000
+      internalID: 6698995784500110781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_30
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1557
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8876b27a4f65c0530800000000000000
+      internalID: 3822525792507357064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_31
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1601
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a5595f78fae263a0800000000000000
+      internalID: -6673513344800303706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_32
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 1557
+        width: 54
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98e64d771f1d1cfe0800000000000000
+      internalID: -1170423593111884151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_33
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 1595
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 536093a13cecbf490800000000000000
+      internalID: -7711342599587953099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_34
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1561
+        width: 57
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cd00ebb4cda45420800000000000000
+      internalID: 2617908343886319043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_35
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 1558
+        width: 60
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d313e4127e09ad390800000000000000
+      internalID: -7792756882840604355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_36
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 1563
+        width: 54
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 812a51e9a8b5cf190800000000000000
+      internalID: -7927360593163083240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_37
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 1599
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c51d3fd92c7d4720800000000000000
+      internalID: 2832056259966735815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_38
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 1582
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 480e600af194e9e20800000000000000
+      internalID: 3359202772242587780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_39
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1559
+        width: 47
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4764901bfa21e32f0800000000000000
+      internalID: -991334322176178572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_40
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 1563
+        width: 55
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 572e8ba258c210fd0800000000000000
+      internalID: -2377570177815879051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_41
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 1560
+        width: 56
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 265b1feb948431050800000000000000
+      internalID: 5770035029165061474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_42
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 1594
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d4b6d67a2c1ca070800000000000000
+      internalID: 8118895196950148308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_43
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 1477
+        width: 465
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c447928d229f4520800000000000000
+      internalID: 2688528226725610688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_44
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 1574
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98d6ef8c862eb2c90800000000000000
+      internalID: -7193407040117641847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_45
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 1578
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ab7af52859901170800000000000000
+      internalID: 8147180329786571686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_46
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 1580
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3087ffc425fc9ded0800000000000000
+      internalID: -2388650174957258749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_47
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1565
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c42acc5489b52ea0800000000000000
+      internalID: -5898104158828223296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_48
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1477
+        width: 69
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bafe75940bb33b8f0800000000000000
+      internalID: -526011103141433429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_49
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1478
+        width: 83
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd1ac54e76e478830800000000000000
+      internalID: 4073310596099776989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_50
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 1501
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 843eb4f0430939cf0800000000000000
+      internalID: -246695001305914552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_51
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 1478
+        width: 69
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a61fad1e1c940430800000000000000
+      internalID: 3748292443040061090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_52
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 1501
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27a97fd6b048d1ee0800000000000000
+      internalID: -1288728733733643662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_53
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 1477
+        width: 76
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1758bf14e7e687df0800000000000000
+      internalID: -182274296356567695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_54
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 1495
+        width: 35
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8290d000a97fc170800000000000000
+      internalID: 8200907174580359821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_55
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 1493
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 033828842dc72dd00800000000000000
+      internalID: 995995710203790128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_56
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 1492
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3a47e1b5797ae100800000000000000
+      internalID: 138056284991081020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_57
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 1428
+        width: 55
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97e21358a91611cb0800000000000000
+      internalID: -4895024003687567751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_58
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 1428
+        width: 46
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86fc80a5ef848f040800000000000000
+      internalID: 4681572069921050472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_59
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 1348
+        width: 71
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c342d4f828746ab0800000000000000
+      internalID: -5015751967682444351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_60
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 1351
+        width: 70
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25db3915101427e20800000000000000
+      internalID: 3346808947009109330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_61
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 1348
+        width: 74
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8815732113a6d510800000000000000
+      internalID: 1573624413817215119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_62
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 1348
+        width: 74
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e9be7e6489d5b4e0800000000000000
+      internalID: -1966426499464644124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_63
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 1351
+        width: 75
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a11d2d6a1f2ce5b0800000000000000
+      internalID: -5337839667793555031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_64
+      rect:
+        serializedVersion: 2
+        x: 1258
+        y: 1348
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c84ac57d4387a4dc0800000000000000
+      internalID: -3653975979310930804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_65
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 1348
+        width: 77
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 600f3b7112cf1da50800000000000000
+      internalID: 6544288952607830022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_66
+      rect:
+        serializedVersion: 2
+        x: 1463
+        y: 1348
+        width: 78
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8639f0770eca1e20800000000000000
+      internalID: 3322194206494635663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_67
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 1348
+        width: 60
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 906cb885d207e9170800000000000000
+      internalID: 8187104512667534857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_68
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 1348
+        width: 63
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 412c9c7d8118d60e0800000000000000
+      internalID: -2275020293052710380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_69
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 1348
+        width: 67
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cbf321c3dcc47870800000000000000
+      internalID: 8679787591700315075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_70
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 1419
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fbb6e0ecfe182dd0800000000000000
+      internalID: -2510722720805241869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_71
+      rect:
+        serializedVersion: 2
+        x: 1566
+        y: 1365
+        width: 57
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3832441106cbfc90800000000000000
+      internalID: -7134891476701267905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_72
+      rect:
+        serializedVersion: 2
+        x: 1649
+        y: 1367
+        width: 55
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c01b0d8a9b3356610800000000000000
+      internalID: 1613752913976406284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_73
+      rect:
+        serializedVersion: 2
+        x: 1733
+        y: 1368
+        width: 53
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c89f8acda6a8d670800000000000000
+      internalID: 8563777956802959557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_74
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1357
+        width: 43
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7fc480396159fc50800000000000000
+      internalID: 6699475432917749630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_75
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 1351
+        width: 51
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a184f338a3914d4e0800000000000000
+      internalID: -1957912198898563046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_76
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 1348
+        width: 58
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7289051d0d09b9530800000000000000
+      internalID: 3862840331939649575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_77
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 1348
+        width: 55
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e1a833f0ef604d60800000000000000
+      internalID: 7872415160587559392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_78
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 1348
+        width: 58
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6557b0286f418b70800000000000000
+      internalID: 8899481647304889708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_79
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 1354
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 330b2dbe1d1cdc400800000000000000
+      internalID: 346145853726175283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_80
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1251
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf5cd3c55d76aa350800000000000000
+      internalID: 6028745217262077436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_81
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 1302
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d033ea9b0ce538730800000000000000
+      internalID: 4000145075877065485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_82
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 1303
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9606af98a342ef310800000000000000
+      internalID: 1440628764646727785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_83
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 1251
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b8330038eb4014b0800000000000000
+      internalID: -5471790086645139275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_84
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 1303
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f0e14e0b96f61b20800000000000000
+      internalID: 3104940138938097912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_85
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 1259
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba6eb25d47e6f1960800000000000000
+      internalID: 7574894546332149419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_86
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 1259
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46d2a05acb01f8690800000000000000
+      internalID: -7597835643941933724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_87
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 1253
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4843b296df9dd140800000000000000
+      internalID: 4746125326251411530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_88
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 1259
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5dff830154498690800000000000000
+      internalID: -7599467781468193444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_89
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 1303
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c774cf5cb25de460800000000000000
+      internalID: 7272559942287259584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_90
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1254
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 441f7a53db9c26d70800000000000000
+      internalID: 9035005616944836932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_91
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 1267
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20a67ad1f6b6e14e0800000000000000
+      internalID: -2009050258777609726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_92
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 1250
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ede0c27d95572cd30800000000000000
+      internalID: 4450248410517999326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_93
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 1259
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45300f739d3513d50800000000000000
+      internalID: 6715240711797605204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_94
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1257
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce6621b1f77ae02e0800000000000000
+      internalID: -2157603007107012884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_95
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 1302
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12142e171f0eee780800000000000000
+      internalID: -8651730506529750751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_96
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 1253
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cabcc0304f4621280800000000000000
+      internalID: -9074079300012160084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_97
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 1261
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 089b22b99905fb450800000000000000
+      internalID: 6106688240400644480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_98
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1247
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93d543bd84e734b80800000000000000
+      internalID: -8411740827617567431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_99
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 1269
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80525aa2a0e81cc00800000000000000
+      internalID: 919171973276574984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_100
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 1263
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b446de87dea2e620800000000000000
+      internalID: 2801994159015478455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_101
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 1303
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0aa25488872b33a10800000000000000
+      internalID: 1888048899550423712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_102
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 1250
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78e07a4786c58ae20800000000000000
+      internalID: 3362038725535534727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_103
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 1248
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 472bde88590c0c6e0800000000000000
+      internalID: -1819242500977741196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_104
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 1255
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f6df2ecdaf1c8740800000000000000
+      internalID: 5155530504781420278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_105
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 1242
+        width: 122
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd3b3b3c2df3fe6f0800000000000000
+      internalID: -653233246486416420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_106
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 1303
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcc1c5995e1fc57c0800000000000000
+      internalID: -4081121193881756469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_107
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 1303
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5df4d97d3d3f5c8a0800000000000000
+      internalID: -6285349613744599083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_108
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 930
+        width: 340
+        height: 355
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efb211656c9d83c20800000000000000
+      internalID: 3186536182235343870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_109
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 932
+        width: 296
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32ebf806f476a5690800000000000000
+      internalID: -7612658629496291805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_110
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 935
+        width: 295
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fab590409d7a60240800000000000000
+      internalID: 4757674606880971695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_111
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 934
+        width: 300
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf53e58798ff97530800000000000000
+      internalID: 3853391922087212539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_112
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 937
+        width: 295
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e2c91d6b0a467000800000000000000
+      internalID: 33295460187357921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_113
+      rect:
+        serializedVersion: 2
+        x: 1627
+        y: 932
+        width: 300
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b26b1f76e17d81d0800000000000000
+      internalID: -3346893713277492560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_114
+      rect:
+        serializedVersion: 2
+        x: 1937
+        y: 932
+        width: 295
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f9c6433fcd723be0800000000000000
+      internalID: -1498997397088974344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_115
+      rect:
+        serializedVersion: 2
+        x: 2245
+        y: 934
+        width: 299
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32535aa37aa7075a0800000000000000
+      internalID: -6525581001397816029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_116
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 592
+        width: 298
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f87e080c8ab9f43e0800000000000000
+      internalID: -2067262554853283953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_117
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 592
+        width: 298
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d2994df3b6236f30800000000000000
+      internalID: 4567537001574273748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_118
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 604
+        width: 289
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f162b25d221e2ec20800000000000000
+      internalID: 3234395022126949919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_119
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 604
+        width: 291
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32baafc3ea28975f0800000000000000
+      internalID: -758431377376236765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_120
+      rect:
+        serializedVersion: 2
+        x: 1353
+        y: 605
+        width: 298
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1c439c0f3c20ec80800000000000000
+      internalID: -8295581864310911974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_121
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 385
+        width: 65
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8565cf3750d75770800000000000000
+      internalID: 8599571086637884815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_122
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 272
+        width: 105
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b0e3ebdf8ab86240800000000000000
+      internalID: 4785279731113386166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_123
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 385
+        width: 65
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56a7a2034d42ae540800000000000000
+      internalID: 5037879626927077989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_124
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 288
+        width: 90
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bd1f758718155400800000000000000
+      internalID: 312182238475132341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_125
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 381
+        width: 63
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a61baacd31c59d290800000000000000
+      internalID: -7865154033849552534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_126
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 383
+        width: 64
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5556b6d3f16345420800000000000000
+      internalID: 2617776791211435349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_127
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 383
+        width: 63
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b86a0e3eeadb20d0800000000000000
+      internalID: -3446420373044041543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_128
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 383
+        width: 65
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe7680e0a8bc2d010800000000000000
+      internalID: 1212255043517442031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_129
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 383
+        width: 65
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae05aef0c6594b380800000000000000
+      internalID: -8956369467577052950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_130
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 519
+        width: 74
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b4844e42f96749d0800000000000000
+      internalID: -2790144954716617544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_131
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 385
+        width: 61
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 882a4a12a81263820800000000000000
+      internalID: 2897540287413133960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_132
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 385
+        width: 63
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ff483aab3946e860800000000000000
+      internalID: 7558809545195671541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_133
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 297
+        width: 107
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62bda3fc35bf6e010800000000000000
+      internalID: 1217937086627896102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_134
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 274
+        width: 194
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f5a2b8e94fb98e00800000000000000
+      internalID: 1047578712497890806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_135
+      rect:
+        serializedVersion: 2
+        x: 1147
+        y: 460
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af81b5e8065562000800000000000000
+      internalID: 10789922308561146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_136
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 385
+        width: 53
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b287240eb562d050800000000000000
+      internalID: 5823829134931362488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_137
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 295
+        width: 128
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8fa1acfc9fbd1ff0800000000000000
+      internalID: -63684138739060851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_138
+      rect:
+        serializedVersion: 2
+        x: 1626
+        y: 276
+        width: 342
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a09a4043643ab900800000000000000
+      internalID: 700930292894568612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_139
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 218
+        width: 66
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd83cfa55a1590ad0800000000000000
+      internalID: -2735565528012932897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_140
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 225
+        width: 66
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6c704f624f309070800000000000000
+      internalID: 8111052483461151855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_141
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 336
+        width: 12
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98fada7486c40c1f0800000000000000
+      internalID: -1026736704277598327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_142
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 309
+        width: 20
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a4acac590e4a4010800000000000000
+      internalID: 1173836454999925920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_143
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 226
+        width: 66
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4f9696e588bb4b70800000000000000
+      internalID: 8884397575157227340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_144
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 224
+        width: 64
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e6c7d1955c147a60800000000000000
+      internalID: 7670787219163432676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_145
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 293
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f84994448dc8233e0800000000000000
+      internalID: -2075441617777879921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_146
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 279
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83fff82f4e81812d0800000000000000
+      internalID: -3307866554702495944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_147
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 260
+        width: 21
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39e1db030fafaf660800000000000000
+      internalID: 7420519245563109011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_148
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 265
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b608b11ad24603e0800000000000000
+      internalID: -2087907872872069448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_149
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 264
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc899d3886d3682b0800000000000000
+      internalID: -5582707168981182259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_150
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 262
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2fc7bb3f8dca6820800000000000000
+      internalID: 2912366124114366253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_151
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 272
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0989a53d1b49ce780800000000000000
+      internalID: -8652377292609513328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_152
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 266
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc8682c1d675410c0800000000000000
+      internalID: -4605960392757712693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_153
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 227
+        width: 56
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3fc15ab653da99f0800000000000000
+      internalID: -460823642405482689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_154
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 267
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c620b78e15c0aa360800000000000000
+      internalID: 7181566101727937132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_155
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 228
+        width: 60
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97677c9524329f770800000000000000
+      internalID: 8644979727595435641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_156
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 228
+        width: 59
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5a1a57559de70b60800000000000000
+      internalID: 7712394112566696540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_157
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 227
+        width: 54
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e280b0d09841da70800000000000000
+      internalID: 8849934529573454569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_158
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 224
+        width: 19
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a53fd40bbd290b0f0800000000000000
+      internalID: -1103220436452379814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_159
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 224
+        width: 62
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2c06c4ea502f83f0800000000000000
+      internalID: -896462226066109394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_160
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 223
+        width: 60
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae7022027062253e0800000000000000
+      internalID: -2066547466963908630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_161
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 229
+        width: 57
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4742011528b819a90800000000000000
+      internalID: -7308907328423582604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_162
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 224
+        width: 48
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 653fea0599ca762d0800000000000000
+      internalID: -3285467628659870890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_163
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 226
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df855d8b50777a150800000000000000
+      internalID: 5883802304642373885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_164
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 188
+        width: 41
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e4a0fdbe08e4b8a0800000000000000
+      internalID: -6290147629515889434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_165
+      rect:
+        serializedVersion: 2
+        x: 1442
+        y: 39
+        width: 186
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e23a70e96024f340800000000000000
+      internalID: 4896574333968331490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_166
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 33
+        width: 186
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 494a231fc07f55b70800000000000000
+      internalID: 8887281074643838100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_167
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 24
+        width: 215
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 992ab6d6f9f9bbe10800000000000000
+      internalID: 2214539148867117721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_168
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 109
+        width: 47
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc3d03dc080c6a290800000000000000
+      internalID: -7879398838607227953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_169
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 109
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fd2584074f3fb4e0800000000000000
+      internalID: -1963781338259182089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_170
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 109
+        width: 79
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 135ad1227ef2df110800000000000000
+      internalID: 1296244937508889905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_171
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 97
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d3445ff71e94ba10800000000000000
+      internalID: 1924336766699193301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_172
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 97
+        width: 34
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bd9aeb3b11a96840800000000000000
+      internalID: 5217878781626850744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_173
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 97
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3294bc11497c0580800000000000000
+      internalID: -8859573046383177156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_174
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 97
+        width: 31
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea5e65b918ce7c0d0800000000000000
+      internalID: -3402490952054020690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_175
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 97
+        width: 54
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85b34cde9ccf3ceb0800000000000000
+      internalID: -4700635641836979368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_176
+      rect:
+        serializedVersion: 2
+        x: 1631
+        y: 43
+        width: 31
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaf2b40841c103bf0800000000000000
+      internalID: -346746296930193490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_0: 7162386311589441314
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_1: 6148718473782132191
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_10: 8748426968198868768
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_100: 2801994159015478455
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_101: 1888048899550423712
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_102: 3362038725535534727
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_103: -1819242500977741196
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_104: 5155530504781420278
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_105: -653233246486416420
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_106: -4081121193881756469
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_107: -6285349613744599083
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_108: 3186536182235343870
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_109: -7612658629496291805
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_11: 6390880412961713152
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_110: 4757674606880971695
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_111: 3853391922087212539
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_112: 33295460187357921
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_113: -3346893713277492560
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_114: -1498997397088974344
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_115: -6525581001397816029
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_116: -2067262554853283953
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_117: 4567537001574273748
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_118: 3234395022126949919
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_119: -758431377376236765
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_12: -6759015066882163047
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_120: -8295581864310911974
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_121: 8599571086637884815
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_122: 4785279731113386166
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_123: 5037879626927077989
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_124: 312182238475132341
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_125: -7865154033849552534
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_126: 2617776791211435349
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_127: -3446420373044041543
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_128: 1212255043517442031
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_129: -8956369467577052950
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_13: 99388395563715100
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_130: -2790144954716617544
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_131: 2897540287413133960
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_132: 7558809545195671541
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_133: 1217937086627896102
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_134: 1047578712497890806
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_135: 10789922308561146
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_136: 5823829134931362488
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_137: -63684138739060851
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_138: 700930292894568612
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_139: -2735565528012932897
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_14: -1437006036609247189
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_140: 8111052483461151855
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_141: -1026736704277598327
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_142: 1173836454999925920
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_143: 8884397575157227340
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_144: 7670787219163432676
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_145: -2075441617777879921
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_146: -3307866554702495944
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_147: 7420519245563109011
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_148: -2087907872872069448
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_149: -5582707168981182259
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_15: -6491298567657320585
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_150: 2912366124114366253
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_151: -8652377292609513328
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_152: -4605960392757712693
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_153: -460823642405482689
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_154: 7181566101727937132
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_155: 8644979727595435641
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_156: 7712394112566696540
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_157: 8849934529573454569
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_158: -1103220436452379814
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_159: -896462226066109394
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_16: -4847337738419145354
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_160: -2066547466963908630
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_161: -7308907328423582604
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_162: -3285467628659870890
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_163: 5883802304642373885
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_164: -6290147629515889434
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_165: 4896574333968331490
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_166: 8887281074643838100
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_167: 2214539148867117721
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_168: -7879398838607227953
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_169: -1963781338259182089
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_17: 1389583462010973613
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_170: 1296244937508889905
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_171: 1924336766699193301
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_172: 5217878781626850744
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_173: -8859573046383177156
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_174: -3402490952054020690
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_175: -4700635641836979368
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_176: -346746296930193490
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_18: 5945707224887684932
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_19: -5116907017301898729
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_2: 8878539451046019020
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_20: -5374262774094702376
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_21: 7186528300261076731
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_22: -1156449296061114945
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_23: 3044036200003961065
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_24: -8722582439412291754
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_25: 3739306717327666934
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_26: 8114147275583870347
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_27: 2675323314117372648
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_28: 4516650019951962499
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_29: 6698995784500110781
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_3: -5867785296570472386
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_30: 3822525792507357064
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_31: -6673513344800303706
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_32: -1170423593111884151
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_33: -7711342599587953099
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_34: 2617908343886319043
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_35: -7792756882840604355
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_36: -7927360593163083240
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_37: 2832056259966735815
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_38: 3359202772242587780
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_39: -991334322176178572
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_4: -1915371427911171061
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_40: -2377570177815879051
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_41: 5770035029165061474
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_42: 8118895196950148308
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_43: 2688528226725610688
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_44: -7193407040117641847
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_45: 8147180329786571686
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_46: -2388650174957258749
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_47: -5898104158828223296
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_48: -526011103141433429
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_49: 4073310596099776989
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_5: 6944432537444785296
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_50: -246695001305914552
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_51: 3748292443040061090
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_52: -1288728733733643662
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_53: -182274296356567695
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_54: 8200907174580359821
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_55: 995995710203790128
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_56: 138056284991081020
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_57: -4895024003687567751
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_58: 4681572069921050472
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_59: -5015751967682444351
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_6: 494956816998594280
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_60: 3346808947009109330
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_61: 1573624413817215119
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_62: -1966426499464644124
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_63: -5337839667793555031
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_64: -3653975979310930804
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_65: 6544288952607830022
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_66: 3322194206494635663
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_67: 8187104512667534857
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_68: -2275020293052710380
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_69: 8679787591700315075
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_7: -4637274012782447716
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_70: -2510722720805241869
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_71: -7134891476701267905
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_72: 1613752913976406284
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_73: 8563777956802959557
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_74: 6699475432917749630
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_75: -1957912198898563046
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_76: 3862840331939649575
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_77: 7872415160587559392
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_78: 8899481647304889708
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_79: 346145853726175283
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_8: -1653377727251152940
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_80: 6028745217262077436
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_81: 4000145075877065485
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_82: 1440628764646727785
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_83: -5471790086645139275
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_84: 3104940138938097912
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_85: 7574894546332149419
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_86: -7597835643941933724
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_87: 4746125326251411530
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_88: -7599467781468193444
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_89: 7272559942287259584
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_9: -514190796674834484
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_90: 9035005616944836932
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_91: -2009050258777609726
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_92: 4450248410517999326
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_93: 6715240711797605204
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_94: -2157603007107012884
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_95: -8651730506529750751
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_96: -9074079300012160084
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_97: 6106688240400644480
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_98: -8411740827617567431
+      Mobile - Metal Slug Attack - Units_ Aliens - Metal Fushioner No.223_99: 919171973276574984
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
