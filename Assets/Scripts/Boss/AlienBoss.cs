@@ -7,15 +7,20 @@ public class AlienBoss : Enemy
     private float initialPositionX;
     private float moveSpeed;
     private float shootTimer;
+    private float spreadTimer;
+    private float spreadShootInterval;
     private float spiralTimer = 10f;
     private float spiralCD = 5f;
     private float shootInterval;    
     private ObjectPooler projectilePool;
+    private ObjectPooler secondProjectilePool;
     private float timeBeforeShooting = 2f;
     private bool canShoot;
     private bool canSpiral;
+    private bool canSpread;
     private Animator anim;
-    public Transform phaseOneBulletSpawn;
+    public Transform spiralBulletSpawn;
+    public Transform [] phaseTwoBulletSpawn;
     private float angle = 0f;
 
     
@@ -24,11 +29,13 @@ public class AlienBoss : Enemy
         base.OnEnable();
         transform.rotation = Quaternion.Euler(0,0,0);
         // this makes enemys charge in and spawn on right side of the map
-        initialPositionX = 15f + Random.Range(-1f,1f);
+        //initialPositionX = 10f + Random.Range(-1f,1f);
+        initialPositionX = 12f;
         moveSpeed = Random.Range(1f, 2f);
         // if random value is less than 0.5 , 50% it eithers moves up or down Two float
         speedY = Random.value < 0.5 ? -2f : 2f;
         shootInterval = Random.Range(0.1f, 0.2f);
+        spreadShootInterval = Random.Range(1f,2f);
         canSpiral = true; 
         //HpScaling();       
     }    
@@ -38,6 +45,7 @@ public class AlienBoss : Enemy
         anim = GetComponent<Animator>();
         destroyEffectPool = GameObject.Find("BoomPool").GetComponent<ObjectPooler>();    
         projectilePool = GameObject.Find("SpiralBulletOnePool").GetComponent<ObjectPooler>();
+        secondProjectilePool = GameObject.Find("SpreadBulletPool").GetComponent<ObjectPooler>();
         // second variation of the alienboss's bullet
         //projectilePool = GameObject.Find("SpiralBulletTwoPool").GetComponent<ObjectPooler>();         
         hitSound = AudioManager.instance.hitImpact;
@@ -46,6 +54,14 @@ public class AlienBoss : Enemy
     public override void Update()
     {
         base.Update();
+        if(lives >= 200)
+        {
+            canSpread = false;    
+        }
+        else
+        {
+            canSpread = true;
+        }
         // enemy can't shoot after spawning in for 2 seconds.
         // this fixes enemy shooting as they spawn in
         timeBeforeShooting -= Time.deltaTime;
@@ -59,18 +75,26 @@ public class AlienBoss : Enemy
         }
         //shooting
         shootTimer -= Time.deltaTime;
-        if(maxLives >= 200 && shootTimer <=  0 && canShoot == true && canSpiral == true)
+        if(lives >= 200 && shootTimer <=  0 && canShoot == true && canSpiral == true)
         {
             shootTimer += shootInterval;
             PhaseOneSpiral();
-            initialPositionX = 12f + Random.Range(-1f,1f);
+            // initialPositionX = 12f + Random.Range(-1f,1f);
         }   
-        // if(maxLives <= 200 && shootTimer <= 0 &&  canShoot == true)
-        // {
-        //     shootTimer += shootInterval;
-        //     PhaseTwoSpiral();
-        // }
-
+        if(lives <= 200 && shootTimer <= 0 &&  canShoot == true && canSpiral == true)
+        {
+            shootTimer += shootInterval;
+            spiralTimer = 15f;
+            PhaseTwoSpiral();
+            // initialPositionX = 12f + Random.Range(-1f,1f);
+        }
+        spreadTimer -= Time.deltaTime;
+        // spreadTimer dictates the fire rate
+        if(canSpread && spreadTimer <= 0)
+        {
+            spreadTimer += spreadShootInterval;
+            SpreadFire();    
+        }
         //movement x
         float currentX = transform.position.x;
         if(Mathf.Abs(currentX - initialPositionX) > 0.1f)
@@ -94,8 +118,8 @@ public class AlienBoss : Enemy
             Vector3 bulVector = new Vector3(bulletDirectionX , bulletDirectionY, 0f);
             Vector2 bulDir = (bulVector - transform.position).normalized;
             GameObject projectile = projectilePool.GetPooledObject();
-            projectile.transform.position = phaseOneBulletSpawn.position;
-            projectile.transform.rotation = phaseOneBulletSpawn.rotation;
+            projectile.transform.position = spiralBulletSpawn.position;
+            projectile.transform.rotation = spiralBulletSpawn.rotation;
             projectile.SetActive(true);
             projectile.GetComponent<SpiralBullet>().SetBulletDirection(bulDir);
             angle += 20f;
@@ -104,7 +128,38 @@ public class AlienBoss : Enemy
             //AudioManager.instance.PlaySound(AudioManager.instance.squidShoot);              
         }           
     }
+    private void PhaseTwoSpiral()
+    {
+        for (int i = 0; i <= 1; i++)
+        {
+            float bulletDirectionX = transform.position.x + Mathf.Sin(((angle + 180f * i) * Mathf.PI) / 180f);
+            float bulletDirectionY = transform.position.y + Mathf.Cos(((angle + 180f * i) * Mathf.PI) / 180f);
+            Vector3 bulVector = new Vector3(bulletDirectionX , bulletDirectionY, 0f);
+            Vector2 bulDir = (bulVector - transform.position).normalized;
+            GameObject projectile = projectilePool.GetPooledObject();
+            projectile.transform.position = spiralBulletSpawn.position;
+            projectile.transform.rotation = spiralBulletSpawn.rotation;
+            projectile.SetActive(true);
+            projectile.GetComponent<SpiralBullet>().SetBulletDirection(bulDir);
+            StartCoroutine(SpiralCD());                                   
+        }           
+        angle += 20f;
+        if(angle >= 360f)
+        {
+            angle = 0f;
+        }
+    }
 
+    private void SpreadFire()
+    {
+        for (int v = 0; v < phaseTwoBulletSpawn.Length; v++)
+        {
+            GameObject spreadProjectile = secondProjectilePool.GetPooledObject();
+            spreadProjectile.transform.position = phaseTwoBulletSpawn[v].position;
+            spreadProjectile.transform.rotation = phaseTwoBulletSpawn[v].rotation;
+            spreadProjectile.SetActive(true);
+        }        
+    }    
     IEnumerator SpiralCD()
     {
         yield return new WaitForSeconds(spiralTimer);
@@ -113,25 +168,4 @@ public class AlienBoss : Enemy
         yield return new WaitForSeconds(spiralCD);
         canSpiral = true;
     }
-    // private void PhaseTwoSpiral()
-    // {
-    //     for (int i = 0; i < phaseTwoBulletSpawn.Length; i++)
-    //     {
-    //         // position boss closer to player
-    //         // means less time for player to react and dodge to boss's projectiles
-    //         initialPositionX = 14f + Random.Range(-1f,1f);
-    //         BossTwoBullet.bulletSpeed = 10;
-    //         GameObject projectile = projectilePool.GetPooledObject();
-    //         GameObject homingProjectile = homingCircleProjectilePool.GetPooledObject();
-    //         projectile.transform.position = phaseTwoBulletSpawn[i].position;
-    //         projectile.transform.rotation = phaseTwoBulletSpawn[i].rotation;
-    //         projectile.SetActive(true);
-    //         homingProjectile.transform.position = phaseOneHomingBulletSpawn[v].position;
-    //         homingProjectile.transform.rotation = phaseOneHomingBulletSpawn[v].rotation;
-    //         homingProjectile.SetActive(true);                        
-    //         //anim.SetBool("shooting", true);
-    //         //AudioManager.instance.PlaySound(AudioManager.instance.squidShoot);
-    //         //StartCoroutine(ResetShoot());               
-    //     }           
-    // }    
 }

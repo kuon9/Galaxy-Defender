@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class FanBullet : MonoBehaviour
 {
-    public  int bulletSpeed = 4;
-    public  int dmg = 3;
+    public static int bulletSpeed;
+    public static int dmg = 3;
 
     private Rigidbody2D rigidbody;
 

@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class BossTwoBullet : MonoBehaviour
+public class SpreadBullet : MonoBehaviour
 {
-    public static int bulletSpeed;
-    public static int dmg;
+    public int bulletSpeed = 8;
+    public int dmg = 2;
 
     private Rigidbody2D rigidbody;
 

@@ -130,7 +130,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4781984208378945380
 Transform:
   m_ObjectHideFlags: 0
@@ -326,8 +326,9 @@ MonoBehaviour:
   damage: 0
   livesMultipler: 3
   experienceToGive: 0
-  bulletSpawn:
-  - {fileID: 1442895371046481054}
+  bulletCount: 8
+  totalSpreadAngle: 44
+  bulletSpawn: {fileID: 1442895371046481054}
 --- !u!1 &6361137424082421227
 GameObject:
   m_ObjectHideFlags: 0

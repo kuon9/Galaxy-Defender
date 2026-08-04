@@ -1,22 +1,23 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
-public class BossTwo : Enemy
+public class ShipBoss : Enemy
 {
 
 private float initialPositionX;
 private float moveSpeed;
 private float shootTimer;
 private float shootInterval;
+public float totalSpreadAngle = 50f;
+public int bulletCount = 4;
 private ObjectPooler projectilePool;
 private ObjectPooler homingCircleProjectilePool;
 private Animator anim;
 private float timeBeforeShooting = 2f;
 private bool canShoot;
 // using arrays means we can't edit it 
-public Transform [] phaseOneBulletSpawn;
+public Transform fanBulletSpawn;
 public Transform [] phaseOneHomingBulletSpawn;
-public Transform [] phaseTwoBulletSpawn;
 public Transform [] phaseTwoHomingBulletSpawn;
 
 // [SerializeField] private List<Transform> phaseOneGuns;
@@ -41,7 +42,7 @@ public override void OnEnable()
         base.Start();
         anim = GetComponent<Animator>();
         destroyEffectPool = GameObject.Find("BoomPool").GetComponent<ObjectPooler>();    
-        projectilePool = GameObject.Find("BossBulletFrPool").GetComponent<ObjectPooler>();
+        projectilePool = GameObject.Find("FanBulletPool").GetComponent<ObjectPooler>();
         homingCircleProjectilePool= GameObject.Find("BossBulletCirclePool").GetComponent<ObjectPooler>();        
         hitSound = AudioManager.instance.hitImpact;
         destroySound = AudioManager.instance.monsterDeath;        
@@ -63,15 +64,20 @@ public override void OnEnable()
         }
         //shooting
         shootTimer -= Time.deltaTime;
-        if(maxLives >= 200 && shootTimer <=  0 && canShoot == true)
+        if(lives >= 200 && shootTimer <=  0 && canShoot == true)
         {
             shootTimer += shootInterval;
             PhaseOne();
+            FanPattern();
         }    
-        if(maxLives <= 200 && shootTimer <= 0 &&  canShoot == true)
+        if(lives <= 200 && shootTimer <= 0 &&  canShoot == true)
         {
+            // increase fire rate when entering phase 2
+            shootInterval = Random.Range(2f, 2.5f); 
             shootTimer += shootInterval;
+            bulletCount = 6;
             PhaseTwo();
+            FanPattern();
         }
 
         //movement x
@@ -91,16 +97,10 @@ public override void OnEnable()
     }
     private void PhaseOne()
     {
-        for (int i = 0; i < phaseOneBulletSpawn.Length; i++)
         for (int v = 0; v < phaseOneHomingBulletSpawn.Length; v++)
-
         {
-            BossTwoBullet.bulletSpeed = 8;
-            GameObject projectile = projectilePool.GetPooledObject();
+            FanBullet.bulletSpeed = 6;
             GameObject homingProjectile = homingCircleProjectilePool.GetPooledObject();
-            projectile.transform.position = phaseOneBulletSpawn[i].position;
-            projectile.transform.rotation = phaseOneBulletSpawn[i].rotation;
-            projectile.SetActive(true);
             homingProjectile.transform.position = phaseOneHomingBulletSpawn[v].position;
             homingProjectile.transform.rotation = phaseOneHomingBulletSpawn[v].rotation;
             homingProjectile.SetActive(true);            
@@ -111,26 +111,44 @@ public override void OnEnable()
     }
     private void PhaseTwo()
     {
-        for (int i = 0; i < phaseTwoBulletSpawn.Length; i++)
-        for (int v = 0; v < phaseOneHomingBulletSpawn.Length; v++)
+        for (int v = 0; v < phaseTwoHomingBulletSpawn.Length; v++)
         {
-            // position boss closer to player
-            // means less time for player to react and dodge to boss's projectiles
-            initialPositionX = 14f + Random.Range(-1f,1f);
-            BossTwoBullet.bulletSpeed = 10;
-            GameObject projectile = projectilePool.GetPooledObject();
+            initialPositionX = 15f;
+            FanBullet.bulletSpeed = 7;
             GameObject homingProjectile = homingCircleProjectilePool.GetPooledObject();
-            projectile.transform.position = phaseTwoBulletSpawn[i].position;
-            projectile.transform.rotation = phaseTwoBulletSpawn[i].rotation;
+            homingProjectile.transform.position = phaseTwoHomingBulletSpawn[v].position;
+            homingProjectile.transform.rotation = phaseTwoHomingBulletSpawn[v].rotation;
+            homingProjectile.SetActive(true);                            
+        }           
+    }
+
+    private void FanPattern()
+    {
+        // 1. Calculate the step angle between each individual bullet
+        float angleStep = 0f;
+        if (bulletCount > 1)
+        {
+            angleStep = totalSpreadAngle / (bulletCount - 1);
+        }
+
+        // 2. Find the leftmost starting angle relative to the center direction
+        // transform.rotation.eulerAngles.z handles any direction your shooter is facing
+        float centerAngle = transform.rotation.eulerAngles.z;
+        float startAngle = centerAngle - (totalSpreadAngle / 2f);
+        for (int i = 0; i < bulletCount; i++)
+        {
+            float currentBulletAngle = startAngle + (angleStep * i);
+            Quaternion bulletRotation = Quaternion.Euler(0f, 0f, currentBulletAngle);        
+            GameObject projectile = projectilePool.GetPooledObject();
+            projectile.transform.position = fanBulletSpawn.position;
+            projectile.transform.rotation = bulletRotation;
             projectile.SetActive(true);
-            homingProjectile.transform.position = phaseOneHomingBulletSpawn[v].position;
-            homingProjectile.transform.rotation = phaseOneHomingBulletSpawn[v].rotation;
-            homingProjectile.SetActive(true);                        
             //anim.SetBool("shooting", true);
             //AudioManager.instance.PlaySound(AudioManager.instance.squidShoot);
             //StartCoroutine(ResetShoot());               
-        }           
+        }         
     }
+
     // private void PhaseOne()
     // {
                             // we use .Count when using Lists, only use.Length with Arrays    

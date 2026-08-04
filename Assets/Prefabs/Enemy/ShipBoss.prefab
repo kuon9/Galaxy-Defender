@@ -169,12 +169,12 @@ GameObject:
   - component: {fileID: 6193556465791287352}
   - component: {fileID: 1330397786010570177}
   m_Layer: 11
-  m_Name: BossTwo
+  m_Name: ShipBoss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8115535898919273609
 Transform:
   m_ObjectHideFlags: 0
@@ -367,7 +367,6 @@ MonoBehaviour:
   - {fileID: 7017987783948375977}
   phaseOneHomingBulletSpawn:
   - {fileID: 6098587339015066363}
-  - {fileID: 8179312096814398402}
   phaseTwoBulletSpawn:
   - {fileID: 6101848456101830598}
   - {fileID: 2912325478018210675}

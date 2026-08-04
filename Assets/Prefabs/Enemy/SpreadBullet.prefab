@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4093956660793580321}
   - component: {fileID: 8050708140684840789}
   m_Layer: 12
-  m_Name: BossBulletFr
+  m_Name: SpreadBullet
   m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -138,3 +138,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f5b9ee7a0fe3a940b39c4a05fce6b93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletSpeed: 9
+  dmg: 3

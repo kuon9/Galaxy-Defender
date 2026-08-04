@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         BossPool = GameObject.Find("BossPool").GetComponent<ObjectPooler>();
-        BossTwoPool = GameObject.Find("BossTwoPool").GetComponent<ObjectPooler>();
+        BossTwoPool = GameObject.Find("ShipBossPool").GetComponent<ObjectPooler>();
         enemyCounter = 0;
         bossSpawn = AudioManager.instance.bossSpawnMusic;
         isLevelOne = true;
