@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class SpreadBullet : MonoBehaviour
 {
-    public int bulletSpeed = 8;
+    public int bulletSpeed = 6;
     public int dmg = 2;
 
-    private Rigidbody2D rigidbody;
+    //private Rigidbody2D rigidbody;
 
    void Awake()
     {
-        rigidbody = GetComponent<Rigidbody2D>();
+        //rigidbody = GetComponent<Rigidbody2D>();
     }
 
    void Update()

@@ -11,7 +11,7 @@ public class AlienBoss : Enemy
     private float spreadShootInterval;
     private float spiralTimer = 10f;
     private float spiralCD = 5f;
-    private float shootInterval;    
+    private float shootInterval; 
     private ObjectPooler projectilePool;
     private ObjectPooler secondProjectilePool;
     private float timeBeforeShooting = 2f;
@@ -35,7 +35,7 @@ public class AlienBoss : Enemy
         // if random value is less than 0.5 , 50% it eithers moves up or down Two float
         speedY = Random.value < 0.5 ? -2f : 2f;
         shootInterval = Random.Range(0.1f, 0.2f);
-        spreadShootInterval = Random.Range(1f,2f);
+        spreadShootInterval = Random.Range(1.5f,2.5f);
         canSpiral = true; 
         //HpScaling();       
     }    

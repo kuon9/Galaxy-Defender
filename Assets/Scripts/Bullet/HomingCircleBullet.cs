@@ -11,6 +11,7 @@ public class HomingCircleBullet : MonoBehaviour
     private Vector2 bulletSpawn;
     private Vector2 direction;
     private float angle;
+    private ObjectPooler explosionVFX;
 
     public float bulletSpeed = 10f;
     public float timeToChase = 1f;
@@ -21,7 +22,7 @@ public class HomingCircleBullet : MonoBehaviour
     //private ObjectPooler  projectilePool; // The bullet to spawn on split
     // public int splitCount = 3; // Number of new projectiles to spawn
     // public float spreadAngle = 45f; // Total angle spread in degrees
-
+    
     void OnEnable()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -35,10 +36,9 @@ public class HomingCircleBullet : MonoBehaviour
         currentState = State.Circling;
         Invoke(nameof(StartChasing), timeToChase);    
     }
-    
     void Start()
     {
-
+        explosionVFX = GameObject.Find("RedHomingVFXPool").GetComponent<ObjectPooler>();
     }
 
     void Update()
@@ -49,7 +49,6 @@ public class HomingCircleBullet : MonoBehaviour
             gameObject.SetActive(false);
         }    
     }
-
     void FixedUpdate()
     {
         if (currentState == State.Circling)
@@ -69,13 +68,15 @@ public class HomingCircleBullet : MonoBehaviour
 
         }    
     }
-
      void OnCollisionEnter2D(Collision2D col)
     {
         // Handle impact logic here (e.g., damage player, spawn explosion VFX)
         if(col.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Taking Damage");
+            GameObject explosion = explosionVFX.GetPooledObject();
+            explosion.transform.position = transform.position;
+            explosion.transform.rotation = transform.rotation;
+            explosion.SetActive(true);
             PlayerMovement.instance.TakeDamage(dmg);
             gameObject.SetActive(false);    
         }

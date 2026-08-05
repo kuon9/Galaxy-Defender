@@ -8,7 +8,7 @@ private float initialPositionX;
 private float moveSpeed;
 private float shootTimer;
 private float shootInterval;
-public float totalSpreadAngle = 50f;
+public float totalSpreadAngle = 60f;
 public int bulletCount = 4;
 private ObjectPooler projectilePool;
 private ObjectPooler homingCircleProjectilePool;
@@ -28,7 +28,8 @@ public override void OnEnable()
         base.OnEnable();
         transform.rotation = Quaternion.Euler(0,0,0);
         // this makes enemys charge in and spawn on right side of the map
-        initialPositionX = 17f + Random.Range(-1f,1f);
+        //initialPositionX = 16f + Random.Range(-1f,1f);
+        initialPositionX = 16f;
         moveSpeed = Random.Range(1f, 2f);
         // if random value is less than 0.5 , 50% it eithers moves up or down Two float
         speedY = Random.value < 0.5 ? -2f : 2f;
@@ -43,7 +44,7 @@ public override void OnEnable()
         anim = GetComponent<Animator>();
         destroyEffectPool = GameObject.Find("BoomPool").GetComponent<ObjectPooler>();    
         projectilePool = GameObject.Find("FanBulletPool").GetComponent<ObjectPooler>();
-        homingCircleProjectilePool= GameObject.Find("BossBulletCirclePool").GetComponent<ObjectPooler>();        
+        homingCircleProjectilePool= GameObject.Find("ShipBossHomingBulletPool").GetComponent<ObjectPooler>();        
         hitSound = AudioManager.instance.hitImpact;
         destroySound = AudioManager.instance.monsterDeath;        
     }
@@ -99,7 +100,7 @@ public override void OnEnable()
     {
         for (int v = 0; v < phaseOneHomingBulletSpawn.Length; v++)
         {
-            FanBullet.bulletSpeed = 6;
+            FanBullet.bulletSpeed = 7;
             GameObject homingProjectile = homingCircleProjectilePool.GetPooledObject();
             homingProjectile.transform.position = phaseOneHomingBulletSpawn[v].position;
             homingProjectile.transform.rotation = phaseOneHomingBulletSpawn[v].rotation;
@@ -114,7 +115,7 @@ public override void OnEnable()
         for (int v = 0; v < phaseTwoHomingBulletSpawn.Length; v++)
         {
             initialPositionX = 15f;
-            FanBullet.bulletSpeed = 7;
+            FanBullet.bulletSpeed = 9;
             GameObject homingProjectile = homingCircleProjectilePool.GetPooledObject();
             homingProjectile.transform.position = phaseTwoHomingBulletSpawn[v].position;
             homingProjectile.transform.rotation = phaseTwoHomingBulletSpawn[v].rotation;

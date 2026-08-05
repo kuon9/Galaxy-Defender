@@ -174,7 +174,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8115535898919273609
 Transform:
   m_ObjectHideFlags: 0
@@ -356,23 +356,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0baa00d6e6452e1439d53c597dbf81bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lives: 0
+  lives: 199
   maxLives: 400
   damage: 5
   livesMultipler: 3
   experienceToGive: 20
-  phaseOneBulletSpawn:
-  - {fileID: 6101848456101830598}
-  - {fileID: 2912325478018210675}
-  - {fileID: 7017987783948375977}
+  totalSpreadAngle: 50
+  bulletCount: 4
+  fanBulletSpawn: {fileID: 6101848456101830598}
   phaseOneHomingBulletSpawn:
   - {fileID: 6098587339015066363}
-  phaseTwoBulletSpawn:
-  - {fileID: 6101848456101830598}
-  - {fileID: 2912325478018210675}
-  - {fileID: 6098587339015066363}
-  - {fileID: 7017987783948375977}
-  - {fileID: 8179312096814398402}
   phaseTwoHomingBulletSpawn:
   - {fileID: 9172560409744653326}
   - {fileID: 5906097117469126261}

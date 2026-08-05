@@ -75,7 +75,7 @@ public class Boss : Enemy
         }
         //shooting
         shootTimer -= Time.deltaTime;
-        if(lives >= 300 && shootTimer <=  0 && canShoot == true)
+        if(lives >= 200 && shootTimer <=  0 && canShoot == true)
         {
             shootTimer += shootInterval;
             PhaseOneAttacks();
@@ -83,7 +83,7 @@ public class Boss : Enemy
         }    
         // isLaser bool prevents boss from shooting projectile while also shooting laser
         // maybe we'll remove later and add other attacks
-        if(lives <= 300 && shootTimer <= 0 && canShoot == true && !isLaser)
+        if(lives <= 200 && shootTimer <= 0 && canShoot == true && !isLaser)
         {
             shootTimer += shootInterval;
             PhaseTwoAttacks();

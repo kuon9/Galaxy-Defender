@@ -326,7 +326,7 @@ MonoBehaviour:
   damage: 0
   livesMultipler: 3
   experienceToGive: 0
-  bulletCount: 8
+  bulletCount: 3
   totalSpreadAngle: 44
   bulletSpawn: {fileID: 1442895371046481054}
 --- !u!1 &6361137424082421227

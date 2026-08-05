@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1636299323762993072}
   - component: {fileID: 6215794004362569431}
   m_Layer: 11
-  m_Name: 3rdBoss
+  m_Name: AlienBoss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

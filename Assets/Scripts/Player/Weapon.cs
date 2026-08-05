@@ -11,9 +11,13 @@ public class Weapon : Weapons
     [SerializeField] private ObjectPooler bulletPool;
     [SerializeField] private ObjectPooler redbulletPool;
     [SerializeField] private ObjectPooler missilePool;
+    [SerializeField] private ObjectPooler spreadBulletPool;
     private AudioSource missileShoot;
 
     [SerializeField] Transform missleSpawn;
+
+    [SerializeField] Transform [] spreadBulletSpawn;
+
     private bool missileAvailable = true;
     [SerializeField] int missileCD;
 
@@ -97,6 +101,7 @@ public class Weapon : Weapons
             // AudioManager.instance.PlayModifiedSound(AudioManager.instance.shoot);
             GameObject missle = missilePool.GetPooledObject();
             missle.transform.position = missleSpawn.position;
+            missle.transform.rotation = missleSpawn.rotation;
             missle.SetActive(true);
             StartCoroutine(MissileCD());             
         }       
@@ -108,6 +113,18 @@ public class Weapon : Weapons
         AudioManager.instance.PlayModifiedSound(missileShoot);
         yield return new WaitForSeconds(missileCD);
         missileAvailable = true;    
+    }
+
+
+    public void SpreadPattern()
+    {
+        for(int i = 0; i < spreadBulletSpawn.Length; i++)
+        {
+            GameObject spreadProjectile = spreadBulletPool.GetPooledObject();
+            spreadProjectile.transform.position = spreadBulletSpawn[i].position;
+            spreadProjectile.transform.rotation = spreadBulletSpawn[i].rotation;
+            spreadProjectile.SetActive(true);             
+        }
     }
 
     public void LevelUp()

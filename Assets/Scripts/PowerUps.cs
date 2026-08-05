@@ -4,7 +4,7 @@ public class PowerUps : MonoBehaviour
 {
 
     //public static bool isRotating, shootingPowerUp;
-    [SerializeField] bool unlockRotating, unlockshootingPowerUp;
+    [SerializeField] bool unlockRotating, unlockshootingPowerUp, unlockSpreadMode;
     
     ShootingPowerUp shootingPowerUp;
     

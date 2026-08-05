@@ -92,6 +92,7 @@ public override void OnEnable()
         float startAngle = centerAngle - (totalSpreadAngle / 2f);
         for (int i = 0; i < bulletCount; i++)
         {
+            FanBullet.bulletSpeed = 5;
             float currentBulletAngle = startAngle + (angleStep * i);
             Quaternion bulletRotation = Quaternion.Euler(0f, 0f, currentBulletAngle);        
             GameObject projectile = projectilePool.GetPooledObject();

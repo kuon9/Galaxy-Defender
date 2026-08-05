@@ -20,12 +20,10 @@ public class BossHomingProjectile : MonoBehaviour
     {
         rigidbody = GetComponent<Rigidbody2D>();
     }
-
     void Start()
     {
         explosionVFX = GameObject.Find("GreenHomingVFXPool").GetComponent<ObjectPooler>();
     }
-
     void OnEnable()
     {
         GameObject player = GameObject.FindWithTag("Player");
@@ -70,7 +68,6 @@ public class BossHomingProjectile : MonoBehaviour
             gameObject.SetActive(false);    
         }
     }
-
     IEnumerator Timer()
     {
         yield return new WaitForSeconds(homingProjectileTimer);
