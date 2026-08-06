@@ -50,7 +50,6 @@ public class ShootingPowerUp : MonoBehaviour
         // we'll be in this shooting state for 20 seconds
         yield return new WaitForSeconds(shootingTimer);
         Debug.Log("Returning to original level before Shooting PowerUp");
-
         // revert back to the level before touching the shooting powerups
         Weapon.instance.weaponLevel = originalLevel;
         //regularMode.SetActive(true);

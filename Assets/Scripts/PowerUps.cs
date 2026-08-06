@@ -7,12 +7,14 @@ public class PowerUps : MonoBehaviour
     [SerializeField] bool unlockRotating, unlockshootingPowerUp, unlockSpreadMode;
     
     ShootingPowerUp shootingPowerUp;
-    
+    SpreadShootingPowerUp spreadShootingPowerUp;
 
     public void Start()
     {
         //isRotating = false; 
-        shootingPowerUp = Object.FindAnyObjectByType<ShootingPowerUp>();  
+        shootingPowerUp = Object.FindAnyObjectByType<ShootingPowerUp>();
+        spreadShootingPowerUp = Object.FindAnyObjectByType<SpreadShootingPowerUp>();
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -33,6 +35,13 @@ public class PowerUps : MonoBehaviour
             {
                 player.isShooting = true;
                 shootingPowerUp.ShootingForm();
+            }
+
+            if(unlockSpreadMode)
+            {
+                player.SpreadMode = true;
+                FiringMode.instance.currentMode = FiringMode.shootingMode.Spread;
+                spreadShootingPowerUp.SpreadPowerUp();
             }
             // makes gameobject setactive false after people touches it
             gameObject.SetActive(false);  

@@ -113,18 +113,18 @@ public class PlayerMovement : MonoBehaviour
         {
             StopBoosting();
         }
-        if(Input.GetButtonDown("Fire1") || Input.GetButton("Fire1") && Time.time >= nextFireTime && !powerUpTracker.SpreadMode)
-        {
-            Weapon.instance.Shoot();
-            nextFireTime = Time.time + fireRate;
-            AudioManager.instance.PlayModifiedSound(laserShoot);
-        }
-        if(Input.GetButtonDown("Fire1") || Input.GetButton("Fire1") && Time.time >= nextFireTime && powerUpTracker.SpreadMode)
-        {
-            Weapon.instance.SpreadPattern();
-            nextFireTime = Time.time + fireRate;
-            AudioManager.instance.PlayModifiedSound(laserShoot);
-        }
+        // if(Input.GetButtonDown("Fire1") || Input.GetButton("Fire1") && Time.time >= nextFireTime && !powerUpTracker.SpreadMode)
+        // {
+        //     Weapon.instance.Shoot();
+        //     nextFireTime = Time.time + fireRate;
+        //     AudioManager.instance.PlayModifiedSound(laserShoot);
+        // }
+        // if(Input.GetButtonDown("Fire1") || Input.GetButton("Fire1") && Time.time >= nextFireTime && powerUpTracker.SpreadMode)
+        // {
+        //     Weapon.instance.SpreadPattern();
+        //     nextFireTime = Time.time + fireRate;
+        //     AudioManager.instance.PlayModifiedSound(laserShoot);
+        // }
         if(Input.GetButtonDown("Fire3"))
         {
             Weapon.instance.ShootMissile();

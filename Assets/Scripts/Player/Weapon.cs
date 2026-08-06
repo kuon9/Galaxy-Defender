@@ -123,10 +123,9 @@ public class Weapon : Weapons
             GameObject spreadProjectile = spreadBulletPool.GetPooledObject();
             spreadProjectile.transform.position = spreadBulletSpawn[i].position;
             spreadProjectile.transform.rotation = spreadBulletSpawn[i].rotation;
-            spreadProjectile.SetActive(true);             
+            spreadProjectile.SetActive(true);       
         }
     }
-
     public void LevelUp()
     {
         if(weaponLevel < stats.Count - 1)
