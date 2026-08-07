@@ -1693,6 +1693,10 @@ PrefabInstance:
       propertyPath: nukeSlider
       value: 
       objectReference: {fileID: 511208511}
+    - target: {fileID: 2081638083647659816, guid: e5c185fe9634f1244bdd83ecd4a6a0fb, type: 3}
+      propertyPath: m_Name
+      value: RedForm
+      objectReference: {fileID: 0}
     - target: {fileID: 2411981583693519459, guid: e5c185fe9634f1244bdd83ecd4a6a0fb, type: 3}
       propertyPath: laser
       value: 
@@ -10403,7 +10407,7 @@ MonoBehaviour:
   maxDistance: 10
   hitLayers:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 2176
 --- !u!1 &1631543335
 GameObject:
   m_ObjectHideFlags: 0

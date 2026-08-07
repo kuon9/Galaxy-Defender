@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerLaser : MonoBehaviour
 {
     
-    [SerializeField] int damage = 10;
+    [SerializeField] int damage = 1;
     public LineRenderer lineRenderer;
     public float maxDistance = 10f;
     public LayerMask hitLayers;
@@ -25,9 +25,28 @@ public class PlayerLaser : MonoBehaviour
             lineRenderer.SetPosition(1, hit.point);
             
             // Handle dealing damage or triggering events here
-            if (hit.collider.CompareTag("Enemy"))
+            if(hit.collider.gameObject.CompareTag("Obstacles"))
             {
-                hit.collider.GetComponent<Enemy>().TakeDamage(damage);
+                Asteroid asteroid = hit.collider.GetComponent<Asteroid>();
+                Meteor meteor = hit.collider.GetComponent<Meteor>();
+                if(asteroid) asteroid.TakeDamage(damage);
+                if(meteor) meteor.TakeDamage(damage);
+                gameObject.SetActive(false);
+            }
+            else if (hit.collider.CompareTag("Enemy"))
+            {
+                EnemyShipWave enemyShipWave = hit.collider.GetComponent<EnemyShipWave>();
+                EnemyBug enemyBug = hit.collider.GetComponent<EnemyBug>();
+                Enemy enemy = hit.collider.GetComponent<Enemy>();
+                OctopusWave octopusWave = hit.collider.GetComponent<OctopusWave>();
+                BugWave bugWave = hit.collider.GetComponent<BugWave>();
+                BeetleWave beetleWave = hit.collider.GetComponent<BeetleWave>();
+                if(enemyShipWave) enemyShipWave.TakeDamage(damage);
+                if(enemy)enemy.TakeDamage(damage);
+                if(octopusWave)octopusWave.TakeDamage(damage);
+                if(enemyBug)enemyBug.TakeDamage(damage);
+                if(bugWave)bugWave.TakeDamage(damage);
+                if(beetleWave)beetleWave.TakeDamage(damage);   
                 // Player is given iframes when hit by laser only.
                 // whereas other attacks don't give players iframes and keep damaging player continiously
             }
