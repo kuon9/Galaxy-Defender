@@ -2,6 +2,5 @@ using UnityEngine;
 
 public class PowerUpTracker : MonoBehaviour
 {
-    public bool isRotating, isShooting, SpreadMode;
-
+    public bool isRotating, isRedMode, SpreadMode;
 }

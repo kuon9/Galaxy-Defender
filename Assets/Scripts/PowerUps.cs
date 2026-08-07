@@ -4,22 +4,20 @@ public class PowerUps : MonoBehaviour
 {
 
     //public static bool isRotating, shootingPowerUp;
-    [SerializeField] bool unlockRotating, unlockshootingPowerUp, unlockSpreadMode;
+    [SerializeField] bool unlockRotating, unlockRedMode, unlockSpreadMode;
     
-    ShootingPowerUp shootingPowerUp;
+    RedModePowerUp redModePowerUp;
     SpreadShootingPowerUp spreadShootingPowerUp;
 
     public void Start()
     {
         //isRotating = false; 
-        shootingPowerUp = Object.FindAnyObjectByType<ShootingPowerUp>();
+        redModePowerUp = Object.FindAnyObjectByType<RedModePowerUp>();
         spreadShootingPowerUp = Object.FindAnyObjectByType<SpreadShootingPowerUp>();
 
     }
-
     void OnTriggerEnter2D(Collider2D other)
     {
-        
         // look for PowerUpTracker in hiearchy and references to it
         // we're assigning the PowerTracker script as player
         PowerUpTracker player = other.GetComponentInParent<PowerUpTracker>();
@@ -31,10 +29,11 @@ public class PowerUps : MonoBehaviour
                 //setactive false so it can be used for object pooling
                 //destroying this gameobject prevents it from spawning from object pooler's script                                  
             }
-            if(unlockshootingPowerUp)
+            if(unlockRedMode)
             {
-                player.isShooting = true;
-                shootingPowerUp.ShootingForm();
+                player.isRedMode = true;
+                FiringMode.instance.currentMode = FiringMode.shootingMode.RedMode;
+                redModePowerUp.RedForm();
             }
 
             if(unlockSpreadMode)

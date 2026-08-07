@@ -22,8 +22,10 @@ public class Weapon : Weapons
     [SerializeField] int missileCD;
 
     PowerUpTracker powerUpTracker;
+    
 
-
+    [SerializeField] GameObject laser;
+ 
     void Awake()
     {
         if(instance != null)
@@ -56,42 +58,32 @@ public class Weapon : Weapons
                 float spacing = stats[weaponLevel].range / (stats[weaponLevel].amount - 1);
                 yPos = transform.position.y - (stats[weaponLevel].range/2 ) + i * spacing;
             }
-            if(!powerUpTracker.isShooting)
+            if(!powerUpTracker.isRedMode)
             {
             bullet.transform.position = new Vector2(transform.position.x, yPos);
             //bullet.transform.position = transform.position;
             bullet.transform.localScale = new Vector2(stats[weaponLevel].size, stats[weaponLevel].size);
             bullet.SetActive(true);                
             }
-            if(powerUpTracker.isShooting)
-            {
-            redbullet.transform.position = new Vector2(transform.position.x, yPos);
-            //bullet.transform.position = transform.position;
-            redbullet.transform.localScale = new Vector2(stats[weaponLevel].size, stats[weaponLevel].size);
-            redbullet.SetActive(true);                
-            }
+            // old red mode powerup
+            // if(powerUpTracker.isShooting)
+            // {
+            // redbullet.transform.position = new Vector2(transform.position.x, yPos);
+            // //bullet.transform.position = transform.position;
+            // redbullet.transform.localScale = new Vector2(stats[weaponLevel].size, stats[weaponLevel].size);
+            // redbullet.SetActive(true);                
+            // }
         }
     }
-    // public void RedShoot()
-    // {
-    //     for (int i = 0; i < stats[weaponLevel].amount; i++)
-    //     {
-    //         GameObject redbullet = redbulletPool.GetPooledObject();
-    //         // this spacing makes the bullet spread apart
-    //         float yPos = transform.position.y;
-            
-    //         if(stats[weaponLevel].amount > 1)
-    //         {
-    //             float spacing = stats[weaponLevel].range / (stats[weaponLevel].amount - 1);
-    //             yPos = transform.position.y - (stats[weaponLevel].range/2 ) + i * spacing;
-    //         }
-    //         redbullet.transform.position = new Vector2(transform.position.x, yPos);
-    //         //bullet.transform.position = transform.position;
-    //         redbullet.transform.localScale = new Vector2(stats[weaponLevel].size, stats[weaponLevel].size);
-    //         redbullet.SetActive(true);
-    //     }
-    // }
+    public void Laser()
+    {
+        laser.SetActive(true);     
+    }
 
+    public void StopLaser()
+    {
+        laser.SetActive(false);
+    }
 
     public void ShootMissile()
     {   
@@ -133,6 +125,5 @@ public class Weapon : Weapons
             weaponLevel++;
         }
     }
-
 }
  

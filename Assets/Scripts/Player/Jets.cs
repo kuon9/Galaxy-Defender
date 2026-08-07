@@ -26,7 +26,7 @@ public class Jets : MonoBehaviour
     {
         foreach(GameObject jet in blueJets)
         {
-            if(!powerUpTracker.isShooting)
+            if(!powerUpTracker.isRedMode)
             {
                 jet.SetActive(true);
             }
@@ -40,7 +40,7 @@ public class Jets : MonoBehaviour
     {
         foreach(GameObject jet in redJets)
         {
-            if(powerUpTracker.isShooting)
+            if(powerUpTracker.isRedMode)
             {
                 jet.SetActive(true);
             }

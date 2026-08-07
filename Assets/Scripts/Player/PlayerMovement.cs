@@ -101,11 +101,11 @@ public class PlayerMovement : MonoBehaviour
         // anim.SetFloat("moveY", directionY);
         playerDirection = new Vector2(directionX, directionY).normalized;
 
-        if(Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Fire2") && !powerUpTracker.isShooting)
+        if(Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Fire2") && !powerUpTracker.isRedMode)
         {
             Boosting();
         }
-        if(Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Fire2") && powerUpTracker.isShooting)
+        if(Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Fire2") && powerUpTracker.isRedMode)
         {
             RedBoosting();
         }
@@ -258,7 +258,7 @@ public class PlayerMovement : MonoBehaviour
     public void ActivateDroids()
     {
         // drones are only active if player's level is higher or equal to 3 and isShooting form is off
-        if(currentLevel >= 3 && !powerUpTracker.isShooting)
+        if(currentLevel >= 3 && !powerUpTracker.isRedMode)
         {
             droneOne.SetActive(true);
             droneTwo.SetActive(true);

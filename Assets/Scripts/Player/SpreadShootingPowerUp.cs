@@ -6,7 +6,7 @@ public class SpreadShootingPowerUp : MonoBehaviour
     
     PowerUpTracker powerUpTracker;
 
-    [SerializeField] float shootingTimer = 20f;
+    [SerializeField] float powerUpDuration = 20f;
     [SerializeField] int boostedLevel;
     [SerializeField] int originalLevel;
     private int storeLevel;
@@ -30,7 +30,7 @@ public class SpreadShootingPowerUp : MonoBehaviour
     IEnumerator SpreadShoot()
     {
         // we'll be in this shooting state for 20 seconds
-        yield return new WaitForSeconds(shootingTimer);
+        yield return new WaitForSeconds(powerUpDuration);
         Debug.Log("Returning to original level before Shooting PowerUp");
         // this reverts our current enum mode which is Spread mode to regular.
         FiringMode.instance.currentMode = FiringMode.shootingMode.Regular;
