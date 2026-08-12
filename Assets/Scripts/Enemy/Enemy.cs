@@ -13,10 +13,10 @@ public class Enemy : MonoBehaviour
     protected float speedX = 0;
     protected float speedY = 0;
 
-    [SerializeField] protected int lives;
-    [SerializeField] protected int maxLives;
-    [SerializeField] protected int damage;
-    [SerializeField] protected int livesMultipler = 2;
+    [SerializeField] protected float lives;
+    [SerializeField] protected float maxLives;
+    [SerializeField] protected float damage;
+    [SerializeField] protected float livesMultipler = 2;
     [SerializeField] protected int experienceToGive;
   
 
@@ -60,7 +60,7 @@ public class Enemy : MonoBehaviour
             if(player)player.TakeDamage(damage);
         }
     }
-    public virtual void TakeDamage(int damage)
+    public virtual void TakeDamage(float damage)
     {
         // AudioManager.instance.PlayModifiedSound(hitSound);
         lives -= damage;

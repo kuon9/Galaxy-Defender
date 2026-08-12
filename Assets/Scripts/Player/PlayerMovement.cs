@@ -33,8 +33,8 @@ public class PlayerMovement : MonoBehaviour
     public bool isRegularMode;
     private ObjectPooler playerBoomPool;
 
-    [SerializeField] int health;
-    [SerializeField] int maxHealth;
+    [SerializeField] float health;
+    [SerializeField] float maxHealth;
     [SerializeField] Material defaultMaterial;
     [SerializeField] Material whiteMaterial;
     [SerializeField] int experience;
@@ -182,7 +182,7 @@ public class PlayerMovement : MonoBehaviour
         boost = 1f;
         boosting = false;
     }
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         foreach (FlashWhite form in playerForms)
         {

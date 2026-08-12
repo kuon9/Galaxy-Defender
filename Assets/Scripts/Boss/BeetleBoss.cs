@@ -139,7 +139,7 @@ public class BeetleBoss : Enemy
     //         GameManager.instance.CanSpawn = true;        
     //     }
     // }
-    public override void TakeDamage(int damage)
+    public override void TakeDamage(float damage)
     {
         base.TakeDamage(damage);
         AudioManager.instance.PlayModifiedSound(AudioManager.instance.hitBoss);

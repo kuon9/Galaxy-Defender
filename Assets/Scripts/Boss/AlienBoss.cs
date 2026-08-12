@@ -20,6 +20,7 @@ public class AlienBoss : Enemy
     private bool canSpread;
     private Animator anim;
     public Transform spiralBulletSpawn;
+    public Transform [] phaseTwoSpiralSpawn;
     public Transform [] phaseTwoBulletSpawn;
     private float angle = 0f;
 
@@ -130,26 +131,25 @@ public class AlienBoss : Enemy
     }
     private void PhaseTwoSpiral()
     {
-        for (int i = 0; i <= 1; i++)
+        for (int i = 0; i < phaseTwoSpiralSpawn.Length; i++)
         {
             float bulletDirectionX = transform.position.x + Mathf.Sin(((angle + 180f * i) * Mathf.PI) / 180f);
             float bulletDirectionY = transform.position.y + Mathf.Cos(((angle + 180f * i) * Mathf.PI) / 180f);
             Vector3 bulVector = new Vector3(bulletDirectionX , bulletDirectionY, 0f);
             Vector2 bulDir = (bulVector - transform.position).normalized;
             GameObject projectile = projectilePool.GetPooledObject();
-            projectile.transform.position = spiralBulletSpawn.position;
-            projectile.transform.rotation = spiralBulletSpawn.rotation;
+            projectile.transform.position = phaseTwoSpiralSpawn[i].position;
+            projectile.transform.rotation = phaseTwoSpiralSpawn[i].rotation;
             projectile.SetActive(true);
             projectile.GetComponent<SpiralBullet>().SetBulletDirection(bulDir);
             StartCoroutine(SpiralCD());                                   
         }           
-        angle += 20f;
+        angle += 15f;
         if(angle >= 360f)
         {
             angle = 0f;
         }
     }
-
     private void SpreadFire()
     {
         for (int v = 0; v < phaseTwoBulletSpawn.Length; v++)

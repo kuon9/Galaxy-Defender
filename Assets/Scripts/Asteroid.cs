@@ -11,9 +11,9 @@ public class Asteroid : MonoBehaviour
 
     [SerializeField] private Sprite[] sprites;
 
-    [SerializeField] int lives;
-    [SerializeField] private int maxLives;
-    [SerializeField] private int dmg = 1;
+    [SerializeField] float lives;
+    [SerializeField] private float maxLives;
+    [SerializeField] private float dmg = 1;
 
     private ObjectPooler destroyEffectPool;
 
@@ -62,7 +62,7 @@ public class Asteroid : MonoBehaviour
     }
     
     
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         //Debug.Log("ASteroid takding dmg");
         flashWhite.Flash();

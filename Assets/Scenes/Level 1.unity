@@ -1777,6 +1777,10 @@ PrefabInstance:
       propertyPath: projectileSpawn
       value: 
       objectReference: {fileID: 87089381}
+    - target: {fileID: 6423339992552999652, guid: e5c185fe9634f1244bdd83ecd4a6a0fb, type: 3}
+      propertyPath: maxHealth
+      value: 299
+      objectReference: {fileID: 0}
     - target: {fileID: 7358134841776262015, guid: e5c185fe9634f1244bdd83ecd4a6a0fb, type: 3}
       propertyPath: projectileSpawn
       value: 
@@ -3625,7 +3629,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &508673125
 Transform:
   m_ObjectHideFlags: 0
@@ -5058,7 +5062,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2866840311726469669, guid: c7dd16be3f235d74da0bc18c78ddf11f, type: 3}
       propertyPath: maxLives
-      value: 300
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 3121994298679400806, guid: c7dd16be3f235d74da0bc18c78ddf11f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5208,6 +5212,7 @@ Transform:
   - {fileID: 1734365358}
   - {fileID: 1736859965}
   - {fileID: 18008967}
+  - {fileID: 1686318169}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &768898804
@@ -9151,6 +9156,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1333564505}
   m_CullTransparentMesh: 1
+--- !u!1 &1336788232
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1336788234}
+  - component: {fileID: 1336788233}
+  m_Layer: 0
+  m_Name: RadialSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1336788233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336788232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daf173560e9501547a18867a19e58665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletCount: 5
+  radius: 1
+  bulletSpeed: 5
+  rotationSpeed: 10
+--- !u!4 &1336788234
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336788232}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.07, y: -0.87, z: 0.055705406}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1368053856
 GameObject:
   m_ObjectHideFlags: 0
@@ -10261,9 +10314,9 @@ GameObject:
   - component: {fileID: 1628478444}
   - component: {fileID: 1628478443}
   - component: {fileID: 1628478445}
-  m_Layer: 11
+  m_Layer: 9
   m_Name: playerLaser
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10312,18 +10365,18 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 1
+    widthMultiplier: 1.0435824
     widthCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
+        time: 0.033018436
         value: 1
         inSlope: 0
         outSlope: 0
@@ -10402,9 +10455,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b2bb3a47c189e34a8e931026e838216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damagePerSecond: 44
   lineRenderer: {fileID: 1628478443}
-  maxDistance: 10
+  maxDistance: 12
   hitLayers:
     serializedVersion: 2
     m_Bits: 2176
@@ -10931,6 +10984,52 @@ MonoBehaviour:
     spawnInterval: 6
     objectsPerWave: 5
     spawnedObjectCount: 0
+--- !u!1 &1686318168
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1686318169}
+  - component: {fileID: 1686318170}
+  m_Layer: 0
+  m_Name: RadialBulletPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1686318169
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686318168}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8.31954, y: -4.011513, z: -598.2447}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 765709286}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1686318170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686318168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 987ad150b4767c54aae1bb57e7575e04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 9108824711909015804, guid: 223f19663df451b48abc39aaab81a68a, type: 3}
+  poolSize: 20
 --- !u!4 &1696548008 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 512592134266224038, guid: 40540595bb6635c4fb21eb4307b5bf27, type: 3}
@@ -13753,6 +13852,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: playerSpreadBullet
       objectReference: {fileID: 0}
+    - target: {fileID: 207164591207269712, guid: 256e23ab29aa6e44d9ac904b09ed7d07, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4630286690119426344, guid: 256e23ab29aa6e44d9ac904b09ed7d07, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.84
@@ -13943,13 +14046,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: AlienBoss
       objectReference: {fileID: 0}
-    - target: {fileID: 106812938175733248, guid: cf3375c54960cef48b5b347fec16ef70, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3270408053035012859, guid: cf3375c54960cef48b5b347fec16ef70, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.33
+      value: 15.04
       objectReference: {fileID: 0}
     - target: {fileID: 3270408053035012859, guid: cf3375c54960cef48b5b347fec16ef70, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14166,6 +14265,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RotatingPower
       objectReference: {fileID: 0}
+    - target: {fileID: 7973779025352122785, guid: 5a95f6820005f91409baea2422d94884, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14324,6 +14427,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RedModePowerUp
       objectReference: {fileID: 0}
+    - target: {fileID: 5236751333790656988, guid: 6656ff62272b61f479b1ddc1890d4d9d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14381,6 +14488,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpreadShootingPowerUp
       objectReference: {fileID: 0}
+    - target: {fileID: 5603595966496668099, guid: 40540595bb6635c4fb21eb4307b5bf27, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14414,3 +14525,4 @@ SceneRoots:
   - {fileID: 1950712127}
   - {fileID: 689089658959742787}
   - {fileID: 2126774540}
+  - {fileID: 1336788234}

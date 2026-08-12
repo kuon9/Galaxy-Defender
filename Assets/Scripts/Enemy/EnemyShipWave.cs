@@ -18,8 +18,8 @@ public class EnemyShipWave : MonoBehaviour
 
     private FlashWhite flashWhite;
 
-    [SerializeField] protected int lives;
-    [SerializeField] protected int maxLives;
+    [SerializeField] protected float lives;
+    [SerializeField] protected float maxLives;
     [SerializeField] protected int expToGive;
     protected AudioSource destroySound;
     protected float timeBeforeShooting = 1.5f;  
@@ -102,7 +102,7 @@ public class EnemyShipWave : MonoBehaviour
     }
 
     
-    public virtual void TakeDamage(int damage)
+    public virtual void TakeDamage(float damage)
     {
         lives -= damage;
         if(lives > 0)

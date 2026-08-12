@@ -16,11 +16,11 @@ public class OctopusWave : MonoBehaviour
     public Transform bulletSpawn;
     [SerializeField] private Sprite[] sprites;
 
-    [SerializeField] private int lives;
-    [SerializeField] private int maxLives;
+    [SerializeField] private float lives;
+    [SerializeField] private float maxLives;
     [SerializeField] int expToGive;
     private FlashWhite flashWhite;
-    private int dmg = 1;
+    private float dmg = 1;
     private SpriteRenderer spriteRenderer;
     [SerializeField] float timerBeforeHpIncrease = 10f;
     [SerializeField] int livesMultipler = 1;
@@ -98,7 +98,7 @@ public class OctopusWave : MonoBehaviour
         yield return null;
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         lives -= damage;
         if(lives > 0)

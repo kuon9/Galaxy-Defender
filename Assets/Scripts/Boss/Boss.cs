@@ -168,7 +168,7 @@ public class Boss : Enemy
     //     //anim.SetBool("shooting", false); 
     // }
     // this overrides the inheritance method from enemy script
-    public override void TakeDamage(int damage)
+    public override void TakeDamage(float damage)
     {
         //AudioManager.instance.PlayModifiedSound(hitSound);
         base.TakeDamage(damage);

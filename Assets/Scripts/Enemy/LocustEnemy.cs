@@ -60,7 +60,7 @@ public class LocustEnemy : Enemy
         }
     }
 
-    public override void TakeDamage(int damage)
+    public override void TakeDamage(float damage)
     {
         base.TakeDamage(damage);
         // if health is 50% of max HP then enemy will charge

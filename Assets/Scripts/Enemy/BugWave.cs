@@ -4,8 +4,8 @@ public class BugWave : MonoBehaviour
 {
     private ObjectPooler destroyEffectPool;
     private AudioSource destroySound;
-    [SerializeField] private int lives;
-    [SerializeField] private int maxLives;
+    [SerializeField] private float lives;
+    [SerializeField] private float maxLives;
     [SerializeField] int expToGive;
     [SerializeField] int livesMultipler = 1;
     private FlashWhite flashWhite;
@@ -34,7 +34,7 @@ public class BugWave : MonoBehaviour
     {
         
     }
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         lives -= damage;
         if(lives > 0)
