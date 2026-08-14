@@ -5164,7 +5164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4751130397799575543, guid: c7dd16be3f235d74da0bc18c78ddf11f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5475046095306861283, guid: c7dd16be3f235d74da0bc18c78ddf11f, type: 3}
       propertyPath: m_Enabled
@@ -11917,7 +11917,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2682551466513078923, guid: 9ace43562cff9c9409219aaea1ccf58b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6193556465791287352, guid: 9ace43562cff9c9409219aaea1ccf58b, type: 3}
       propertyPath: maxLives

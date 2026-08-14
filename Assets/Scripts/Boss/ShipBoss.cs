@@ -20,6 +20,7 @@ private bool canShoot;
 public Transform fanBulletSpawn;
 public Transform [] phaseOneHomingBulletSpawn;
 public Transform [] phaseTwoHomingBulletSpawn;
+public Transform regularHomingBulletSpawn;
 
 // [SerializeField] private List<Transform> phaseOneGuns;
 // [SerializeField] private List<Transform> phaseTwoGuns;
@@ -118,10 +119,14 @@ public override void OnEnable()
         {
             initialPositionX = 15f;
             FanBullet.bulletSpeed = 8;
-            GameObject homingProjectile = secondPhaseHomingCircleProjectile.GetPooledObject();
-            homingProjectile.transform.position = phaseTwoHomingBulletSpawn[v].position;
-            homingProjectile.transform.rotation = phaseTwoHomingBulletSpawn[v].rotation;
-            homingProjectile.SetActive(true);                            
+            GameObject radialHomingProjectile = secondPhaseHomingCircleProjectile.GetPooledObject();
+            GameObject homingProjectile = homingCircleProjectilePool.GetPooledObject();
+            homingProjectile.transform.position = regularHomingBulletSpawn.position;
+            homingProjectile.transform.rotation = regularHomingBulletSpawn.rotation;
+            homingProjectile.SetActive(true);
+            radialHomingProjectile.transform.position = phaseTwoHomingBulletSpawn[v].position;
+            radialHomingProjectile.transform.rotation = phaseTwoHomingBulletSpawn[v].rotation;
+            radialHomingProjectile.SetActive(true);                            
         }           
     }
 
