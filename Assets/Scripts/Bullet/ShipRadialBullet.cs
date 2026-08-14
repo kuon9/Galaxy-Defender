@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class Radial : MonoBehaviour
+public class ShipRadialBullet : MonoBehaviour
 {
-    private float shootInterval;
+    private float shootInterval = 1.2f;
     private float shootTimer;
     private ObjectPooler projectilePool;
     
@@ -14,40 +14,29 @@ public class Radial : MonoBehaviour
     [SerializeField] float rotationSpeed = 10f;    
 
     [SerializeField] Transform bulletSpawn;
-  
-    
 
     void OnEnable()
     {
-        shootInterval = Random.Range(2f,3f);        
+        //RadialPattern();    
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        projectilePool = GameObject.Find("RadialBulletPool").GetComponent<ObjectPooler>();
-        shootInterval = Random.Range(2f,3f);        
+        projectilePool = GameObject.Find("SecondRadialBulletPool").GetComponent<ObjectPooler>();
+        //shootInterval = Random.Range(2f,3f);        
     }
 
     // Update is called once per frame
     void Update()
     {
-        currentAngleOffset += rotationSpeed * Time.deltaTime;
-        shootTimer -= Time.deltaTime;
-        if(shootTimer <= 0)
+        // this executes the same way as the one above
+        shootTimer += Time.deltaTime;
+        if(shootTimer >= shootInterval)
         {
-            shootTimer += shootInterval;
-            //RadialPattern();
             RadialPattern();
-        }    
-    
-        // // this executes the same way as the one above
-        // shootTimer += Time.deltaTime;
-        // if(shootTimer >= shootInterval)
-        // {
-        //     RadialPattern();
-        //     shootTimer = 0;
-        // }
+            shootTimer = 0;
+        }
     }
 
     // void RadialPattern()
@@ -80,7 +69,7 @@ public class Radial : MonoBehaviour
             float bulletDirY = Mathf.Sin(radian);
             Vector2 bulletDir = new Vector2(bulletDirX,bulletDirY);
             GameObject projectile = projectilePool.GetPooledObject();
-            projectile.transform.position = bulletSpawn.position;
+            projectile.transform.position = transform.position;
             projectile.transform.rotation = Quaternion.Euler(0,0,angle);
             projectile.SetActive(true);
             projectile.GetComponent<RadialBullet>().SetBulletDirection(bulletDir, bulletSpeed);

@@ -23,6 +23,7 @@ public class AlienBoss : Enemy
     public Transform [] phaseTwoSpiralSpawn;
     public Transform [] phaseTwoBulletSpawn;
     private float angle = 0f;
+    [SerializeField] float rotationSpeed = 10f; 
 
     
     public override void OnEnable()

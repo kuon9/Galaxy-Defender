@@ -12,6 +12,7 @@ public float totalSpreadAngle = 60f;
 public int bulletCount = 4;
 private ObjectPooler projectilePool;
 private ObjectPooler homingCircleProjectilePool;
+private ObjectPooler secondPhaseHomingCircleProjectile;
 private Animator anim;
 private float timeBeforeShooting = 2f;
 private bool canShoot;
@@ -44,7 +45,8 @@ public override void OnEnable()
         anim = GetComponent<Animator>();
         destroyEffectPool = GameObject.Find("BoomPool").GetComponent<ObjectPooler>();    
         projectilePool = GameObject.Find("FanBulletPool").GetComponent<ObjectPooler>();
-        homingCircleProjectilePool= GameObject.Find("ShipBossHomingBulletPool").GetComponent<ObjectPooler>();        
+        homingCircleProjectilePool= GameObject.Find("ShipBossHomingBulletPool").GetComponent<ObjectPooler>();
+        secondPhaseHomingCircleProjectile= GameObject.Find("SecondShipBossHomingBulletPool").GetComponent<ObjectPooler>();          
         hitSound = AudioManager.instance.hitImpact;
         destroySound = AudioManager.instance.monsterDeath;        
     }
@@ -65,13 +67,13 @@ public override void OnEnable()
         }
         //shooting
         shootTimer -= Time.deltaTime;
-        if(lives >= 200 && shootTimer <=  0 && canShoot == true)
+        if(lives >= 500 && shootTimer <=  0 && canShoot == true)
         {
             shootTimer += shootInterval;
             PhaseOne();
             FanPattern();
         }    
-        if(lives <= 200 && shootTimer <= 0 &&  canShoot == true)
+        if(lives <= 500 && shootTimer <= 0 &&  canShoot == true)
         {
             // increase fire rate when entering phase 2
             shootInterval = Random.Range(2f, 2.5f); 
@@ -100,7 +102,7 @@ public override void OnEnable()
     {
         for (int v = 0; v < phaseOneHomingBulletSpawn.Length; v++)
         {
-            FanBullet.bulletSpeed = 7;
+            FanBullet.bulletSpeed = 6;
             GameObject homingProjectile = homingCircleProjectilePool.GetPooledObject();
             homingProjectile.transform.position = phaseOneHomingBulletSpawn[v].position;
             homingProjectile.transform.rotation = phaseOneHomingBulletSpawn[v].rotation;
@@ -115,8 +117,8 @@ public override void OnEnable()
         for (int v = 0; v < phaseTwoHomingBulletSpawn.Length; v++)
         {
             initialPositionX = 15f;
-            FanBullet.bulletSpeed = 9;
-            GameObject homingProjectile = homingCircleProjectilePool.GetPooledObject();
+            FanBullet.bulletSpeed = 8;
+            GameObject homingProjectile = secondPhaseHomingCircleProjectile.GetPooledObject();
             homingProjectile.transform.position = phaseTwoHomingBulletSpawn[v].position;
             homingProjectile.transform.rotation = phaseTwoHomingBulletSpawn[v].rotation;
             homingProjectile.SetActive(true);                            

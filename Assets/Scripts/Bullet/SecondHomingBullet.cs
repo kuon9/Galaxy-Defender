@@ -1,10 +1,15 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
-public class HomingCircleBullet : MonoBehaviour
+
+public class SecondHomingBullet : MonoBehaviour
 {
 
-    private enum State { Circling, Chasing}
+    private enum State 
+    { 
+        Circling, 
+        Chasing
+    }
     private State currentState;
     public float circleRadius = 2f;
     public float circleSpeed = 5f;
@@ -12,7 +17,6 @@ public class HomingCircleBullet : MonoBehaviour
     private Vector2 direction;
     private float angle;
     private ObjectPooler explosionVFX;
-    public bool canExplode = false;
 
     public float bulletSpeed = 10f;
     public float timeToChase = 1f;
@@ -63,6 +67,7 @@ public class HomingCircleBullet : MonoBehaviour
         else if (currentState == State.Chasing)
         {
             rb.linearVelocity = direction * bulletSpeed;
+            StartCoroutine(RadialPattern());
             // // Rotate towards the player
             // Vector2 direction = (Vector2)(player.position - transform.position);
             // float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
@@ -83,6 +88,14 @@ public class HomingCircleBullet : MonoBehaviour
             gameObject.SetActive(false);    
         }
     }
+
+    IEnumerator RadialPattern()
+    {
+        //radialPrefab.SetActive(true); 
+        yield return new WaitForSeconds(timeForRadial);
+        gameObject.SetActive(false);
+    }
+
     void StartChasing()
     {
         currentState = State.Chasing;

@@ -22,6 +22,7 @@ public class Boss : Enemy
     [SerializeField] GameObject laser;
     public bool isLaser;
     [SerializeField] float laserDuration;
+    [SerializeField] GameObject radialAttackPrefab;
 
     public override void OnEnable()
     {
@@ -75,7 +76,7 @@ public class Boss : Enemy
         }
         //shooting
         shootTimer -= Time.deltaTime;
-        if(lives >= 200 && shootTimer <=  0 && canShoot == true)
+        if(lives >= 500 && shootTimer <=  0 && canShoot == true)
         {
             shootTimer += shootInterval;
             PhaseOneAttacks();
@@ -83,8 +84,10 @@ public class Boss : Enemy
         }    
         // isLaser bool prevents boss from shooting projectile while also shooting laser
         // maybe we'll remove later and add other attacks
-        if(lives <= 200 && shootTimer <= 0 && canShoot == true && !isLaser)
+        if(lives <= 500 && shootTimer <= 0 && canShoot == true && !isLaser)
         {
+            radialAttackPrefab.SetActive(true);
+            initialPositionX = 16f;
             shootTimer += shootInterval;
             PhaseTwoAttacks();
             shootTimer = 2f;
