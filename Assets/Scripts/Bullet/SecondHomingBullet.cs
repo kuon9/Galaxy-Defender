@@ -91,7 +91,7 @@ public class SecondHomingBullet : MonoBehaviour
 
     IEnumerator RadialPattern()
     {
-        //radialPrefab.SetActive(true); 
+        radialPrefab.SetActive(true); 
         yield return new WaitForSeconds(timeForRadial);
         gameObject.SetActive(false);
     }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6136680651665052420}
   - component: {fileID: 6277354476230583813}
   m_Layer: 12
-  m_Name: Radial
+  m_Name: SecondRadialBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,9 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a2b73dc55b46f24dbe882f545f34125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletCount: 10
+  bulletCount: 7
   radius: 1
-  bulletSpeed: 5
+  bulletSpeed: 6
   rotationSpeed: 10
   bulletSpawn: {fileID: 1210571131838395894}
 --- !u!1 &9086759518407281620

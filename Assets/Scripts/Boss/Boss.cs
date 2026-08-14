@@ -55,7 +55,8 @@ public class Boss : Enemy
         timeBeforeShooting -= Time.deltaTime;
         if(timeBeforeShooting <= 0)
         {
-            canShoot = true;    
+            canShoot = true;
+            shootTimer -= Time.deltaTime;    
         }
         else
         {
@@ -75,7 +76,7 @@ public class Boss : Enemy
             speedY *= -1;
         }
         //shooting
-        shootTimer -= Time.deltaTime;
+        //shootTimer -= Time.deltaTime;
         if(lives >= 500 && shootTimer <=  0 && canShoot == true)
         {
             shootTimer += shootInterval;
@@ -93,7 +94,6 @@ public class Boss : Enemy
             shootTimer = 2f;
         }
     }
-    
     void PhaseOneAttacks()
     {
         int randomAttack = Random.Range(0,3);
@@ -130,7 +130,6 @@ public class Boss : Enemy
         //AudioManager.instance.PlaySound(AudioManager.instance.squidShoot);
         //StartCoroutine(ResetShoot());          
     }
-
     private void PhaseOneProjectile()
     {
         
@@ -142,7 +141,6 @@ public class Boss : Enemy
         projectile.SetActive(true);
         //StartCoroutine(ResetShoot());    
     }
-
     private void PhaseTwoProjectile()
     {
         for(int i = 0; i < phaseTwoProjectileSpawn.Length; i++)
@@ -163,7 +161,6 @@ public class Boss : Enemy
         laser.SetActive(false);
         isLaser = false;    
     }
-
     // IEnumerator ResetShoot()
     // {
     //     // waits one frame

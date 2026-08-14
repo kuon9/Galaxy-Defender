@@ -13,13 +13,12 @@ public class SpiralBullet : MonoBehaviour
     {
         
     }
-
     // Update is called once per frame
     void Update()
     {
         transform.Translate(bulletDir * bulletSpeed * Time.deltaTime, Space.Self);
         
-        if(transform.position.x < -5)
+        if(transform.position.x < -5 || transform.position.x > 19)
         {
             gameObject.SetActive(false);
         }    
@@ -28,7 +27,6 @@ public class SpiralBullet : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
-
     public void SetBulletDirection(Vector2 dir)
     {
         bulletDir = dir;

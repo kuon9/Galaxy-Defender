@@ -61,6 +61,7 @@ public override void OnEnable()
         if(timeBeforeShooting <= 0)
         {
             canShoot = true;
+            // putting this here instead of in update solves the issue of boss attacking twice on spawn
             shootTimer -= Time.deltaTime;    
         }
         else
@@ -120,11 +121,11 @@ public override void OnEnable()
         {
             initialPositionX = 15f;
             FanBullet.bulletSpeed = 6;
-            GameObject radialHomingProjectile = secondPhaseHomingCircleProjectile.GetPooledObject();
             GameObject homingProjectile = homingCircleProjectilePool.GetPooledObject();
             homingProjectile.transform.position = regularHomingBulletSpawn.position;
             homingProjectile.transform.rotation = regularHomingBulletSpawn.rotation;
             homingProjectile.SetActive(true);
+            GameObject radialHomingProjectile = secondPhaseHomingCircleProjectile.GetPooledObject();
             radialHomingProjectile.transform.position = phaseTwoHomingBulletSpawn[v].position;
             radialHomingProjectile.transform.rotation = phaseTwoHomingBulletSpawn[v].rotation;
             radialHomingProjectile.SetActive(true);                            

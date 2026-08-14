@@ -11,7 +11,7 @@ public class RadialBullet : MonoBehaviour
     void Update()
     {
         transform.Translate(bulletDir * moveSpeed * Time.deltaTime, Space.World);
-        if(transform.position.x < -5)
+        if(transform.position.x < -5 || transform.position.x > 19)
         {
             gameObject.SetActive(false);
         }    

@@ -37,8 +37,15 @@ public class ShipRadialBullet : MonoBehaviour
             RadialPattern();
             shootTimer = 0;
         }
+        if(transform.position.x < -5 || transform.position.x > 19)
+        {
+            gameObject.SetActive(false);
+        }    
+        if(transform.position.y > 6 || transform.position.y < -6)
+        {
+            gameObject.SetActive(false);
+        }
     }
-
     // void RadialPattern()
     // {
     //     Debug.Log("FIRING RADIAL");

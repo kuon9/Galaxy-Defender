@@ -18,7 +18,7 @@ public class HomingCircleBullet : MonoBehaviour
     public float timeToChase = 1f;
     public int dmg;
     private float timeForRadial = 1.2f;
-    [SerializeField] GameObject  radialPrefab;
+    //[SerializeField] GameObject  radialPrefab;
     private Rigidbody2D rb;    
     // public float homingProjectileTimer;
 

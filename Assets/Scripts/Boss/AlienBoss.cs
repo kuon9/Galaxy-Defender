@@ -63,20 +63,22 @@ public class AlienBoss : Enemy
         else
         {
             canSpread = true;
+            spreadTimer -= Time.deltaTime;
         }
         // enemy can't shoot after spawning in for 2 seconds.
         // this fixes enemy shooting as they spawn in
         timeBeforeShooting -= Time.deltaTime;
         if(timeBeforeShooting <= 0)
         {
-            canShoot = true;    
+            canShoot = true;
+            shootTimer -= Time.deltaTime;    
         }
         else
         {
             canShoot = false;
         }
         //shooting
-        shootTimer -= Time.deltaTime;
+        //shootTimer -= Time.deltaTime;
         if(lives >= 200 && shootTimer <=  0 && canShoot == true && canSpiral == true)
         {
             shootTimer += shootInterval;
@@ -90,7 +92,7 @@ public class AlienBoss : Enemy
             PhaseTwoSpiral();
             // initialPositionX = 12f + Random.Range(-1f,1f);
         }
-        spreadTimer -= Time.deltaTime;
+        //spreadTimer -= Time.deltaTime;
         // spreadTimer dictates the fire rate
         if(canSpread && spreadTimer <= 0)
         {
