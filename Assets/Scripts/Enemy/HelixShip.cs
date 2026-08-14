@@ -27,7 +27,7 @@ public override void OnEnable()
         moveSpeed = Random.Range(2f, 3f);
         // if random value is less than 0.5 , 50% it eithers moves up or down Two float
         speedY = Random.value < 0.5 ? -2f : 2f;
-        shootInterval = Random.Range(2f, 3f); 
+        shootInterval = Random.Range(1f, 2f); 
         HpScaling();       
     }    
     

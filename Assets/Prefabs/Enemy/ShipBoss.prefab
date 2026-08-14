@@ -357,18 +357,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 199
-  maxLives: 400
+  maxLives: 499
   damage: 5
   livesMultipler: 3
   experienceToGive: 20
-  totalSpreadAngle: 50
-  bulletCount: 4
+  totalSpreadAngle: 75
+  bulletCount: 3
   fanBulletSpawn: {fileID: 6101848456101830598}
   phaseOneHomingBulletSpawn:
   - {fileID: 6098587339015066363}
+  - {fileID: 5906097117469126261}
   phaseTwoHomingBulletSpawn:
   - {fileID: 9172560409744653326}
-  - {fileID: 5906097117469126261}
+  regularHomingBulletSpawn: {fileID: 5906097117469126261}
 --- !u!114 &1330397786010570177
 MonoBehaviour:
   m_ObjectHideFlags: 0

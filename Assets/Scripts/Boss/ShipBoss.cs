@@ -60,14 +60,15 @@ public override void OnEnable()
         timeBeforeShooting -= Time.deltaTime;
         if(timeBeforeShooting <= 0)
         {
-            canShoot = true;    
+            canShoot = true;
+            shootTimer -= Time.deltaTime;    
         }
         else
         {
             canShoot = false;
         }
         //shooting
-        shootTimer -= Time.deltaTime;
+        //shootTimer -= Time.deltaTime;
         if(lives >= 500 && shootTimer <=  0 && canShoot == true)
         {
             shootTimer += shootInterval;
@@ -118,7 +119,7 @@ public override void OnEnable()
         for (int v = 0; v < phaseTwoHomingBulletSpawn.Length; v++)
         {
             initialPositionX = 15f;
-            FanBullet.bulletSpeed = 8;
+            FanBullet.bulletSpeed = 6;
             GameObject radialHomingProjectile = secondPhaseHomingCircleProjectile.GetPooledObject();
             GameObject homingProjectile = homingCircleProjectilePool.GetPooledObject();
             homingProjectile.transform.position = regularHomingBulletSpawn.position;
