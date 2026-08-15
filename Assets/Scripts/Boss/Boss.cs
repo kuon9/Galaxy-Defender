@@ -91,7 +91,7 @@ public class Boss : Enemy
             initialPositionX = 16f;
             shootTimer += shootInterval;
             PhaseTwoAttacks();
-            shootTimer = 2f;
+            shootTimer = 2.5f;
         }
     }
     void PhaseOneAttacks()

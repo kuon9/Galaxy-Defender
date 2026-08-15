@@ -26,7 +26,7 @@ public class Radial : MonoBehaviour
     void Start()
     {
         projectilePool = GameObject.Find("RadialBulletPool").GetComponent<ObjectPooler>();
-        shootInterval = Random.Range(2f,3f);        
+        shootInterval = Random.Range(4f,5.5f);        
     }
 
     // Update is called once per frame

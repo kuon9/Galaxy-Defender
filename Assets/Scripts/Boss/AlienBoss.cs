@@ -11,6 +11,8 @@ public class AlienBoss : Enemy
     private float spreadShootInterval;
     private float spiralTimer = 10f;
     private float spiralCD = 5f;
+    private float SpreadFireTimer = 10f;
+    private float SpreadFireCD = 10f;
     private float shootInterval; 
     private ObjectPooler projectilePool;
     private ObjectPooler secondProjectilePool;
@@ -38,7 +40,8 @@ public class AlienBoss : Enemy
         speedY = Random.value < 0.5 ? -2f : 2f;
         shootInterval = Random.Range(0.1f, 0.2f);
         spreadShootInterval = Random.Range(1.5f,2.5f);
-        canSpiral = true; 
+        canSpiral = true;
+        canSpread = true; 
         //HpScaling();       
     }    
     public override void Start()
@@ -56,15 +59,6 @@ public class AlienBoss : Enemy
     public override void Update()
     {
         base.Update();
-        if(lives >= 200)
-        {
-            canSpread = false;    
-        }
-        else
-        {
-            canSpread = true;
-            spreadTimer -= Time.deltaTime;
-        }
         // enemy can't shoot after spawning in for 2 seconds.
         // this fixes enemy shooting as they spawn in
         timeBeforeShooting -= Time.deltaTime;
@@ -92,12 +86,18 @@ public class AlienBoss : Enemy
             PhaseTwoSpiral();
             // initialPositionX = 12f + Random.Range(-1f,1f);
         }
-        //spreadTimer -= Time.deltaTime;
+        spreadTimer -= Time.deltaTime;
         // spreadTimer dictates the fire rate
-        if(canSpread && spreadTimer <= 0)
+        if(lives >= 500 && canSpread && spreadTimer <= 0)
         {
             spreadTimer += spreadShootInterval;
             SpreadFire();    
+        }
+        if(lives <= 300 && canSpread && spreadTimer <=0)
+        {
+            spreadShootInterval = 0.1f;
+            spreadTimer += spreadShootInterval;
+            RapidSpreadFire();
         }
         //movement x
         float currentX = transform.position.x;
@@ -162,6 +162,17 @@ public class AlienBoss : Enemy
             spreadProjectile.transform.rotation = phaseTwoBulletSpawn[v].rotation;
             spreadProjectile.SetActive(true);
         }        
+    }
+    private void RapidSpreadFire()
+    {
+        for (int v = 0; v < phaseTwoBulletSpawn.Length; v++)
+        {
+            GameObject spreadProjectile = secondProjectilePool.GetPooledObject();
+            spreadProjectile.transform.position = phaseTwoBulletSpawn[v].position;
+            spreadProjectile.transform.rotation = phaseTwoBulletSpawn[v].rotation;
+            spreadProjectile.SetActive(true);
+            StartCoroutine(SpreadCD());
+        }        
     }    
     IEnumerator SpiralCD()
     {
@@ -170,5 +181,13 @@ public class AlienBoss : Enemy
         shootTimer = 0;
         yield return new WaitForSeconds(spiralCD);
         canSpiral = true;
+    }
+    IEnumerator SpreadCD()
+    {
+        yield return new WaitForSeconds(SpreadFireTimer);
+        canSpread = false;
+        spreadTimer = 0;
+        yield return new WaitForSeconds(SpreadFireCD);
+        canSpread = true;        
     }
 }
