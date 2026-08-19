@@ -50,7 +50,8 @@ public override void OnEnable()
         timeBeforeShooting -= Time.deltaTime;
         if(timeBeforeShooting <= 0)
         {
-            canShoot = true;    
+            canShoot = true;
+            shootTimer -= Time.deltaTime;    
         }
         else
         {
@@ -70,7 +71,6 @@ public override void OnEnable()
             speedY *= -1;
         }
         //shooting
-        shootTimer -= Time.deltaTime;
         if(shootTimer <=  0 && canShoot == true)
         {
             shootTimer += shootInterval;
@@ -92,6 +92,7 @@ public override void OnEnable()
         float startAngle = centerAngle - (totalSpreadAngle / 2f);
         for (int i = 0; i < bulletCount; i++)
         {
+            FanBullet.dmg = 3;
             FanBullet.bulletSpeed = 5;
             float currentBulletAngle = startAngle + (angleStep * i);
             Quaternion bulletRotation = Quaternion.Euler(0f, 0f, currentBulletAngle);        

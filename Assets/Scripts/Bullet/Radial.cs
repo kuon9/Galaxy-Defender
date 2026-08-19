@@ -9,14 +9,14 @@ public class Radial : MonoBehaviour
     [SerializeField] int bulletCount;
     [SerializeField] float radius;
     [SerializeField] int bulletSpeed;
+    private float timeBeforeShooting = 2f;
+    private bool canShoot;
 
     private float currentAngleOffset = 0f;
     [SerializeField] float rotationSpeed = 10f;    
 
     [SerializeField] Transform bulletSpawn;
   
-    
-
     void OnEnable()
     {
         shootInterval = Random.Range(2f,3f);        
@@ -25,8 +25,7 @@ public class Radial : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        projectilePool = GameObject.Find("RadialBulletPool").GetComponent<ObjectPooler>();
-        shootInterval = Random.Range(4f,5.5f);        
+        projectilePool = GameObject.Find("RadialBulletPool").GetComponent<ObjectPooler>();       
     }
 
     // Update is called once per frame

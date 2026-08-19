@@ -33,12 +33,15 @@ public class GameManager : MonoBehaviour
     // [SerializeField] GameObject  secondWaveSpawner;
     [SerializeField] GameObject firstLevelBackground;
     [SerializeField] GameObject secondLevelBackground; 
+    [SerializeField] GameObject thirdLevelBackground; 
 
     public GameObject firstLevelChunk;
     public GameObject secondLevelChunk;   
+    public GameObject thirdLevelChunk;
     private AudioSource bossSpawn;
     
     public bool isLevelOne;
+    public bool isLevelTwo;
 
      void Awake()
     {
@@ -57,6 +60,7 @@ public class GameManager : MonoBehaviour
     {
         BossPool = GameObject.Find("BossPool").GetComponent<ObjectPooler>();
         BossTwoPool = GameObject.Find("ShipBossPool").GetComponent<ObjectPooler>();
+        BossThreePool = GameObject.Find("AlienBossPool").GetComponent<ObjectPooler>();
         enemyCounter = 0;
         bossSpawn = AudioManager.instance.bossSpawnMusic;
         isLevelOne = true;
@@ -73,7 +77,7 @@ public class GameManager : MonoBehaviour
         {
             Pause();
         }
-    if(enemyCounter >= 50 & isLevelOne)
+    if(enemyCounter >= 200 & isLevelOne)
         {
             //this disables all spawners so that we only have boss on the screen
             firstLevelChunk.SetActive(false);
@@ -86,7 +90,7 @@ public class GameManager : MonoBehaviour
             Boss.SetActive(true);
         }    
 
-    if(enemyCounter >= 50 & !isLevelOne)
+    if(enemyCounter >= 200 & !isLevelOne && isLevelTwo)
         {
             secondLevelChunk.SetActive(false);
             enemyCounter = 0;
@@ -96,11 +100,26 @@ public class GameManager : MonoBehaviour
             BossTwo.transform.position = new Vector2(17f,0);
             BossTwo.transform.rotation = Quaternion.Euler(0,0,-90);
             BossTwo.SetActive(true);            
-        }    
-        if(isSwitchingLevel)
+        }
+    if(enemyCounter >= 200 & !isLevelOne && !isLevelTwo)
         {
-            //NewLevel();
-            StartCoroutine(NewLevel());            
+            thirdLevelChunk.SetActive(false);
+            enemyCounter = 0;
+            GameObject BossThree = BossThreePool.GetPooledObject();
+            AudioManager.instance.PlayModifiedSound(bossSpawn);
+            // this is the transform where the boss will be spawned at
+            BossThree.transform.position = new Vector2(17f,0);
+            BossThree.transform.rotation = Quaternion.Euler(0,0,-90);
+            BossThree.SetActive(true);                       
+        }    
+        if(isSwitchingLevel && isLevelOne)
+        {
+            //SecondLevel();
+            StartCoroutine(SecondLevel());            
+        }
+        if(isSwitchingLevel && !isLevelOne)
+        {
+            StartCoroutine(ThirdLevel());
         }
     }
     public void Pause()
@@ -205,7 +224,7 @@ public class GameManager : MonoBehaviour
     // we disable one objectspawner with old enemies loaded
     // and we enable a second objectspawner with new enemies loaded
     // we apply this same principle to the enemywaveSpawner
-    // public void NewLevel()
+    // public void SecondLevel()
     // {
     //     isLevelOne = false;
     //     foreach (GameObject obj in firstObjectSpawners)
@@ -224,7 +243,7 @@ public class GameManager : MonoBehaviour
 
     // this method is way more easier and efficient.
     // Make a Master Parent GameObject and it setactive false or true every children below
-    // public void NewLevel()
+    // public void SecondLevel()
     // {
     //     //firstLevelChunk.SetActive(false);
     //     isLevelOne = false;
@@ -234,7 +253,7 @@ public class GameManager : MonoBehaviour
     // }
 
     // fade between next level.
-    IEnumerator NewLevel()
+    IEnumerator SecondLevel()
     {
         Fade.instance.FadeToBlack();
         Time.timeScale = fadeSlowMo;
@@ -242,6 +261,7 @@ public class GameManager : MonoBehaviour
         Fade.instance.FadeToClear();
         Time.timeScale = 1;
         isLevelOne = false;
+        isLevelTwo = true;
         firstLevelBackground.SetActive(false);
         secondLevelBackground.SetActive(true);
         secondLevelChunk.SetActive(true);
@@ -249,5 +269,20 @@ public class GameManager : MonoBehaviour
         // we gotta make isSwitchingBoolean to false so coroutine stops running because of condition
         isSwitchingLevel = false;          
     }
-
+   IEnumerator ThirdLevel()
+    {
+        Fade.instance.FadeToBlack();
+        Time.timeScale = fadeSlowMo;
+        yield return new WaitForSeconds(1.5f);
+        Fade.instance.FadeToClear();
+        Time.timeScale = 1;
+        isLevelOne = false;
+        isLevelTwo = false;
+        secondLevelBackground.SetActive(false);
+        thirdLevelBackground.SetActive(true);
+        thirdLevelChunk.SetActive(true);
+        // this coroutine is running over and over.
+        // we gotta make isSwitchingBoolean to false so coroutine stops running because of condition
+        isSwitchingLevel = false;          
+    }
 }

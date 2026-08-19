@@ -3,7 +3,7 @@ using UnityEngine;
 public class SpiralBullet : MonoBehaviour
 {
     
-    public float bulletSpeed = 1f;
+    public float bulletSpeed = 4f;
     private Vector2 bulletDir;
     
     public int dmg = 1;

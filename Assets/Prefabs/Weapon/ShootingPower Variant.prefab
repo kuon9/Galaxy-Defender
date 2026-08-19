@@ -9,6 +9,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 41189741022215242, guid: 5a95f6820005f91409baea2422d94884, type: 3}
+      propertyPath: unlockRedMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 41189741022215242, guid: 5a95f6820005f91409baea2422d94884, type: 3}
       propertyPath: unlockRotating
       value: 0
       objectReference: {fileID: 0}

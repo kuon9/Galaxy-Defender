@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ShipRadialBullet : MonoBehaviour
 {
-    private float shootInterval = 1.2f;
+    private float shootInterval = 1.5f;
     private float shootTimer;
     private ObjectPooler projectilePool;
     

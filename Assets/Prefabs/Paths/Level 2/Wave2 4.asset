@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Wave2 4
   m_EditorClassIdentifier: 
   enemyPrefabs:
-  - {fileID: 300677311798647931, guid: 94fff46173a506d4eb108da22338a9ef, type: 3}
-  - {fileID: 300677311798647931, guid: 94fff46173a506d4eb108da22338a9ef, type: 3}
-  - {fileID: 300677311798647931, guid: 94fff46173a506d4eb108da22338a9ef, type: 3}
-  - {fileID: 300677311798647931, guid: 94fff46173a506d4eb108da22338a9ef, type: 3}
-  - {fileID: 300677311798647931, guid: 94fff46173a506d4eb108da22338a9ef, type: 3}
-  - {fileID: 300677311798647931, guid: 94fff46173a506d4eb108da22338a9ef, type: 3}
-  pathPrefab: {fileID: 1406478906184090490, guid: 97010187c4032aa44b7de59b42b82096, type: 3}
+  - {fileID: 5125160589481613674, guid: 9a2b1b3004a7e19449080c02391f9bea, type: 3}
+  - {fileID: 5125160589481613674, guid: 9a2b1b3004a7e19449080c02391f9bea, type: 3}
+  - {fileID: 5125160589481613674, guid: 9a2b1b3004a7e19449080c02391f9bea, type: 3}
+  - {fileID: 5125160589481613674, guid: 9a2b1b3004a7e19449080c02391f9bea, type: 3}
+  - {fileID: 5125160589481613674, guid: 9a2b1b3004a7e19449080c02391f9bea, type: 3}
+  - {fileID: 5125160589481613674, guid: 9a2b1b3004a7e19449080c02391f9bea, type: 3}
+  pathPrefab: {fileID: 1406478906184090490, guid: 5b5b88aff9a090042af900a78da10b43, type: 3}
   moveSpeed: 4
   TimeBetweenEnemySpawns: 1
   spawnTimeVariance: 0

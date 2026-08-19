@@ -9,18 +9,14 @@ public class Enemy : MonoBehaviour
     protected ObjectPooler destroyEffectPool;
     protected AudioSource hitSound;
     protected AudioSource destroySound;
-
     protected float speedX = 0;
     protected float speedY = 0;
-
     [SerializeField] protected float lives;
     [SerializeField] protected float maxLives;
     [SerializeField] protected float damage;
     [SerializeField] protected float livesMultipler = 2;
     [SerializeField] protected int experienceToGive;
   
-
-
     //[SerializeField] int scoreToGive;
     //ScoreKeeper scoreKeeper;
 
@@ -30,7 +26,6 @@ public class Enemy : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
-
 
     public virtual void OnEnable()
     {

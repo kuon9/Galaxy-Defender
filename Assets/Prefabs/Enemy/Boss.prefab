@@ -62,6 +62,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3121994298679400806}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
+--- !u!1 &1016666617730398661
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3714026100878775357}
+  - component: {fileID: 5531871329393664166}
+  m_Layer: 11
+  m_Name: RadialAttack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &3714026100878775357
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016666617730398661}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: -2.53, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3121994298679400806}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5531871329393664166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016666617730398661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daf173560e9501547a18867a19e58665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletCount: 15
+  radius: 1
+  bulletSpeed: 5
+  rotationSpeed: 10
+  bulletSpawn: {fileID: 3714026100878775357}
 --- !u!1 &4751130397799575543
 GameObject:
   m_ObjectHideFlags: 0
@@ -82,7 +131,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3121994298679400806
 Transform:
   m_ObjectHideFlags: 0
@@ -100,6 +149,7 @@ Transform:
   - {fileID: 1188959623884231023}
   - {fileID: 8944168643851897532}
   - {fileID: 2257907434187343672}
+  - {fileID: 3714026100878775357}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3566375913988261616
@@ -170,7 +220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 0
-  maxLives: 299
+  maxLives: 500
   damage: 10
   livesMultipler: 2
   experienceToGive: 10
@@ -181,6 +231,7 @@ MonoBehaviour:
   laser: {fileID: 8450663067817712363}
   isLaser: 0
   laserDuration: 4
+  radialAttackPrefab: {fileID: 1016666617730398661}
 --- !u!114 &5475046095306861283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,7 +376,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 1
+    widthMultiplier: 0.8
     widthCurve:
       serializedVersion: 2
       m_Curve:

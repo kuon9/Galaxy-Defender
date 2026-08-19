@@ -73,13 +73,13 @@ public class AlienBoss : Enemy
         }
         //shooting
         //shootTimer -= Time.deltaTime;
-        if(lives >= 200 && shootTimer <=  0 && canShoot == true && canSpiral == true)
+        if(lives >= 700 && shootTimer <=  0 && canShoot == true && canSpiral == true)
         {
             shootTimer += shootInterval;
             PhaseOneSpiral();
             // initialPositionX = 12f + Random.Range(-1f,1f);
         }   
-        if(lives <= 200 && shootTimer <= 0 &&  canShoot == true && canSpiral == true)
+        if(lives <= 500 && shootTimer <= 0 &&  canShoot == true && canSpiral == true)
         {
             shootTimer += shootInterval;
             spiralTimer = 15f;
@@ -147,12 +147,33 @@ public class AlienBoss : Enemy
             projectile.GetComponent<SpiralBullet>().SetBulletDirection(bulDir);
             StartCoroutine(SpiralCD());                                   
         }           
-        angle += 15f;
+        angle += 20f;
         if(angle >= 360f)
         {
             angle = 0f;
         }
     }
+    private void PhaseThreeSpiral()
+    {
+        for (int i = 0; i < phaseTwoSpiralSpawn.Length; i++)
+        {
+            float bulletDirectionX = transform.position.x + Mathf.Sin(((angle + 180f * i) * Mathf.PI) / 180f);
+            float bulletDirectionY = transform.position.y + Mathf.Cos(((angle + 180f * i) * Mathf.PI) / 180f);
+            Vector3 bulVector = new Vector3(bulletDirectionX , bulletDirectionY, 0f);
+            Vector2 bulDir = (bulVector - transform.position).normalized;
+            GameObject projectile = projectilePool.GetPooledObject();
+            projectile.transform.position = phaseTwoSpiralSpawn[i].position;
+            projectile.transform.rotation = phaseTwoSpiralSpawn[i].rotation;
+            projectile.SetActive(true);
+            projectile.GetComponent<SpiralBullet>().SetBulletDirection(bulDir);
+            StartCoroutine(SpiralCD());                                   
+        }           
+        angle += 5f;
+        if(angle >= 360f)
+        {
+            angle = 0f;
+        }
+    }    
     private void SpreadFire()
     {
         for (int v = 0; v < phaseTwoBulletSpawn.Length; v++)

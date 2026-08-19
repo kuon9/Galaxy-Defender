@@ -10,7 +10,6 @@ public class HeadEnemy : Enemy
     private float moveSpeed;
     private float targetMoveSpeed;
 
-
     public override void OnEnable()
     {
         base.OnEnable();

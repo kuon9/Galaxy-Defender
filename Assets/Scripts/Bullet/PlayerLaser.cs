@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerLaser : MonoBehaviour
 {
     
-    [SerializeField] float damagePerSecond = 40f;
+    [SerializeField] float damagePerSecond = 50f;
     // Time in seconds between each tick
     public LineRenderer lineRenderer;
     public float maxDistance = 10f;
@@ -34,8 +34,8 @@ public class PlayerLaser : MonoBehaviour
             //{
                 Asteroid asteroid = hit.collider.GetComponent<Asteroid>();
                 Meteor meteor = hit.collider.GetComponent<Meteor>();
-                if(asteroid) asteroid.TakeDamage(damagePerSecond  * Time.deltaTime);
-                if(meteor) meteor.TakeDamage(damagePerSecond  * Time.deltaTime);
+                if(asteroid) asteroid.TakeDamage(damagePerSecond);
+                if(meteor) meteor.TakeDamage(damagePerSecond);
                 gameObject.SetActive(false);
             //}
             //else if (hit.collider.CompareTag("Enemy"))
@@ -46,12 +46,12 @@ public class PlayerLaser : MonoBehaviour
                 OctopusWave octopusWave = hit.collider.GetComponent<OctopusWave>();
                 BugWave bugWave = hit.collider.GetComponent<BugWave>();
                 BeetleWave beetleWave = hit.collider.GetComponent<BeetleWave>();
-                if(enemyShipWave) enemyShipWave.TakeDamage(damagePerSecond  * Time.deltaTime);
-                if(enemy)enemy.TakeDamage(damagePerSecond  * Time.deltaTime);
-                if(octopusWave)octopusWave.TakeDamage(damagePerSecond  * Time.deltaTime);
-                if(enemyBug)enemyBug.TakeDamage(damagePerSecond  * Time.deltaTime);
-                if(bugWave)bugWave.TakeDamage(damagePerSecond  * Time.deltaTime);
-                if(beetleWave)beetleWave.TakeDamage(damagePerSecond  * Time.deltaTime);   
+                if(enemyShipWave) enemyShipWave.TakeDamage(damagePerSecond);
+                if(enemy)enemy.TakeDamage(damagePerSecond);
+                if(octopusWave)octopusWave.TakeDamage(damagePerSecond);
+                if(enemyBug)enemyBug.TakeDamage(damagePerSecond);
+                if(bugWave)bugWave.TakeDamage(damagePerSecond);
+                if(beetleWave)beetleWave.TakeDamage(damagePerSecond);   
                 // Player is given iframes when hit by laser only.
                 // whereas other attacks don't give players iframes and keep damaging player continiously
         }

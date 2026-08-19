@@ -105,6 +105,7 @@ public override void OnEnable()
     {
         for (int v = 0; v < phaseOneHomingBulletSpawn.Length; v++)
         {
+            FanBullet.dmg = 5;
             FanBullet.bulletSpeed = 6;
             GameObject homingProjectile = homingCircleProjectilePool.GetPooledObject();
             homingProjectile.transform.position = phaseOneHomingBulletSpawn[v].position;
@@ -120,6 +121,7 @@ public override void OnEnable()
         for (int v = 0; v < phaseTwoHomingBulletSpawn.Length; v++)
         {
             initialPositionX = 15f;
+            FanBullet.dmg = 7;
             FanBullet.bulletSpeed = 6;
             GameObject homingProjectile = homingCircleProjectilePool.GetPooledObject();
             homingProjectile.transform.position = regularHomingBulletSpawn.position;
