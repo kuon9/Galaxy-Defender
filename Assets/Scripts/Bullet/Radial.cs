@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Radial : MonoBehaviour
 {
-    private float shootInterval;
+    [SerializeField] float shootInterval;
     private float shootTimer;
     private ObjectPooler projectilePool;
     
@@ -19,7 +19,7 @@ public class Radial : MonoBehaviour
   
     void OnEnable()
     {
-        shootInterval = Random.Range(2f,3f);        
+        //shootInterval = Random.Range(2f,3f);        
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

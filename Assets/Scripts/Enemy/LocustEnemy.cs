@@ -39,7 +39,6 @@ public class LocustEnemy : Enemy
             speedY *= -1;
         }
     }
-
     private void EnterIdle()
     {
         charging = false;
@@ -47,7 +46,6 @@ public class LocustEnemy : Enemy
         speedX = Random.Range(0.1f, 0.6f);
         speedY = Random.Range(-0.9f, 0.9f);
     }
-
     private void EnterCharge()
     {
         if(!charging)

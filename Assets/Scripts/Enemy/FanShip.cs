@@ -41,7 +41,6 @@ public override void OnEnable()
         hitSound = AudioManager.instance.hitImpact;
         destroySound = AudioManager.instance.monsterDeath;        
     }
-
     public override void Update()
     {
         base.Update();

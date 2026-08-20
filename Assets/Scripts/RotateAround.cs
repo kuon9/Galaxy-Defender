@@ -10,8 +10,6 @@ public class RotateAround : MonoBehaviour
     PowerUpTracker powerUpTracker;
 
     private Collider2D playerCollider;
-
-
     //PowerUps powerUps;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -27,7 +25,6 @@ public class RotateAround : MonoBehaviour
         playerCollider = GetComponentInParent<Collider2D>();
 
     }
-
     void Update()
     {
         RotatingPowerUp();

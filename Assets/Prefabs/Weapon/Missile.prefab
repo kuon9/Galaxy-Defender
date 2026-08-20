@@ -169,8 +169,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   missileSpeed: 5
   defaultSpeed: 2
-  missileRotationSpeed: 200
+  missileRotationSpeed: 1500
   missileDamage: 5
+  missileTimer: 5
 --- !u!1 &6055166567781999729
 GameObject:
   m_ObjectHideFlags: 0

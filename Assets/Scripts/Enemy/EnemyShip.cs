@@ -46,7 +46,8 @@ public override void OnEnable()
         timeBeforeShooting -= Time.deltaTime;
         if(timeBeforeShooting <= 0)
         {
-            canShoot = true;    
+            canShoot = true;
+            shootTimer -= Time.deltaTime;    
         }
         else
         {
@@ -66,7 +67,7 @@ public override void OnEnable()
             speedY *= -1;
         }
         //shooting
-        shootTimer -= Time.deltaTime;
+        //shootTimer -= Time.deltaTime;
         if(shootTimer <=  0 && canShoot == true)
         {
             shootTimer += shootInterval;
@@ -83,7 +84,7 @@ public override void OnEnable()
         projectile.SetActive(true);
         //anim.SetBool("shooting", true);
         //AudioManager.instance.PlaySound(AudioManager.instance.squidShoot);
-        StartCoroutine(ResetShoot());               
+        //StartCoroutine(ResetShoot());               
         }           
     }    
     IEnumerator ResetShoot()

@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private FlashWhite [] playerForms;
 
-    [SerializeField] GameObject droneOne,droneTwo;
+    [SerializeField] GameObject droneOne,droneTwo,droneThree,droneFour;
 
     public bool boosting;
     public float boost = 1f;
@@ -267,6 +267,16 @@ public class PlayerMovement : MonoBehaviour
         {
             droneOne.SetActive(false);
             droneTwo.SetActive(false);            
+        }
+        if(currentLevel >= 10 && !powerUpTracker.isRedMode)
+        {
+            droneThree.SetActive(true);
+            droneFour.SetActive(true);
+        }
+        else
+        {
+            droneThree.SetActive(false);
+            droneFour.SetActive(false);
         }
     }
 }
