@@ -11,10 +11,12 @@ public class Weapon : Weapons
     [SerializeField] private ObjectPooler bulletPool;
     [SerializeField] private ObjectPooler redbulletPool;
     [SerializeField] private ObjectPooler missilePool;
+    [SerializeField] private ObjectPooler offsetMisslePool;
     [SerializeField] private ObjectPooler spreadBulletPool;
     private AudioSource missileShoot;
 
     [SerializeField] Transform missleSpawn;
+    [SerializeField] Transform offsetMissleSpawn;
 
     [SerializeField] Transform [] spreadBulletSpawn;
 
@@ -97,6 +99,20 @@ public class Weapon : Weapons
             missle.SetActive(true);
             StartCoroutine(MissileCD());             
         }       
+    }
+
+    public void ShootOffsetMissile()
+    {
+        if(missileAvailable)
+        {
+            missileAvailable = false;
+            // AudioManager.instance.PlayModifiedSound(AudioManager.instance.shoot);
+            GameObject offsetmissle = offsetMisslePool.GetPooledObject();
+            offsetmissle.transform.position = offsetMissleSpawn.position;
+            offsetmissle.transform.rotation = offsetMissleSpawn.rotation;
+            offsetmissle.SetActive(true);
+            StartCoroutine(MissileCD());             
+        }           
     }
     IEnumerator MissileCD()
     {

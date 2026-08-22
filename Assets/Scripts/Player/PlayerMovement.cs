@@ -129,6 +129,10 @@ public class PlayerMovement : MonoBehaviour
         {
             Weapon.instance.ShootMissile();
         }
+        if(Input.GetButtonDown("Fire4"))
+        {
+            Weapon.instance.ShootOffsetMissile();
+        }
     }
     void FixedUpdate()
     {

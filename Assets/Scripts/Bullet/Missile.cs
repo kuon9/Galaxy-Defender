@@ -92,10 +92,10 @@ public class Missile : MonoBehaviour
             Meteor meteor = col.gameObject.GetComponent<Meteor>();
             if(asteroid) asteroid.TakeDamage(missileDamage);
             if(meteor) meteor.TakeDamage(missileDamage);
-            GameObject destroyEffect = destroyEffectPool.GetPooledObject();
-            destroyEffect.transform.position = transform.position;
-            destroyEffect.transform.rotation = transform.rotation;
-            destroyEffect.SetActive(true);            
+            // GameObject destroyEffect = destroyEffectPool.GetPooledObject();
+            // destroyEffect.transform.position = transform.position;
+            // destroyEffect.transform.rotation = transform.rotation;
+            // destroyEffect.SetActive(true);            
             gameObject.SetActive(false); 
         }
         else if(col.gameObject.CompareTag("Enemy"))
@@ -103,10 +103,10 @@ public class Missile : MonoBehaviour
             // GetComponent of the actual gameobject name and not the tag or layer of it
             EnemyShipWave enemyShipWave = col.gameObject.GetComponent<EnemyShipWave>();
             Enemy enemy = col.gameObject.GetComponent<Enemy>();
-            GameObject destroyEffect = destroyEffectPool.GetPooledObject();
-            destroyEffect.transform.position = transform.position;
-            destroyEffect.transform.rotation = transform.rotation;
-            destroyEffect.SetActive(true);      
+            // GameObject destroyEffect = destroyEffectPool.GetPooledObject();
+            // destroyEffect.transform.position = transform.position;
+            // destroyEffect.transform.rotation = transform.rotation;
+            // destroyEffect.SetActive(true);      
             if(enemyShipWave) enemyShipWave.TakeDamage(missileDamage);
             if(enemy)enemy.TakeDamage(missileDamage);
             gameObject.SetActive(false);

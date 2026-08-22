@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3847016829860352689}
   - component: {fileID: 4642458644366816532}
-  - component: {fileID: 7127911766258366474}
   - component: {fileID: 6409683051283865241}
   - component: {fileID: 2369442352746766454}
+  - component: {fileID: 7127911766258366474}
   m_Layer: 12
   m_Name: EnemyMissile
   m_TagString: EnemyBullet
@@ -90,24 +90,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7127911766258366474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1647844921666284209}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ca6e572c31031d49bb43954fa8ed155, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  missileSpeed: 4
-  defaultSpeed: 2
-  missileRotationSpeed: 300
-  missileDamage: 2
-  missileTimer: 5
-  dmg: 3
 --- !u!50 &6409683051283865241
 Rigidbody2D:
   serializedVersion: 5
@@ -172,3 +154,21 @@ CapsuleCollider2D:
   m_Offset: {x: 0.011546967, y: -0.006928085}
   m_Size: {x: 0.36762324, y: 0.6061436}
   m_Direction: 0
+--- !u!114 &7127911766258366474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647844921666284209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ca6e572c31031d49bb43954fa8ed155, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missileSpeed: 4
+  defaultSpeed: 2
+  missileRotationSpeed: 300
+  missileDamage: 2
+  missileTimer: 5
+  dmg: 3

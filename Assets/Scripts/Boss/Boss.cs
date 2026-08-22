@@ -13,6 +13,7 @@ public class Boss : Enemy
     private ObjectPooler homingProjectilePool;
     private float timeBeforeShooting = 2f;
     
+    [SerializeField] GameObject regularRadial, rapidRadial;
     private bool canShoot;
     
     public Transform projectileSpawn;
@@ -81,17 +82,24 @@ public class Boss : Enemy
         {
             shootTimer += shootInterval;
             PhaseOneAttacks();
-            shootTimer = 1f;
+            shootInterval = 1f;
+            regularRadial.SetActive(true);
         }    
         // isLaser bool prevents boss from shooting projectile while also shooting laser
         // maybe we'll remove later and add other attacks
-        if(lives <= 500 && shootTimer <= 0 && canShoot == true && !isLaser)
+        else if(lives <= 500 && shootTimer <= 0 && canShoot == true && !isLaser)
         {
-            radialAttackPrefab.SetActive(true);
             initialPositionX = 16f;
             shootTimer += shootInterval;
             PhaseTwoAttacks();
-            shootTimer = 2.5f;
+            shootInterval = 4f;
+        }
+        else if(lives <= 200)
+        {
+            regularRadial.SetActive(false);
+            rapidRadial.SetActive(true);
+            shootInterval = 10f;
+  
         }
     }
     void PhaseOneAttacks()

@@ -17,7 +17,7 @@ public class MissileShip : Enemy
     public override void OnEnable()
     {
         base.OnEnable();
-        shootInterval = 2f; 
+        shootInterval = 3f; 
     }
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
