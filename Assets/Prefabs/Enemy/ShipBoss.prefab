@@ -357,7 +357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 199
-  maxLives: 499
+  maxLives: 600
   damage: 5
   livesMultipler: 3
   experienceToGive: 20

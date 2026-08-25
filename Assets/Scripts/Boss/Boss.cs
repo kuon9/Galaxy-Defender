@@ -89,12 +89,12 @@ public class Boss : Enemy
         // maybe we'll remove later and add other attacks
         else if(lives <= 500 && shootTimer <= 0 && canShoot == true && !isLaser)
         {
-            initialPositionX = 16f;
+            initialPositionX = 17f;
             shootTimer += shootInterval;
             PhaseTwoAttacks();
             shootInterval = 4f;
         }
-        else if(lives <= 200)
+        if(lives <= 200)
         {
             regularRadial.SetActive(false);
             rapidRadial.SetActive(true);

@@ -65,7 +65,8 @@ public class AlienBoss : Enemy
         if(timeBeforeShooting <= 0)
         {
             canShoot = true;
-            shootTimer -= Time.deltaTime;    
+            shootTimer -= Time.deltaTime;
+            //spreadTimer -= Time.deltaTime;    
         }
         else
         {
@@ -79,7 +80,7 @@ public class AlienBoss : Enemy
             PhaseOneSpiral();
             // initialPositionX = 12f + Random.Range(-1f,1f);
         }   
-        if(lives <= 500 && shootTimer <= 0 &&  canShoot == true && canSpiral == true)
+        else if(lives <= 500 && shootTimer <= 0 &&  canShoot == true && canSpiral == true)
         {
             shootTimer += shootInterval;
             spiralTimer = 15f;
@@ -93,7 +94,7 @@ public class AlienBoss : Enemy
             spreadTimer += spreadShootInterval;
             SpreadFire();    
         }
-        if(lives <= 300 && canSpread && spreadTimer <=0)
+        else if(lives <= 300 && canSpread && spreadTimer <=0)
         {
             spreadShootInterval = 0.1f;
             spreadTimer += spreadShootInterval;

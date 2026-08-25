@@ -4090,6 +4090,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2866840311726469669, guid: c7dd16be3f235d74da0bc18c78ddf11f, type: 3}
+      propertyPath: maxLives
+      value: 199
+      objectReference: {fileID: 0}
+    - target: {fileID: 2866840311726469669, guid: c7dd16be3f235d74da0bc18c78ddf11f, type: 3}
+      propertyPath: rapidRadial
+      value: 
+      objectReference: {fileID: 1993620533}
+    - target: {fileID: 2866840311726469669, guid: c7dd16be3f235d74da0bc18c78ddf11f, type: 3}
+      propertyPath: regularRadial
+      value: 
+      objectReference: {fileID: 1325726721}
     - target: {fileID: 3121994298679400806, guid: c7dd16be3f235d74da0bc18c78ddf11f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.72
@@ -10449,6 +10461,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 1627087328891523586, guid: 6c657aef290d1e94d8ce3c402752e5b4, type: 3}
   poolSize: 5
+--- !u!1 &1325726721 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1016666617730398661, guid: c7dd16be3f235d74da0bc18c78ddf11f, type: 3}
+  m_PrefabInstance: {fileID: 495999446}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1333564505
 GameObject:
   m_ObjectHideFlags: 0
@@ -14951,8 +14968,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootInterval: 0.44
-  bulletCount: 20
-  radius: 2
+  bulletCount: 15
+  radius: 1
   bulletSpeed: 4
   rotationSpeed: 10
   bulletSpawn: {fileID: 1993620534}
@@ -15912,6 +15929,10 @@ PrefabInstance:
       propertyPath: firstLevelChunk
       value: 
       objectReference: {fileID: 508673124}
+    - target: {fileID: 926372992463610407, guid: 153dbf0deb575aa4b9efcb9bf3c3b165, type: 3}
+      propertyPath: thirdLevelChunk
+      value: 
+      objectReference: {fileID: 176926296}
     - target: {fileID: 926372992463610407, guid: 153dbf0deb575aa4b9efcb9bf3c3b165, type: 3}
       propertyPath: firstWaveSpawner
       value: 

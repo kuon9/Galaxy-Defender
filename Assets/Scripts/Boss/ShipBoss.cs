@@ -7,6 +7,10 @@ public class ShipBoss : Enemy
 private float initialPositionX;
 private float moveSpeed;
 private float shootTimer;
+private float fanTimer;
+private float fanShootTimer = 10f;
+private float fanCD = 10f;
+private float fanShootInterval;
 private float shootInterval;
 public float totalSpreadAngle = 60f;
 public int bulletCount = 4;
@@ -16,6 +20,8 @@ private ObjectPooler secondPhaseHomingCircleProjectile;
 private Animator anim;
 private float timeBeforeShooting = 2f;
 private bool canShoot;
+private bool canFan;
+private bool finalPhase;
 // using arrays means we can't edit it 
 public Transform fanBulletSpawn;
 public Transform [] phaseOneHomingBulletSpawn;
@@ -35,7 +41,12 @@ public override void OnEnable()
         moveSpeed = Random.Range(1f, 2f);
         // if random value is less than 0.5 , 50% it eithers moves up or down Two float
         speedY = Random.value < 0.5 ? -2f : 2f;
-        shootInterval = Random.Range(2f, 3.5f); 
+        shootInterval = Random.Range(2f, 3.5f);
+        fanShootInterval = Random.Range(1.5f,2f); 
+        canFan = true;
+        canShoot = true;
+        fanTimer = 1f;
+        shootTimer = 1f;
         //HpScaling();       
     }    
     
@@ -60,32 +71,47 @@ public override void OnEnable()
         timeBeforeShooting -= Time.deltaTime;
         if(timeBeforeShooting <= 0)
         {
-            canShoot = true;
+            //canShoot = true;
             // putting this here instead of in update solves the issue of boss attacking twice on spawn
-            shootTimer -= Time.deltaTime;    
+            shootTimer -= Time.deltaTime;
+            fanTimer -= Time.deltaTime;   
         }
-        else
-        {
-            canShoot = false;
-        }
+        // else
+        // {
+        //     canShoot = false;
+        // }
         //shooting
         //shootTimer -= Time.deltaTime;
-        if(lives >= 500 && shootTimer <=  0 && canShoot == true)
+        if(lives >= 500 && shootTimer <=  0 && canShoot)
         {
+            bulletCount = 4;
             shootTimer += shootInterval;
             PhaseOne();
-            FanPattern();
+            //FanPattern();
         }    
-        if(lives <= 500 && shootTimer <= 0 &&  canShoot == true)
+        else if(lives <= 500 && shootTimer <= 0 && canShoot)
         {
             // increase fire rate when entering phase 2
-            shootInterval = Random.Range(2f, 2.5f); 
+            shootInterval = Random.Range(2f,3f); 
             shootTimer += shootInterval;
             bulletCount = 6;
+            // boss ship will shoot out 6 bullets with the fan pattern
             PhaseTwo();
+            //FanPattern();
+        }
+        //fanTimer -= Time.deltaTime;  
+        if(lives >= 201 && fanTimer <= 0 && canFan)
+        {
+            fanTimer += fanShootInterval;
             FanPattern();
         }
-
+        else if(lives <= 200 && fanTimer <= 0 && canFan)
+        {
+            canShoot = false;
+            fanShootInterval = 0.5f;
+            fanTimer += fanShootInterval;
+            RapidFanPattern();
+        }
         //movement x
         float currentX = transform.position.x;
         if(Mathf.Abs(currentX - initialPositionX) > 0.1f)
@@ -99,7 +125,6 @@ public override void OnEnable()
         {
             speedY *= -1;
         }
-
     }
     private void PhaseOne()
     {
@@ -156,9 +181,46 @@ public override void OnEnable()
             projectile.transform.rotation = bulletRotation;
             projectile.SetActive(true);
             //anim.SetBool("shooting", true);
+            //AudioManager.instance.PlaySound(AudioManager.instance.squidShoot);              
+            //StartCoroutine(ResetShoot()); 
+        }         
+    }
+
+    private void RapidFanPattern()
+    {
+        // 1. Calculate the step angle between each individual bullet
+        float angleStep = 0f;
+        if (bulletCount > 1)
+        {
+            angleStep = totalSpreadAngle / (bulletCount - 1);
+        }
+
+        // 2. Find the leftmost starting angle relative to the center direction
+        // transform.rotation.eulerAngles.z handles any direction your shooter is facing
+        float centerAngle = transform.rotation.eulerAngles.z;
+        float startAngle = centerAngle - (totalSpreadAngle / 2f);
+        for (int i = 0; i < bulletCount; i++)
+        {
+            float currentBulletAngle = startAngle + (angleStep * i);
+            Quaternion bulletRotation = Quaternion.Euler(0f, 0f, currentBulletAngle);        
+            GameObject projectile = projectilePool.GetPooledObject();
+            projectile.transform.position = fanBulletSpawn.position;
+            projectile.transform.rotation = bulletRotation;
+            projectile.SetActive(true);
+            StartCoroutine(FanCD()); 
+            //anim.SetBool("shooting", true);
             //AudioManager.instance.PlaySound(AudioManager.instance.squidShoot);
             //StartCoroutine(ResetShoot());               
-        }         
+        }          
+    }
+    IEnumerator FanCD()
+    {
+        yield return new WaitForSeconds(fanShootTimer);
+        canFan = false;
+        canShoot = true;
+        fanTimer = 0;
+        yield return new WaitForSeconds(fanCD);
+        canFan = true;
     }
 
     // private void PhaseOne()
