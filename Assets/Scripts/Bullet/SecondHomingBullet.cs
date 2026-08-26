@@ -8,7 +8,8 @@ public class SecondHomingBullet : MonoBehaviour
     private enum State 
     { 
         Circling, 
-        Chasing
+        Chasing,
+        Radial
     }
     private State currentState;
     public float circleRadius = 2f;
@@ -32,17 +33,32 @@ public class SecondHomingBullet : MonoBehaviour
     
     void OnEnable()
     {
-        rb = GetComponent<Rigidbody2D>();
+        // rb = GetComponent<Rigidbody2D>();
         bulletSpawn = transform.position;
         currentState = State.Circling;
+        // GameObject player = GameObject.FindWithTag("Player");
+        // if(player != null)
+        // {
+        //     direction = (player.transform.position - transform.position).normalized;
+        // }        
+        currentState = State.Circling;
+        Invoke(nameof(StartChasing), timeToChase);    
+    }
+
+    void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        // bulletSpawn = transform.position;
+        // currentState = State.Circling;
         GameObject player = GameObject.FindWithTag("Player");
         if(player != null)
         {
             direction = (player.transform.position - transform.position).normalized;
         }        
-        currentState = State.Circling;
-        Invoke(nameof(StartChasing), timeToChase);    
+        // currentState = State.Circling;
+        // Invoke(nameof(StartChasing), timeToChase);            
     }
+
     void Start()
     {
         explosionVFX = GameObject.Find("RedHomingVFXPool").GetComponent<ObjectPooler>();
@@ -67,7 +83,7 @@ public class SecondHomingBullet : MonoBehaviour
         else if (currentState == State.Chasing)
         {
             rb.linearVelocity = direction * bulletSpeed;
-            StartCoroutine(RadialPattern());
+            StartCoroutine(RadialPattern()); 
             // // Rotate towards the player
             // Vector2 direction = (Vector2)(player.position - transform.position);
             // float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
@@ -91,8 +107,8 @@ public class SecondHomingBullet : MonoBehaviour
 
     IEnumerator RadialPattern()
     {
-        radialPrefab.SetActive(true); 
         yield return new WaitForSeconds(timeForRadial);
+        radialPrefab.SetActive(true); 
         gameObject.SetActive(false);
     }
 

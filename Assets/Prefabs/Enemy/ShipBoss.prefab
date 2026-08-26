@@ -356,8 +356,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0baa00d6e6452e1439d53c597dbf81bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lives: 199
-  maxLives: 600
+  lives: 480
+  maxLives: 199
   damage: 5
   livesMultipler: 3
   experienceToGive: 20

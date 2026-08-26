@@ -20,6 +20,7 @@ public class AlienBoss : Enemy
     private bool canShoot;
     private bool canSpiral;
     private bool canSpread;
+    private bool isFinalPhase;
     private Animator anim;
     public Transform spiralBulletSpawn;
     public Transform [] phaseTwoSpiralSpawn;
@@ -42,6 +43,7 @@ public class AlienBoss : Enemy
         spreadShootInterval = Random.Range(1.5f,2.5f);
         canSpiral = true;
         canSpread = true; 
+        isFinalPhase = false;
         //HpScaling();       
     }    
     public override void Start()
@@ -72,29 +74,40 @@ public class AlienBoss : Enemy
         {
             canShoot = false;
         }
+        if(lives <= 100)
+        {
+            isFinalPhase = true;
+        }
         //shooting
         //shootTimer -= Time.deltaTime;
-        if(lives >= 700 && shootTimer <=  0 && canShoot == true && canSpiral == true)
+        if(lives >= 700 && shootTimer <=  0 && canShoot == true && canSpiral == true && !isFinalPhase)
         {
             shootTimer += shootInterval;
             PhaseOneSpiral();
             // initialPositionX = 12f + Random.Range(-1f,1f);
         }   
-        else if(lives <= 500 && shootTimer <= 0 &&  canShoot == true && canSpiral == true)
+        else if(lives <= 500 && shootTimer <= 0 &&  canShoot == true && canSpiral == true && !isFinalPhase)
         {
             shootTimer += shootInterval;
             spiralTimer = 15f;
             PhaseTwoSpiral();
             // initialPositionX = 12f + Random.Range(-1f,1f);
         }
+        else if(lives <= 500 && shootTimer <= 0 &&  canShoot == true && canSpiral == true && isFinalPhase)
+        {
+            shootTimer += shootInterval;
+            spiralTimer = 15f;
+            initialPositionX = 10.5f;
+            PhaseThreeSpiral();
+        }
         spreadTimer -= Time.deltaTime;
         // spreadTimer dictates the fire rate
-        if(lives >= 500 && canSpread && spreadTimer <= 0)
+        if(lives >= 500 && canSpread && spreadTimer <= 0 && !isFinalPhase)
         {
             spreadTimer += spreadShootInterval;
             SpreadFire();    
         }
-        else if(lives <= 300 && canSpread && spreadTimer <=0)
+        else if(lives <= 300 && canSpread && spreadTimer <=0 && !isFinalPhase)
         {
             spreadShootInterval = 0.1f;
             spreadTimer += spreadShootInterval;
@@ -169,7 +182,7 @@ public class AlienBoss : Enemy
             projectile.GetComponent<SpiralBullet>().SetBulletDirection(bulDir);
             StartCoroutine(SpiralCD());                                   
         }           
-        angle += 5f;
+        angle += 10f;
         if(angle >= 360f)
         {
             angle = 0f;

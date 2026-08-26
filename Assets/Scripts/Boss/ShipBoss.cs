@@ -119,7 +119,6 @@ public override void OnEnable()
             float posX = Mathf.Lerp(currentX, initialPositionX, moveSpeed * Time.deltaTime);
             transform.position = new Vector3(posX, transform.position.y);
         }
-
         //movement y 
         if(transform.position.y > 4 || transform.position.y < -4)
         {
@@ -222,7 +221,6 @@ public override void OnEnable()
         yield return new WaitForSeconds(fanCD);
         canFan = true;
     }
-
     // private void PhaseOne()
     // {
                             // we use .Count when using Lists, only use.Length with Arrays    
