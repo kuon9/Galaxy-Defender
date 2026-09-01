@@ -32,11 +32,11 @@ public class PlayerLaser : MonoBehaviour
             // Handle dealing damage or triggering events here
             //if(hit.collider.gameObject.CompareTag("Obstacles"))
             //{
-                Asteroid asteroid = hit.collider.GetComponent<Asteroid>();
-                Meteor meteor = hit.collider.GetComponent<Meteor>();
-                if(asteroid) asteroid.TakeDamage(damagePerSecond);
-                if(meteor) meteor.TakeDamage(damagePerSecond);
-                gameObject.SetActive(false);
+                // Asteroid asteroid = hit.collider.GetComponent<Asteroid>();
+                // Meteor meteor = hit.collider.GetComponent<Meteor>();
+                // if(asteroid) asteroid.TakeDamage(damagePerSecond);
+                // if(meteor) meteor.TakeDamage(damagePerSecond);
+                // gameObject.SetActive(false);
             //}
             //else if (hit.collider.CompareTag("Enemy"))
             //{

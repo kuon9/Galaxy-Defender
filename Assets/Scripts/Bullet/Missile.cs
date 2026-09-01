@@ -84,34 +84,53 @@ public class Missile : MonoBehaviour
         enemyTarget = GameObject.FindWithTag("Enemy").transform;
     }
 
+    // void OnCollisionEnter2D(Collision2D col)
+    // {
+    //     if(col.gameObject.CompareTag("Obstacles"))
+    //     {
+    //         Asteroid asteroid = col.gameObject.GetComponent<Asteroid>();
+    //         Meteor meteor = col.gameObject.GetComponent<Meteor>();
+    //         if(asteroid) asteroid.TakeDamage(missileDamage);
+    //         if(meteor) meteor.TakeDamage(missileDamage);
+    //         // GameObject destroyEffect = destroyEffectPool.GetPooledObject();
+    //         // destroyEffect.transform.position = transform.position;
+    //         // destroyEffect.transform.rotation = transform.rotation;
+    //         // destroyEffect.SetActive(true);            
+    //         gameObject.SetActive(false); 
+    //     }
+    //     else if(col.gameObject.CompareTag("Enemy"))
+    //     {
+    //         // GetComponent of the actual gameobject name and not the tag or layer of it
+    //         EnemyShipWave enemyShipWave = col.gameObject.GetComponent<EnemyShipWave>();
+    //         Enemy enemy = col.gameObject.GetComponent<Enemy>();
+    //         // GameObject destroyEffect = destroyEffectPool.GetPooledObject();
+    //         // destroyEffect.transform.position = transform.position;
+    //         // destroyEffect.transform.rotation = transform.rotation;
+    //         // destroyEffect.SetActive(true);      
+    //         if(enemyShipWave) enemyShipWave.TakeDamage(missileDamage);
+    //         if(enemy)enemy.TakeDamage(missileDamage);
+    //         gameObject.SetActive(false);
+    //         Debug.Log("Enemy ship is taking damage");            
+    //     }
+    // }
     void OnCollisionEnter2D(Collision2D col)
     {
-        if(col.gameObject.CompareTag("Obstacles"))
-        {
-            Asteroid asteroid = col.gameObject.GetComponent<Asteroid>();
-            Meteor meteor = col.gameObject.GetComponent<Meteor>();
-            if(asteroid) asteroid.TakeDamage(missileDamage);
-            if(meteor) meteor.TakeDamage(missileDamage);
-            // GameObject destroyEffect = destroyEffectPool.GetPooledObject();
-            // destroyEffect.transform.position = transform.position;
-            // destroyEffect.transform.rotation = transform.rotation;
-            // destroyEffect.SetActive(true);            
-            gameObject.SetActive(false); 
-        }
-        else if(col.gameObject.CompareTag("Enemy"))
+        if(col.gameObject.CompareTag("Enemy"))
         {
             // GetComponent of the actual gameobject name and not the tag or layer of it
             EnemyShipWave enemyShipWave = col.gameObject.GetComponent<EnemyShipWave>();
+            EnemyBug enemyBug = col.gameObject.GetComponent<EnemyBug>();
             Enemy enemy = col.gameObject.GetComponent<Enemy>();
-            // GameObject destroyEffect = destroyEffectPool.GetPooledObject();
-            // destroyEffect.transform.position = transform.position;
-            // destroyEffect.transform.rotation = transform.rotation;
-            // destroyEffect.SetActive(true);      
+            OctopusWave octopusWave = col.gameObject.GetComponent<OctopusWave>();
+            BugWave bugWave = col.gameObject.GetComponent<BugWave>();
+            BeetleWave beetleWave = col.gameObject.GetComponent<BeetleWave>();
             if(enemyShipWave) enemyShipWave.TakeDamage(missileDamage);
             if(enemy)enemy.TakeDamage(missileDamage);
-            gameObject.SetActive(false);
-            Debug.Log("Enemy ship is taking damage");            
-        }
+            if(octopusWave)octopusWave.TakeDamage(missileDamage);
+            if(enemyBug)enemyBug.TakeDamage(missileDamage);
+            if(bugWave)bugWave.TakeDamage(missileDamage);
+            if(beetleWave)beetleWave.TakeDamage(missileDamage);   
+            gameObject.SetActive(false);               
+        }        
     }
-
 }
