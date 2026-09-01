@@ -32,14 +32,14 @@ public class UiController : MonoBehaviour
     {
         energySlider.value = Mathf.RoundToInt(current);
         energySlider.maxValue = max;
-        energyText.text = energySlider.value + "/" + energySlider.maxValue;
+        //energyText.text = energySlider.value + "/" + energySlider.maxValue;
     }
 
     public void UpdateHealthSlider(float current, float max)
     {
         healthSlider.maxValue = max;
         healthSlider.value = Mathf.RoundToInt(current);
-        healthText.text = healthSlider.value + "/" + healthSlider.maxValue;        
+        //healthText.text = healthSlider.value + "/" + healthSlider.maxValue;        
     }
     public void UpdateExperienceSlider(float current, float max)
     {
@@ -51,7 +51,9 @@ public class UiController : MonoBehaviour
     public void UpdateNukeSlider(float current, float max)
     {
         nukeSlider.maxValue = max;
-        nukeSlider.value = Mathf.RoundToInt(current);
+        // we're moving this because it rounds our 0.05 float to 1 which regens the bar way too fast
+        //nukeSlider.value = Mathf.RoundToInt(current);
+        nukeSlider.value = current;
         //nukeText.text = nukeSlider.value + "/" + nukeSlider.maxValue;        
     }
     public void DeactivateUI()

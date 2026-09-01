@@ -6,11 +6,16 @@ public class ScreenClear : MonoBehaviour
     [SerializeField] GameObject nukeSlider;
     Animator anim;
  
-    public int nukeEnergy;
-    public int nukeMaxEnergy;
+    // nuke energy needs to be public so other classes can access
+    // aka enemies adding to nuke energy when killed
+    public float nukeEnergy;
+    [SerializeField] float nukeMaxEnergy;
+
+    [SerializeField] float nukeRegen;
     public ParticleSystem screenNukeParticles;
 
     public int nukeDamage;
+    public int nukeBossDamage;
     public float nukeRange;
 
     //public GameObject [] enemies;
@@ -48,10 +53,8 @@ public class ScreenClear : MonoBehaviour
         //     // logic to destroy every enemy in screen
         //     Nuke();
         //     nukeEnergy = 0;
-        // }        
-
+        // }
         NukeisReady();
-        UiController.instance.UpdateNukeSlider(nukeEnergy,nukeMaxEnergy);
         if(Input.GetKeyDown(KeyCode.R) && nukeEnergy >= 50)
         {
             // logic to destroy every enemy in screen
@@ -59,7 +62,13 @@ public class ScreenClear : MonoBehaviour
             Nuke();
             Debug.Log("NUKING");
             nukeEnergy = 0;
-        }        
+        }      
+
+        if(nukeEnergy < nukeMaxEnergy)
+        {
+            nukeEnergy += nukeRegen;
+        }
+        UiController.instance.UpdateNukeSlider(nukeEnergy,nukeMaxEnergy);  
     }
     void Nuke()
     {
@@ -73,7 +82,7 @@ public class ScreenClear : MonoBehaviour
             OctopusWave octopusWave = collider.GetComponent<OctopusWave>();
             BugWave bugWave = collider.GetComponent<BugWave>();
             Asteroid asteroid = collider.GetComponent<Asteroid>();
-            Meteor meteor = collider.GetComponent<Meteor>();     
+            Meteor meteor = collider.GetComponent<Meteor>();   
 
             if(enemy)enemy.TakeDamage(nukeDamage);
             if(enemyShipWave)enemyShipWave.TakeDamage(nukeDamage);
@@ -81,10 +90,9 @@ public class ScreenClear : MonoBehaviour
             if(octopusWave)octopusWave.TakeDamage(nukeDamage);
             if(bugWave)bugWave.TakeDamage(nukeDamage);
             if(asteroid)asteroid.TakeDamage(nukeDamage);
-            if(meteor)meteor.TakeDamage(nukeEnergy);
+            if(meteor)meteor.TakeDamage(nukeDamage);
         }
     }
-
     void NukeisReady()
     {
         if(nukeEnergy >= 50)
@@ -97,7 +105,6 @@ public class ScreenClear : MonoBehaviour
             anim.SetBool("NukeReady", false);
             UiController.instance.nukeText.text = "";
         }
-
     }
     void OnDrawGizmos()
     {

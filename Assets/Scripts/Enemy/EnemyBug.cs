@@ -51,7 +51,6 @@ public class EnemyBug : Enemy
         //float sine = Mathf.Sin(transform.position.x);
         // transform.position = new Vector3(transform.position.x,sine);
     }
-
     void HpScaling()
     {
         // makes enemy hp scale based on current player's hp

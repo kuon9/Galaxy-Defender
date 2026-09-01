@@ -54,8 +54,6 @@ public class GameManager : MonoBehaviour
             instance = this;    
         }
     } 
-
-
     void Start()
     {
         BossPool = GameObject.Find("BossPool").GetComponent<ObjectPooler>();
@@ -65,7 +63,6 @@ public class GameManager : MonoBehaviour
         bossSpawn = AudioManager.instance.bossSpawnMusic;
         isLevelOne = true;
     }
-
     void Update()
     {
     if(isTransitioning)
@@ -77,7 +74,7 @@ public class GameManager : MonoBehaviour
         {
             Pause();
         }
-    if(enemyCounter >= 200 & isLevelOne)
+    if(enemyCounter >= 10 & isLevelOne)
         {
             //this disables all spawners so that we only have boss on the screen
             firstLevelChunk.SetActive(false);
@@ -90,7 +87,7 @@ public class GameManager : MonoBehaviour
             Boss.SetActive(true);
         }    
 
-    if(enemyCounter >= 200 & !isLevelOne && isLevelTwo)
+    if(enemyCounter >= 10 & !isLevelOne && isLevelTwo)
         {
             secondLevelChunk.SetActive(false);
             enemyCounter = 0;
@@ -101,7 +98,7 @@ public class GameManager : MonoBehaviour
             BossTwo.transform.rotation = Quaternion.Euler(0,0,-90);
             BossTwo.SetActive(true);            
         }
-    if(enemyCounter >= 200 & !isLevelOne && !isLevelTwo)
+    if(enemyCounter >= 10 & !isLevelOne && !isLevelTwo)
         {
             thirdLevelChunk.SetActive(false);
             enemyCounter = 0;
@@ -117,7 +114,7 @@ public class GameManager : MonoBehaviour
             //SecondLevel();
             StartCoroutine(SecondLevel());            
         }
-        if(isSwitchingLevel && !isLevelOne)
+        if(isSwitchingLevel && !isLevelOne && isLevelTwo)
         {
             StartCoroutine(ThirdLevel());
         }
@@ -160,24 +157,24 @@ public class GameManager : MonoBehaviour
         // Player.instance.ResetPlayer();
         UiController.instance.DeactivateUI();        
     }
-    public void NextLevel()
-    {
-        // SceneManager.LoadScene(nextLevelScene);
-        // StartFadeToBlack();
-        StartCoroutine(FadingToNextLevel());
-    }
+//     public void NextLevel()
+//     {
+//         // SceneManager.LoadScene(nextLevelScene);
+//         // StartFadeToBlack();
+//         StartCoroutine(FadingToNextLevel());
+//     }
 
-  IEnumerator FadingToNextLevel()
-    {
-        Time.timeScale = 1;
-        Fade.instance.FadeToBlack();
-        yield return new WaitForSeconds(2f);
-        //UiController.instance.ActivateUI();
-        SceneManager.LoadScene(nextLevelScene);
-        Fade.instance.FadeToClear();
-        // Player.instance.StartTakingDamage();
-        levelCompletedUI.SetActive(false);
-    }    
+//   IEnumerator FadingToNextLevel()
+//     {
+//         Time.timeScale = 1;
+//         Fade.instance.FadeToBlack();
+//         yield return new WaitForSeconds(2f);
+//         //UiController.instance.ActivateUI();
+//         SceneManager.LoadScene(nextLevelScene);
+//         Fade.instance.FadeToClear();
+//         // Player.instance.StartTakingDamage();
+//         levelCompletedUI.SetActive(false);
+//     }    
 
     public void Restart()
     {
@@ -276,7 +273,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         Fade.instance.FadeToClear();
         Time.timeScale = 1;
-        isLevelOne = false;
+        //isLevelOne = false;
         isLevelTwo = false;
         secondLevelBackground.SetActive(false);
         thirdLevelBackground.SetActive(true);

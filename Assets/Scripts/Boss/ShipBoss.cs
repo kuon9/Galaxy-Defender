@@ -221,6 +221,26 @@ public override void OnEnable()
         yield return new WaitForSeconds(fanCD);
         canFan = true;
     }
+    public override void TakeDamage(float damage)
+    {
+        //AudioManager.instance.PlayModifiedSound(hitSound);
+        base.TakeDamage(damage);
+        lives -= damage;
+        if(lives <= 0 )
+        {
+            AudioManager.instance.PlayModifiedSound(destroySound);
+            GameObject destroyEffect = destroyEffectPool.GetPooledObject();
+            destroyEffect.transform.position = transform.position;
+            destroyEffect.transform.rotation = transform.rotation;
+            destroyEffect.SetActive(true);
+            // UiController.instance.ModifyScore(scoreToGive);
+            // Player.instance.GetExperience(experienceToGive);
+            // this makes us switch to level 2
+            GameManager.instance.isSwitchingLevel = true;
+            gameObject.SetActive(false);
+            //GameManager.instance.ActivateLevelCompletedUI();
+        }
+    }    
     // private void PhaseOne()
     // {
                             // we use .Count when using Lists, only use.Length with Arrays    
