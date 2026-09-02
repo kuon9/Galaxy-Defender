@@ -240,7 +240,9 @@ public class AlienBoss : Enemy
             // UiController.instance.ModifyScore(scoreToGive);
             // Player.instance.GetExperience(experienceToGive);
             // this makes us switch to level 2
-            GameManager.instance.ActivateLevelCompletedUI();
+            //GameManager.instance.ActivateLevelCompletedUI();
+            GameManager.instance.isSwitchingLevel = true;
+            GameManager.instance.victory = true;
             gameObject.SetActive(false);
             //GameManager.instance.ActivateLevelCompletedUI();
         }

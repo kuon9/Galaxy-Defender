@@ -100,7 +100,6 @@ public class Weapon : Weapons
             StartCoroutine(MissileCD());             
         }       
     }
-
     public void ShootOffsetMissile()
     {
         if(missileAvailable)

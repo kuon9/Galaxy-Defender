@@ -38,10 +38,13 @@ public class GameManager : MonoBehaviour
     public GameObject firstLevelChunk;
     public GameObject secondLevelChunk;   
     public GameObject thirdLevelChunk;
+    public GameObject victoryScreen;
     private AudioSource bossSpawn;
     
     public bool isLevelOne;
     public bool isLevelTwo;
+    
+    public bool victory;
 
      void Awake()
     {
@@ -62,6 +65,7 @@ public class GameManager : MonoBehaviour
         enemyCounter = 0;
         bossSpawn = AudioManager.instance.bossSpawnMusic;
         isLevelOne = true;
+        victory = false;
     }
     void Update()
     {
@@ -74,7 +78,7 @@ public class GameManager : MonoBehaviour
         {
             Pause();
         }
-    if(enemyCounter >= 10 & isLevelOne)
+    if(enemyCounter >= 200 & isLevelOne)
         {
             //this disables all spawners so that we only have boss on the screen
             firstLevelChunk.SetActive(false);
@@ -87,7 +91,7 @@ public class GameManager : MonoBehaviour
             Boss.SetActive(true);
         }    
 
-    if(enemyCounter >= 10 & !isLevelOne && isLevelTwo)
+    if(enemyCounter >= 200 & !isLevelOne && isLevelTwo)
         {
             secondLevelChunk.SetActive(false);
             enemyCounter = 0;
@@ -98,7 +102,7 @@ public class GameManager : MonoBehaviour
             BossTwo.transform.rotation = Quaternion.Euler(0,0,-90);
             BossTwo.SetActive(true);            
         }
-    if(enemyCounter >= 10 & !isLevelOne && !isLevelTwo)
+    if(enemyCounter >= 200 & !isLevelOne && !isLevelTwo)
         {
             thirdLevelChunk.SetActive(false);
             enemyCounter = 0;
@@ -117,6 +121,10 @@ public class GameManager : MonoBehaviour
         if(isSwitchingLevel && !isLevelOne && isLevelTwo)
         {
             StartCoroutine(ThirdLevel());
+        }
+        if(isSwitchingLevel && victory)
+        {
+            StartCoroutine(VictoryScreen());
         }
     }
     public void Pause()
@@ -282,4 +290,15 @@ public class GameManager : MonoBehaviour
         // we gotta make isSwitchingBoolean to false so coroutine stops running because of condition
         isSwitchingLevel = false;          
     }
+
+    IEnumerator VictoryScreen()
+    {
+        Fade.instance.FadeToBlack();
+        Time.timeScale = fadeSlowMo;
+        yield return new WaitForSeconds(1.5f);
+        Fade.instance.FadeToClear();
+        Time.timeScale = 1;
+        victoryScreen.SetActive(true);        
+    }
+
 }
