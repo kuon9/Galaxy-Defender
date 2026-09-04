@@ -30,16 +30,16 @@ public class PlayerLaser : MonoBehaviour
             // lineRenderer.SetPosition(1, hit.point);
             
             // Handle dealing damage or triggering events here
-            //if(hit.collider.gameObject.CompareTag("Obstacles"))
-            //{
-                // Asteroid asteroid = hit.collider.GetComponent<Asteroid>();
-                // Meteor meteor = hit.collider.GetComponent<Meteor>();
-                // if(asteroid) asteroid.TakeDamage(damagePerSecond);
-                // if(meteor) meteor.TakeDamage(damagePerSecond);
-                // gameObject.SetActive(false);
-            //}
-            //else if (hit.collider.CompareTag("Enemy"))
-            //{
+            if(hit.collider.gameObject.CompareTag("Obstacles"))
+            {
+                Asteroid asteroid = hit.collider.GetComponent<Asteroid>();
+                Meteor meteor = hit.collider.GetComponent<Meteor>();
+                if(asteroid) asteroid.TakeDamage(damagePerSecond);
+                if(meteor) meteor.TakeDamage(damagePerSecond);
+                gameObject.SetActive(false);
+            }
+            else if (hit.collider.CompareTag("Enemy"))
+            {
                 EnemyShipWave enemyShipWave = hit.collider.GetComponent<EnemyShipWave>();
                 EnemyBug enemyBug = hit.collider.GetComponent<EnemyBug>();
                 Enemy enemy = hit.collider.GetComponent<Enemy>();
@@ -54,8 +54,8 @@ public class PlayerLaser : MonoBehaviour
                 if(beetleWave)beetleWave.TakeDamage(damagePerSecond);   
                 // Player is given iframes when hit by laser only.
                 // whereas other attacks don't give players iframes and keep damaging player continiously
+            }
         }
-        //
         //{
             // If nothing is hit, extend the line to its maximum range
             Vector3 maxEndPoint = transform.position + (transform.up * maxDistance);

@@ -9,6 +9,7 @@ TagManager:
   - Missile
   - Enemy
   - EnemyBullet
+  - PowerUpBullet
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Missile
   - Enemy
   - EnemyBullet
-  - 
+  - PowerUpBullet
   - 
   - 
   - 

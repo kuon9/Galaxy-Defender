@@ -66,6 +66,8 @@ public class FiringMode : MonoBehaviour
             if(Input.GetButtonDown("Fire1") || Input.GetButton("Fire1") && Time.time >= nextFireTime)
                 {
                     Weapon.instance.Laser();
+                    //Weapon.instance.BlossomPattern();
+                    nextFireTime = Time.time + fireRate;
                     //AudioManager.instance.PlayModifiedSound(laserShoot);                    
                 }
             else if(Input.GetKeyUp(KeyCode.Mouse0) || Input.GetButtonUp("Fire1"))

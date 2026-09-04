@@ -68,29 +68,29 @@ public class Asteroid : MonoBehaviour
         }
     }
     
-    // public void TakeDamage(float damage)
-    // {
-    //     //Debug.Log("ASteroid takding dmg");
-    //     flashWhite.Flash();
-    //     lives -= damage;
-    //     if(lives > 0)
-    //     {
-    //         flashWhite.Flash();
-    //     }
-    //     else
-    //     {
-    //         AudioManager.instance.PlayModifiedSound(destroySound);
-    //         GameObject destroyEffect = destroyEffectPool.GetPooledObject();
-    //         destroyEffect.transform.position = transform.position;
-    //         destroyEffect.transform.rotation = transform.rotation;
-    //         destroyEffect.transform.localScale = transform.localScale;
-    //         flashWhite.Reset();
-    //         destroyEffect.SetActive(true);
-    //         gameObject.SetActive(false);
-    //         // destory gameobject doesn't work with object pooling
-    //         // we need to make gameobject setactive false and true to reuse
-    //         // we can't reuse if we destroy the gameobject
-    //         //Destroy(GameObject);
-    //     }
-    // }
+    public void TakeDamage(float damage)
+    {
+        //Debug.Log("ASteroid takding dmg");
+        flashWhite.Flash();
+        lives -= damage;
+        if(lives > 0)
+        {
+            flashWhite.Flash();
+        }
+        else
+        {
+            AudioManager.instance.PlayModifiedSound(destroySound);
+            GameObject destroyEffect = destroyEffectPool.GetPooledObject();
+            destroyEffect.transform.position = transform.position;
+            destroyEffect.transform.rotation = transform.rotation;
+            destroyEffect.transform.localScale = transform.localScale;
+            flashWhite.Reset();
+            destroyEffect.SetActive(true);
+            gameObject.SetActive(false);
+            // destory gameobject doesn't work with object pooling
+            // we need to make gameobject setactive false and true to reuse
+            // we can't reuse if we destroy the gameobject
+            //Destroy(GameObject);
+        }
+    }
 }

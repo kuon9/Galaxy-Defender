@@ -36,11 +36,13 @@ public class RotateAround : MonoBehaviour
         {
             if(rotatingTimer >= 0)
             {
+                PlayerMovement.instance.moveSpeed = 7;
                 Rotate();
                 rotatingTimer -= Time.deltaTime;
             }
             else
             {
+                PlayerMovement.instance.moveSpeed = 5;
                 StopRotate();
             }
         }    

@@ -81,16 +81,16 @@ public class ScreenClear : MonoBehaviour
             EnemyBug enemyBug = collider.GetComponent<EnemyBug>();
             OctopusWave octopusWave = collider.GetComponent<OctopusWave>();
             BugWave bugWave = collider.GetComponent<BugWave>();
-            // Asteroid asteroid = collider.GetComponent<Asteroid>();
-            // Meteor meteor = collider.GetComponent<Meteor>();   
+            Asteroid asteroid = collider.GetComponent<Asteroid>();
+            Meteor meteor = collider.GetComponent<Meteor>();   
 
             if(enemy)enemy.TakeDamage(nukeDamage);
             if(enemyShipWave)enemyShipWave.TakeDamage(nukeDamage);
             if(enemyBug)enemyBug.TakeDamage(nukeDamage);
             if(octopusWave)octopusWave.TakeDamage(nukeDamage);
             if(bugWave)bugWave.TakeDamage(nukeDamage);
-            // if(asteroid)asteroid.TakeDamage(nukeDamage);
-            // if(meteor)meteor.TakeDamage(nukeDamage);
+            if(asteroid)asteroid.TakeDamage(nukeDamage);
+            if(meteor)meteor.TakeDamage(nukeDamage);
         }
     }
     void NukeisReady()

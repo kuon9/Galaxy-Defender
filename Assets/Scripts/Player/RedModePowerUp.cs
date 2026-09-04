@@ -57,6 +57,7 @@ public class RedModePowerUp : MonoBehaviour
         regularModeSpriteRenderer.enabled = true;
         //shootingMode.SetActive(false);
         shootingFormSpriteRenderer.enabled = false;
+        Weapon.instance.StopLaser();  
         powerUpTracker.isRedMode = false;   
     }
 // make IEnumerator that checks for player's level every few frames.

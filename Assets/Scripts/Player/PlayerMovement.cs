@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2  playerDirection;
     [Header("Player's Attributes")]
     // SerializeField doesn't allow other scripts to access this variable due to protection level
-    [SerializeField] float moveSpeed;
+    public float moveSpeed;
     [SerializeField] float energy;
     [SerializeField] float maxEnergy;
     [SerializeField] float energyRegen;
@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private FlashWhite [] playerForms;
 
     [SerializeField] GameObject droneOne,droneTwo,droneThree,droneFour;
+    [SerializeField] GameObject spreadDrone, spreadDroneTwo;
 
     public bool boosting;
     public float boost = 1f;
@@ -95,6 +96,7 @@ public class PlayerMovement : MonoBehaviour
         if(!canMove) {return;}
         //RotatingPowerUp();
         ActivateDroids();
+        ActivateSpreadDrones();
         float directionX = Input.GetAxisRaw("Horizontal");
         float directionY = Input.GetAxisRaw("Vertical");
         // anim.SetFloat("moveX", directionX);
@@ -281,6 +283,20 @@ public class PlayerMovement : MonoBehaviour
         {
             droneThree.SetActive(false);
             droneFour.SetActive(false);
+        }
+    }
+
+    public void ActivateSpreadDrones()
+    {
+        if(powerUpTracker.SpreadMode)
+        {
+            spreadDrone.SetActive(true);
+            spreadDroneTwo.SetActive(true);
+        }
+        else
+        {
+            spreadDrone.SetActive(false);
+            spreadDroneTwo.SetActive(false);            
         }
     }
 }

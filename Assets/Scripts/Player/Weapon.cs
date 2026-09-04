@@ -13,6 +13,7 @@ public class Weapon : Weapons
     [SerializeField] private ObjectPooler missilePool;
     [SerializeField] private ObjectPooler offsetMisslePool;
     [SerializeField] private ObjectPooler spreadBulletPool;
+    //[SerializeField] private ObjectPooler blossomBulletPool;
     private AudioSource missileShoot;
 
     [SerializeField] Transform missleSpawn;
@@ -25,8 +26,17 @@ public class Weapon : Weapons
 
     PowerUpTracker powerUpTracker;
     
-
     [SerializeField] GameObject laser;
+
+    // [Header ("Blossom Bullet")]
+    // public GameObject blossomBulletPrefab;
+    // [SerializeField] int armCount = 4;
+    // [SerializeField] int pelletsPerArm = 3;
+    // [SerializeField] float spreadAngle = 15f;
+    // [SerializeField] float fireRate = 0.2f;
+    // [SerializeField] float rotationSpeed = 90f;
+
+
  
     void Awake()
     {
@@ -133,6 +143,25 @@ public class Weapon : Weapons
             spreadProjectile.SetActive(true);       
         }
     }
+
+    // public void BlossomPattern()
+    // {
+    //     for (int i = 0; i < armCount; i++)
+    //     {
+    //         // Base angle for each symmetric arm around the circle
+    //         float armBaseAngle = currentAngle + (i * (360f / armCount));
+
+    //         // Shotgun spread logic per arm
+    //         for (int j = 0; j < pelletsPerArm; j++)
+    //         {
+    //             float pelletOffset = (j - (pelletsPerArm - 1) / 2f) * spreadAngle;
+    //             float finalAngle = armBaseAngle + pelletOffset;
+
+    //             Quaternion rotation = Quaternion.Euler(0, 0, finalAngle);
+    //             GameObject bullet = Instantiate(blossomBulletPrefab, transform.position, rotation);
+    //         }        
+    //     }
+    // }    
     public void LevelUp()
     {
         if(weaponLevel < stats.Count - 1)
