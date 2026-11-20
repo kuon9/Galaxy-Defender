@@ -64,6 +64,8 @@ public class UiController : MonoBehaviour
         healthText.gameObject.SetActive(false);
         experienceSlider.gameObject.SetActive(false);
         experienceText.gameObject.SetActive(false);
+        nukeSlider.gameObject.SetActive(false);
+        nukeText.gameObject.SetActive(false);
     }
 
     public void ActivateUI()
@@ -74,6 +76,8 @@ public class UiController : MonoBehaviour
         healthText.gameObject.SetActive(true);
         experienceSlider.gameObject.SetActive(true);
         experienceText.gameObject.SetActive(true);
+        nukeSlider.gameObject.SetActive(true);
+        nukeText.gameObject.SetActive(true);
     }
 
 }

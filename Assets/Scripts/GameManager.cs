@@ -13,10 +13,12 @@ public class GameManager : MonoBehaviour
     private ObjectPooler BossPool;
     private ObjectPooler BossTwoPool;
     private ObjectPooler BossThreePool;
+    private ObjectPooler BeetleBossPool;
     public int enemyCounter;
     public bool canSpawn;
     public bool isTransitioning;
     public bool isSwitchingLevel;
+    private bool spawnBeetleBoss;
     [SerializeField] float fadeSlowMo = 0.5f;
     [SerializeField] float levelloadDelay = 2f;
 
@@ -62,10 +64,12 @@ public class GameManager : MonoBehaviour
         BossPool = GameObject.Find("BossPool").GetComponent<ObjectPooler>();
         BossTwoPool = GameObject.Find("ShipBossPool").GetComponent<ObjectPooler>();
         BossThreePool = GameObject.Find("AlienBossPool").GetComponent<ObjectPooler>();
+        BeetleBossPool = GameObject.Find("BeetleBossPool").GetComponent<ObjectPooler>();
         enemyCounter = 0;
         bossSpawn = AudioManager.instance.bossSpawnMusic;
         isLevelOne = true;
         victory = false;
+        spawnBeetleBoss = false;
     }
     void Update()
     {
@@ -89,7 +93,20 @@ public class GameManager : MonoBehaviour
             Boss.transform.position = new Vector2(17f,0);
             Boss.transform.rotation = Quaternion.Euler(0,0,-90);
             Boss.SetActive(true);
-        }    
+        }
+        if(enemyCounter >= 100 & isLevelOne && !spawnBeetleBoss)
+        {
+            //this disables all spawners so that we only have boss on the screen
+
+            GameObject BeetleBoss = BeetleBossPool.GetPooledObject();
+            AudioManager.instance.PlayModifiedSound(bossSpawn);
+            // this is the transform where the boss will be spawned at
+            BeetleBoss.transform.position = new Vector2(17f,0);
+            BeetleBoss.transform.rotation = Quaternion.Euler(0,0,-90);
+            BeetleBoss.SetActive(true);
+            // this prevent game from constantly spawning beetleboss the amount enemy counter is above 100
+            spawnBeetleBoss = true;
+        }
 
     if(enemyCounter >= 200 & !isLevelOne && isLevelTwo)
         {
@@ -102,6 +119,16 @@ public class GameManager : MonoBehaviour
             BossTwo.transform.rotation = Quaternion.Euler(0,0,-90);
             BossTwo.SetActive(true);            
         }
+        if(enemyCounter >= 100 & !isLevelOne && isLevelTwo)
+        {
+            GameObject BeetleBoss = BeetleBossPool.GetPooledObject();
+            AudioManager.instance.PlayModifiedSound(bossSpawn);
+            // this is the transform where the boss will be spawned at
+            BeetleBoss.transform.position = new Vector2(17f,0);
+            BeetleBoss.transform.rotation = Quaternion.Euler(0,0,-90);
+            BeetleBoss.SetActive(true);           
+        }
+
     if(enemyCounter >= 200 & !isLevelOne && !isLevelTwo)
         {
             thirdLevelChunk.SetActive(false);
@@ -112,7 +139,17 @@ public class GameManager : MonoBehaviour
             BossThree.transform.position = new Vector2(17f,0);
             BossThree.transform.rotation = Quaternion.Euler(0,0,-90);
             BossThree.SetActive(true);                       
-        }    
+        } 
+
+        if(enemyCounter >= 100 & !isLevelOne && !isLevelTwo)
+        {
+            GameObject BeetleBoss = BeetleBossPool.GetPooledObject();
+            AudioManager.instance.PlayModifiedSound(bossSpawn);
+            // this is the transform where the boss will be spawned at
+            BeetleBoss.transform.position = new Vector2(17f,0);
+            BeetleBoss.transform.rotation = Quaternion.Euler(0,0,-90);
+            BeetleBoss.SetActive(true);                   
+        }      
         if(isSwitchingLevel && isLevelOne)
         {
             //SecondLevel();
@@ -298,7 +335,9 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         Fade.instance.FadeToClear();
         Time.timeScale = 1;
+        UiController.instance.DeactivateUI();
+        FiringMode.instance.isFinished = true;
+        PlayerMovement.instance.canMove = false;
         victoryScreen.SetActive(true);        
     }
-
 }

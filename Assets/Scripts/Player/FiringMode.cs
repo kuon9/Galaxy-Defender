@@ -16,12 +16,14 @@ public class FiringMode : MonoBehaviour
     public float fireRate = 3f;
     private float nextFireTime = 0.0f;
     private AudioSource laserShoot;
+    public bool isFinished;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         currentMode = shootingMode.Regular;
-        laserShoot = AudioManager.instance.laserShoot;        
+        laserShoot = AudioManager.instance.laserShoot;
+        isFinished = false;        
     }
     void Awake()
     {
@@ -37,6 +39,7 @@ public class FiringMode : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(isFinished) {return;}
         Shoot();
     }
 

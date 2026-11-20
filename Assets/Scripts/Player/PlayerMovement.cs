@@ -264,7 +264,7 @@ public class PlayerMovement : MonoBehaviour
     public void ActivateDroids()
     {
         // drones are only active if player's level is higher or equal to 3 and isShooting form is off
-        if(currentLevel >= 3 && !powerUpTracker.isRedMode)
+        if(currentLevel >= 3 && !powerUpTracker.isRedMode && !canMove)
         {
             droneOne.SetActive(true);
             droneTwo.SetActive(true);
@@ -274,7 +274,7 @@ public class PlayerMovement : MonoBehaviour
             droneOne.SetActive(false);
             droneTwo.SetActive(false);            
         }
-        if(currentLevel >= 10 && !powerUpTracker.isRedMode)
+        if(currentLevel >= 10 && !powerUpTracker.isRedMode && !canMove)
         {
             droneThree.SetActive(true);
             droneFour.SetActive(true);
