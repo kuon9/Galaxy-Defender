@@ -80,20 +80,20 @@ public class AlienBoss : Enemy
         }
         //shooting
         //shootTimer -= Time.deltaTime;
-        if(lives >= 700 && shootTimer <=  0 && canShoot == true && canSpiral == true && !isFinalPhase)
+        if(lives >= 2000 && shootTimer <=  0 && canShoot == true && canSpiral == true && !isFinalPhase)
         {
             shootTimer += shootInterval;
             PhaseOneSpiral();
             // initialPositionX = 12f + Random.Range(-1f,1f);
         }   
-        else if(lives <= 500 && shootTimer <= 0 &&  canShoot == true && canSpiral == true && !isFinalPhase)
+        else if(lives <= 1200 && shootTimer <= 0 &&  canShoot == true && canSpiral == true && !isFinalPhase)
         {
             shootTimer += shootInterval;
             spiralTimer = 15f;
             PhaseTwoSpiral();
             // initialPositionX = 12f + Random.Range(-1f,1f);
         }
-        else if(lives <= 500 && shootTimer <= 0 &&  canShoot == true && canSpiral == true && isFinalPhase)
+        else if(lives <= 800 && shootTimer <= 0 &&  canShoot == true && canSpiral == true && isFinalPhase)
         {
             shootTimer += shootInterval;
             spiralTimer = 15f;

@@ -82,14 +82,14 @@ public override void OnEnable()
         // }
         //shooting
         //shootTimer -= Time.deltaTime;
-        if(lives >= 500 && shootTimer <=  0 && canShoot)
+        if(lives >= 1500 && shootTimer <=  0 && canShoot)
         {
             bulletCount = 4;
             shootTimer += shootInterval;
             PhaseOne();
             //FanPattern();
         }    
-        else if(lives <= 500 && shootTimer <= 0 && canShoot)
+        else if(lives <= 1500  && shootTimer <= 0 && canShoot)
         {
             // increase fire rate when entering phase 2
             shootInterval = Random.Range(2f,3f); 
@@ -100,12 +100,12 @@ public override void OnEnable()
             //FanPattern();
         }
         //fanTimer -= Time.deltaTime;  
-        if(lives >= 201 && fanTimer <= 0 && canFan)
+        if(lives >= 900 && fanTimer <= 0 && canFan)
         {
             fanTimer += fanShootInterval;
             FanPattern();
         }
-        else if(lives <= 200 && fanTimer <= 0 && canFan)
+        else if(lives <= 500 && fanTimer <= 0 && canFan)
         {
             canShoot = false;
             fanShootInterval = 0.5f;
